@@ -85,6 +85,7 @@
     color: var(--cc-text);
 }
 
+/*
 .cc_div .c-bn,
 .cc_div .b-tl,
 #s-ttl,
@@ -92,6 +93,7 @@
 #s-bl td:before{
     font-weight: 600;
 }
+*/
 
 #cm,
 #s-inr,
@@ -106,6 +108,7 @@
     border-top-right-radius: 0;
 }
 
+/*
 .cc_div input,
 .cc_div button,
 .cc_div a{
@@ -113,6 +116,7 @@
     -moz-appearance: none;
     appearance: none;
 }
+*/
 
 .cc_div a{
     border-bottom: 1px solid;
@@ -132,9 +136,11 @@
     transition: visibility .25s linear, opacity .25s ease, transform .25s ease!important;
 }
 
+/*
 .c--anim .c-bn{
     transition: background-color .25s ease!important;
 }
+*/
 
 /* start transitions */
 .c--anim #cm.bar.slide,
@@ -248,6 +254,7 @@
     margin-top: 1.4em;
 }
 
+/*
 .cc_div .c-bn{
     color: #40505a;
     color: var(--cc-btn-secondary-text);
@@ -266,6 +273,7 @@
     border-radius: 4px;
     flex: 1;
 }
+*/
 
 #c-bns button + button,
 #s-cnt button + button,
@@ -278,6 +286,7 @@
     float: none;
 }
 
+/*
 #cm .c_link:hover,
 #cm .c_link:active,
 #s-cnt button + button:hover,
@@ -287,6 +296,7 @@
     background: #d8e0e6;
     background: var(--cc-btn-secondary-hover-bg);
 }
+*/
 
 /**
 CookieConsent settings modal
@@ -511,6 +521,7 @@ CookieConsent settings modal
     border-color: transparent;
 }
 
+/*
 #c-bns button:first-child,
 #s-bns button:first-child{
     color: #fff;
@@ -518,6 +529,7 @@ CookieConsent settings modal
     background: #253b48;
     background: var(--cc-btn-primary-bg);
 }
+*/
 
 #c-bns.swap button:first-child{
     color: #40505a;
@@ -538,6 +550,7 @@ CookieConsent settings modal
     background: var(--cc-toggle-bg-on);
 }
 
+/*
 #c-bns button:first-child:active,
 #c-bns button:first-child:hover,
 #s-bns button:first-child:active,
@@ -547,6 +560,7 @@ CookieConsent settings modal
     background: #1d2e38;
     background: var(--cc-btn-primary-hover-bg);
 }
+*/
 
 #c-bns.swap button:first-child:active,
 #c-bns.swap button:first-child:hover{

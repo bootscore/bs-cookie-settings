@@ -379,7 +379,7 @@
                     
                     var consent_primary_btn = _createNode('button');
                     consent_primary_btn.id = 'c-p-bn';
-                    consent_primary_btn.className =  "c-bn";
+                    consent_primary_btn.className =  "c-bn btn btn-primary";
                     consent_primary_btn[innerText] = conf_params.languages[lang]['consent_modal']['primary_btn']['text'];
                     
                     var _accept_type;
@@ -399,7 +399,7 @@
 
                     var consent_secondary_btn = _createNode('button');
                     consent_secondary_btn.id = 'c-s-bn';
-                    consent_secondary_btn.className = "c-bn c_link";
+                    consent_secondary_btn.className = "c-bn c_link btn btn-outline-secondary";
                     consent_secondary_btn[innerText] = conf_params.languages[lang]['consent_modal']['secondary_btn']['text'];
 
                     if(secondary_btn_data['role'] === 'accept_necessary'){
@@ -732,8 +732,8 @@
             settings_buttons.id = 's-bns';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn';
-            settings_accept_all_btn.className ='c-bn';
+            settings_save_btn.className ='c-bn btn btn-outline-secondary';
+            settings_accept_all_btn.className ='c-bn btn btn-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
 
@@ -746,7 +746,7 @@
 
                 var reject_all_btn = _createNode('button');
                 reject_all_btn.id = 's-rall-bn';
-                reject_all_btn.className = 'c-bn';
+                reject_all_btn.className = 'c-bn btn btn-outline-secondary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
 
                 _addEvent(reject_all_btn, 'click', function(){

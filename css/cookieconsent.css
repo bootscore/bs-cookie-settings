@@ -250,9 +250,11 @@
 }
 */
 
+/*
 .cloud #c-ttl{
     margin-top: -.15em;
 }
+*/
 
 /*
 #c-txt{
@@ -518,15 +520,21 @@ CookieConsent settings modal
 }
 
 .cc_div .cc-link{
+  /*
     color: #253b48;
-    color: var(--cc-btn-primary-bg);
-    border-bottom: 1px solid #253b48;
+  */
+    color: var(--bs-primary);
+  /*  
+  border-bottom: 1px solid #253b48;
     border-color: var(--cc-btn-primary-bg);
+  */
     display: inline;
     padding-bottom: 0;
     text-decoration: none;
     cursor: pointer;
+  /*
     font-weight: 600;
+  */
 }
 
 .cc_div .cc-link:hover,

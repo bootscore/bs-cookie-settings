@@ -339,8 +339,10 @@
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "card-body";
                 consent_modal_inner_inner.id = 'c-inr-i';
+                consent_modal_inner_inner.className =  "text-muted";
                
                 consent_text.id = 'c-txt';
+                consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
                 overlay.id = 'cm-ov';
        
@@ -364,6 +366,7 @@
                 if(consent_modal_title_value){
                     var consent_title = _createNode('div');
                     consent_title.id = 'c-ttl';
+                    consent_title.className =  "h6";
                     consent_title.setAttribute('role', 'heading');
                     consent_title.setAttribute('aria-level', '2');
                     consent_title.insertAdjacentHTML('beforeend', consent_modal_title_value);

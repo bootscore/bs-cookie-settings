@@ -760,7 +760,7 @@
                     _cookieconsent.accept([]);
                 });
 
-                settings_inner.className = "bns-t";
+                settings_inner.className = "bns-t rounded";
                 settings_buttons.appendChild(reject_all_btn);
             }
 

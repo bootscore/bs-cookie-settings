@@ -335,7 +335,9 @@
                 var overlay = _createNode('div');
 
                 consent_modal.id = 'cm';
+                consent_modal.className =  "card shadow";
                 consent_modal_inner.id = 'c-inr';
+                consent_modal_inner.className =  "card-body";
                 consent_modal_inner_inner.id = 'c-inr-i';
                
                 consent_text.id = 'c-txt';

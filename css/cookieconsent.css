@@ -212,7 +212,7 @@
 
 #cm{
     font-family: inherit;
-    padding: 1.1em 1.8em 1.4em 1.8em;
+    /*padding: 1.1em 1.8em 1.4em 1.8em;*/
     position: fixed;
     z-index: 1;
     background: #fff;
@@ -974,7 +974,7 @@ html.force--consent.show--consent body{
     left: 1em;
     right: 1em;
     overflow: hidden;
-    padding: 1.3em 2em;
+    /*padding: 1.3em 2em;*/
     width: unset;
 }
 

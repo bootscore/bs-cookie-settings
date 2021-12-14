@@ -438,6 +438,7 @@ CookieConsent settings modal
     margin-bottom: .5em;
 }
 
+/*
 #s-bl .b-acc{
     max-height: 0;
     overflow: hidden;
@@ -451,6 +452,7 @@ CookieConsent settings modal
     display: block;
     overflow: hidden;
 }
+*/
 
 #s-cnt .p{
     font-size: 0.9em;

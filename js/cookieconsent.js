@@ -537,6 +537,7 @@
                 if(title_data && typeof toggle_data !== 'undefined'){
 
                     var accordion_id = "c-ac-"+i;
+                    var accordion_id_toggler = "#c-ac-"+i;
 
                     // Create button (to collapse/expand block description)
                     var block_title_btn = isExpandable ? _createNode('button') : _createNode('div');
@@ -559,6 +560,8 @@
 
                     if(isExpandable){
                         block_title_btn.setAttribute('aria-expanded', 'false');
+                        block_title_btn.setAttribute('data-bs-toggle', 'collapse');
+                        block_title_btn.setAttribute('data-bs-target', accordion_id_toggler);
                         block_title_btn.setAttribute('aria-controls', accordion_id);
                     }
 
@@ -607,6 +610,7 @@
                     }
 
                     _addClass(block_table_container, 'b-acc');
+                    _addClass(block_table_container, 'collapse');
                     _addClass(block_title_container, 'b-bn');
                     _addClass(block_section, 'b-ex');
 

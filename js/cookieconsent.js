@@ -473,7 +473,7 @@
             settings_close_btn.id = 's-c-bn';
             overlay.id = 'cs-ov';
             settings_close_btn_container.id = 's-c-bnc';
-            settings_close_btn.className = 'c-bn';
+            settings_close_btn.className = 'c-bn btn-close';
 
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
             settings_container.setAttribute('role', 'dialog');

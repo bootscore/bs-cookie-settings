@@ -614,6 +614,7 @@ CookieConsent settings modal
     font-size: 1em;
 }
 
+/*
 #s-c-bn{
     padding: 0;
     width: 1.7em;
@@ -623,6 +624,7 @@ CookieConsent settings modal
     font-weight: initial;
     position: relative;
 }
+*/
 
 #s-c-bnc{
     display: table-cell;

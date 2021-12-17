@@ -473,8 +473,21 @@
             settings_close_btn.id = 's-c-bn';
             overlay.id = 'cs-ov';
             settings_close_btn_container.id = 's-c-bnc';
+          
+            /**
+             * Set classes
+             */
+            settings_container_inner.className = "modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down";
+            settings_inner.className = 'modal-content';
+            settings_header.className = "modal-header";
+            settings_title.className = 'h5 modal-title';
             settings_close_btn.className = 'c-bn btn-close';
+            settings_blocks.className = 'modal-body';
 
+          
+            /**
+             * Set attributes
+             */          
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
             settings_container.setAttribute('role', 'dialog');
             settings_container.setAttribute('aria-modal', 'true');
@@ -739,6 +752,7 @@
             var settings_accept_all_btn = _createNode('button');
 
             settings_buttons.id = 's-bns';
+            settings_buttons.className = 'modal-footer';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
             settings_save_btn.className ='c-bn btn btn-outline-secondary';
@@ -764,7 +778,7 @@
                     _cookieconsent.accept([]);
                 });
 
-                settings_inner.className = "bns-t rounded";
+                settings_inner.className = "bns-t modal-content";
                 settings_buttons.appendChild(reject_all_btn);
             }
 

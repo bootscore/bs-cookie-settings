@@ -483,28 +483,32 @@ CookieConsent settings modal
     height: 100%;
 }
 
-#s-inr{
-    height: 100%;
+
+#s-inr {
+    /* height: 100%; */
     position: relative;
-    max-width: 45em;
-    margin: 0 auto;
+    /* max-width: 45em; */
+    /* margin: 0 auto; */
     transform: scale(.96);
     opacity: 0;
-    padding-top: 4.75em;
-    padding-bottom: 4.75em;
+    /* padding-top: 4.75em; */
+    /* padding-bottom: 4.75em; */
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     overflow: hidden;
     visibility: hidden;
-    box-shadow: rgba(3, 6, 9, .26) 0px 13px 27px -5px;
+    /* box-shadow: rgb(3 6 9 / 26%) 0px 13px 27px -5px; */
 }
 
+
+/*
 #s-inr,
 #s-hdr,
 #s-bns{
     background: #fff;
     background: var(--cc-bg);
 }
+*/
 
 #s-bl{
 	overflow-y: auto;
@@ -516,6 +520,7 @@ CookieConsent settings modal
     width: 100%;
 }
 
+/*
 #s-bns{
     position: absolute;
     bottom: 0;
@@ -526,6 +531,8 @@ CookieConsent settings modal
     border-color: var(--cc-section-border);
     height: 4.75em;
 }
+*/
+
 
 .cc_div .cc-link{
   /*
@@ -597,6 +604,7 @@ CookieConsent settings modal
     background: var(--cc-btn-secondary-hover-bg);
 }
 
+/*
 #s-hdr{
     position: absolute;
     top: 0;
@@ -609,6 +617,7 @@ CookieConsent settings modal
     border-bottom: 1px solid #f1f3f5;
     border-color: var(--cc-section-border);
 }
+*/
 
 #s-ttl{
 	display: table-cell;
@@ -648,6 +657,7 @@ CookieConsent settings modal
     margin-top: 1.250em;
 }
 
+/*
 #c-s-in{
     position: relative;
     transform: translateY(-50%);
@@ -656,6 +666,7 @@ CookieConsent settings modal
     height: calc(100% - 2.5em);
     max-height: 37.5em;
 }
+*/
 
 @media screen and (min-width: 688px) {
     /** works only on webkit-based browsers **/
@@ -1237,10 +1248,12 @@ html.force--consent.show--consent body{
         font-size: .85em;
     }
 
+  /*
     #s-bns,
     .cc_div .bar #s-bns{
         padding: 1em 1.3em;
     }
+  */
 
     .cc_div .bar #s-inr{
         max-width: 100%;
@@ -1256,50 +1269,62 @@ html.force--consent.show--consent body{
         padding: 0;
     }
 
+  /*
     #c-s-in{
         max-height: 100%;
         height: 100%;
         top: 0;
         transform: none;
     }
+  */
 
     .cc_div .b-tg{
         transform: scale(1.1);
         right: 1.1em;
     }
 
+  /*
     #s-inr{
         margin: 0;
         padding-bottom: 7.9em;
         border-radius: 0;
     }
+  */
 
+  /*
     #s-bns{
         height: 7.9em;
     }
+  */
 
 	#s-bl,
     .cc_div .bar #s-bl{
 		padding: 1.3em;
     }
     
+  /*
 	#s-hdr,
     .cc_div .bar #s-hdr{
         padding: 0 1.3em;
     }
-
+*/
+  
     /** dynamic table layout **/
     #s-bl table { 
         width: 100%; 
     }
 
+  /*
     #s-inr.bns-t{
         padding-bottom: 10.5em;
     }
+  */
 
+  /*
     .bns-t #s-bns{
         height: 10.5em;
     }
+  */
 
     .cc_div .bns-t .c-bn{
         font-size: 0.83em;

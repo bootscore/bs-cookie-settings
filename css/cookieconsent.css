@@ -211,7 +211,7 @@
 .force--consent.show--consent .c--anim #cm-ov,
 .show--settings .c--anim #cs-ov{
     visibility: visible!important;
-    opacity: 1!important;
+    opacity: .5!important;
 }
 
 #cm{
@@ -965,9 +965,12 @@ CookieConsent settings modal
     bottom: 0;
     visibility: hidden;
     opacity: 0;
+  /*
     background: #070707;
     background: rgba(4, 6, 8, .85);
     background: var(--cc-overlay-bg);
+  */
+  background-color: #000000;
     display: none;
     transition: none;
 }

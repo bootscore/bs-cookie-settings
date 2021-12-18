@@ -331,9 +331,11 @@ CookieConsent settings modal
     visibility: hidden;
 }
 
+/*
 #s-bl{
     outline: none;
 }
+*/
 
 #s-bl .title{
     margin-top: 1.4em;
@@ -516,13 +518,17 @@ CookieConsent settings modal
 
 
 #s-bl{
+  /*
 	overflow-y: auto;
     overflow-y: overlay;
+  */
     overflow-x: hidden;
+  /*
     height: 100%;
     padding: 1.3em 2.1em;
     display: block;
     width: 100%;
+  */
 }
 
 
@@ -1312,10 +1318,13 @@ html.force--consent.show--consent body{
     }
   */
 
+  
+  /*
 	#s-bl,
     .cc_div .bar #s-bl{
 		padding: 1.3em;
     }
+  */
     
   /*
 	#s-hdr,
@@ -1403,20 +1412,28 @@ html.force--consent.show--consent body{
     }
   */
 
+  /*
     #s-cnt #s-rall-bn{
         margin-left: 0;
     }
+  */
 
     .cc_div #c-bns{
         flex-direction: column;
     }
+  
+  div#s-bns {
+    justify-content: normal;
+}
 
+  /*
     #c-bns button + button,
     #s-cnt button + button{
         margin-top: 0.625em;
         margin-left: 0;
         float: unset;
     }
+  */
 
     #cm.cloud,
     #cm.box{

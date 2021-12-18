@@ -482,7 +482,7 @@
             settings_header.className = "modal-header";
             settings_title.className = 'h5 modal-title';
             settings_close_btn.className = 'c-bn btn-close focus-none';
-            settings_blocks.className = 'modal-body';
+            settings_blocks.className = 'modal-body position-static';
 
           
             /**
@@ -752,10 +752,10 @@
             var settings_accept_all_btn = _createNode('button');
 
             settings_buttons.id = 's-bns';
-            settings_buttons.className = 'modal-footer';
+            settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn btn btn-outline-secondary';
+            settings_save_btn.className ='c-bn btn btn-outline-secondary ms-sm-auto';
             settings_accept_all_btn.className ='c-bn btn btn-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);

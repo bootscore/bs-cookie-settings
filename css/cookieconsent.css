@@ -292,6 +292,7 @@
 }
 */
 
+/*
 #c-bns button + button,
 #s-cnt button + button,
 #s-c-bn{
@@ -302,6 +303,7 @@
 #s-cnt #s-rall-bn{
     float: none;
 }
+*/
 
 /*
 #cm .c_link:hover,
@@ -350,6 +352,7 @@ CookieConsent settings modal
     padding: 1em;
 }
 
+
 #s-cnt .b-bn .b-tl{
     display: block;
     font-family: inherit;
@@ -360,6 +363,7 @@ CookieConsent settings modal
     background: none;
     transition: background-color .25s ease;
 }
+
 
 #s-cnt .b-bn .b-tl.exp{
     cursor: pointer;
@@ -510,6 +514,7 @@ CookieConsent settings modal
 }
 */
 
+
 #s-bl{
 	overflow-y: auto;
     overflow-y: overlay;
@@ -519,6 +524,7 @@ CookieConsent settings modal
     display: block;
     width: 100%;
 }
+
 
 /*
 #s-bns{
@@ -619,11 +625,13 @@ CookieConsent settings modal
 }
 */
 
+/*
 #s-ttl{
 	display: table-cell;
     vertical-align: middle;
     font-size: 1em;
 }
+*/
 
 /*
 #s-c-bn{
@@ -637,10 +645,12 @@ CookieConsent settings modal
 }
 */
 
+/*
 #s-c-bnc{
     display: table-cell;
     vertical-align: middle;
 }
+*/
 
 .cc_div span.t-lb {
     position: absolute;
@@ -668,8 +678,9 @@ CookieConsent settings modal
 }
 */
 
+/*
 @media screen and (min-width: 688px) {
-    /** works only on webkit-based browsers **/
+
     #s-bl::-webkit-scrollbar{
         width: .9em;
         height: 100%;
@@ -694,6 +705,7 @@ CookieConsent settings modal
         height: 5px;
     }
 }
+*/
 
 /** custom checkbox **/
 /* The container */
@@ -1326,10 +1338,12 @@ html.force--consent.show--consent body{
     }
   */
 
+  /*
     .cc_div .bns-t .c-bn{
         font-size: 0.83em;
         padding: .9em 1.6em;
     }
+  */
 
     #s-cnt .b-bn .b-tl{
         padding-top: 1.2em;
@@ -1378,11 +1392,13 @@ html.force--consent.show--consent body{
         text-overflow: ellipsis;
     }
 
+  /*
     #cm .c-bn,
     .cc_div .c-bn{
         width: 100%;
         margin-right: 0;
     }
+  */
 
     #s-cnt #s-rall-bn{
         margin-left: 0;

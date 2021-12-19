@@ -294,7 +294,8 @@
 
             // Fix layout flash
             main_container.style.position = "fixed";
-            main_container.style.zIndex = "1000000";
+            //main_container.style.zIndex = "1000000";
+            main_container.style.zIndex = "1060";
             main_container.innerHTML = '<!--[if lt IE 9 ]><div id="cc_div" class="cc_div ie"></div><![endif]--><!--[if (gt IE 8)|!(IE)]><!--><div id="cc_div" class="cc_div"></div><!--<![endif]-->'
             var all_modals_container = main_container.children[0];
 

@@ -142,7 +142,7 @@
 .c--anim #s-inr,
 #cs-ov,
 #cm-ov{
-    transition: visibility .25s linear, opacity .25s ease, transform .25s ease!important;
+    transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out!important;
 }
 
 /*

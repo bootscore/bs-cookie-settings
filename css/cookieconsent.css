@@ -317,6 +317,12 @@
 }
 */
 
+.c-bn.btn-close:focus {
+    opacity: .5;
+    /* outline: 0; */
+    box-shadow: none;
+}
+
 /**
 CookieConsent settings modal
 **/

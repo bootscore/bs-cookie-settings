@@ -174,9 +174,13 @@
     opacity: 1;
 }
 
-#cm.slide,
-.cc_div .slide #s-inr{
+#cm.slide{
     transform: translateY(1.6em);
+}
+
+
+.cc_div .slide #s-inr{
+    transform: translateY(-1.6em);
 }
 
 #cm.top.slide{

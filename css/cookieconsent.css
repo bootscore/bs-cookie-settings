@@ -122,6 +122,11 @@
 }
 */
 
+/* Lock body scroll when settings are open */
+.show--settings body {
+    overflow: hidden;
+}
+
 .cc_div a{
     border-bottom: 1px solid;
 }
@@ -343,9 +348,11 @@ CookieConsent settings modal
 }
 */
 
+/*
 #s-bl .title{
     margin-top: 1.4em;
 }
+*/
 
 #s-bl .title:first-child{
     margin-top: 0;
@@ -1275,12 +1282,6 @@ html.force--consent.show--consent body{
         font-size: .85em;
     }
 
-  /*
-    #s-bns,
-    .cc_div .bar #s-bns{
-        padding: 1em 1.3em;
-    }
-  */
 
     .cc_div .bar #s-inr{
         max-width: 100%;
@@ -1470,7 +1471,9 @@ html.force--consent.show--consent body{
     }
 }
 
+
 /* Begin IE fixes */
+/*
 .cc_div.ie #c-vln{
 	height: 100%;
 	padding-top: 5.62em;
@@ -1549,5 +1552,5 @@ html.force--consent.show--consent body{
 .cc_div.ie #cs-ov{
     filter: alpha(opacity=80);
 }
-
+*/
 /** END IE FIXES **/

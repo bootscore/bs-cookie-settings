@@ -145,6 +145,10 @@
     transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out!important;
 }
 
+.show--consent .c--anim #cm {
+  transition-delay: 1s !important;
+}
+
 /*
 .c--anim .c-bn{
     transition: background-color .25s ease!important;

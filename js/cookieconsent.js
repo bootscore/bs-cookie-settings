@@ -2146,10 +2146,10 @@ window.addEventListener('load', function(){
                             ],
                             blocks: [
                                 {
-                                    title: 'Cookie usage 📢',
+                                    title: 'Cookie usage',
                                     description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
                                 }, {
-                                    title: 'Strictly necessary cookies',
+                                    title: 'Necessary',
                                     description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
                                     toggle: {
                                         value: 'necessary',
@@ -2157,7 +2157,7 @@ window.addEventListener('load', function(){
                                         readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
                                     }
                                 }, {
-                                    title: 'Performance and Analytics cookies',
+                                    title: 'Analytics',
                                     description: 'These cookies allow the website to remember the choices you have made in the past',
                                     toggle: {
                                         value: 'analytics',     // your cookie category
@@ -2169,7 +2169,7 @@ window.addEventListener('load', function(){
                                             col1: '^_ga',       // match all cookies starting with "_ga"
                                             col2: 'google.com',
                                             col3: '2 years',
-                                            col4: 'description ...',
+                                            col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                                             is_regex: true
                                         },
                                         {
@@ -2180,7 +2180,7 @@ window.addEventListener('load', function(){
                                         }
                                     ]
                                 }, {
-                                    title: 'Advertisement and Targeting cookies',
+                                    title: 'Advertisement',
                                     description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
                                     toggle: {
                                         value: 'targeting',

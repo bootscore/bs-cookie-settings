@@ -689,6 +689,7 @@ button.b-tl.exp::before {
 }
 */
 
+/*
 .cc_div span.t-lb {
   position: absolute;
   top: 0;
@@ -697,6 +698,7 @@ button.b-tl.exp::before {
   pointer-events: none;
   overflow: hidden;
 }
+*/
 
 #c_policy__text {
   height: 31.250em;

@@ -483,7 +483,7 @@
             settings_header.className = "modal-header";
             settings_title.className = 'h5 modal-title';
             settings_close_btn.className = 'c-bn btn-close';
-            settings_blocks.className = 'modal-body position-static';
+            settings_blocks.className = 'modal-body';
 
           
             /**
@@ -570,7 +570,7 @@
                     block_switch_span_on_icon.className = 'on-i';
                     block_switch_span_off_icon.className = 'off-i';
                     block_switch_span.className = 'c-tg';
-                    label_text_span.className = "t-lb";
+                    label_text_span.className = "t-lb d-none";
 
                     if(isExpandable){
                         block_title_btn.setAttribute('aria-expanded', 'false');

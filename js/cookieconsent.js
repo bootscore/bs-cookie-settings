@@ -564,7 +564,7 @@
                     var block_switch_span_on_icon = _createNode('span');
                     var block_switch_span_off_icon = _createNode('span');
 
-                    block_title_btn.className = isExpandable ? 'b-tl exp' : 'b-tl';
+                    block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
                     block_switch_label.className = 'b-tg form-check form-switch fs-4';
                     block_switch.className = 'c-tgl form-check-input cursor-pointer';
                     block_switch_span_on_icon.className = 'on-i';
@@ -625,8 +625,17 @@
 
                     _addClass(block_table_container, 'b-acc');
                     _addClass(block_table_container, 'collapse');
+                    _addClass(block_table_container, 'border-top');
                     _addClass(block_title_container, 'b-bn');
+                    _addClass(block_title_container, 'd-flex');
+                    _addClass(block_title_container, 'align-items-center');
+                    _addClass(block_title_container, 'position-relative');
                     _addClass(block_section, 'b-ex');
+                    _addClass(block_section, 'p-0');
+                    _addClass(block_section, 'bg-light');
+                    _addClass(block_section, 'rounded');
+                    //_addClass(block_section, 'border-0');
+                    _addClass(block_section, 'mb-2');
 
                     block_table_container.id = accordion_id;
                     block_table_container.setAttribute('aria-hidden', 'true');

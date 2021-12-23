@@ -537,7 +537,7 @@
                 // Create description
                 if(description_data){
                     var block_desc = _createNode('div');
-                    block_desc.className = 'p';
+                    block_desc.className = 'p small';
                     block_desc.insertAdjacentHTML('beforeend', description_data);
                 }
 
@@ -669,7 +669,7 @@
                      */
                     if(title_data){
                         var block_title = _createNode('div');
-                        block_title.className = 'b-tl';
+                        block_title.className = 'b-tl h6';
                         block_title.setAttribute('role', 'heading');
                         block_title.setAttribute('aria-level', '3');
                         block_title.insertAdjacentHTML('beforeend', title_data);

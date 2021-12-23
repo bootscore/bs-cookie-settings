@@ -50,6 +50,7 @@
 .cc_div *,
 .cc_div :before,
 .cc_div :after {
+  /*
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: none;
@@ -59,6 +60,7 @@
   font-family: inherit;
   line-height: 1.2;
   font-size: 1em;
+  */
   transition: none;
   animation: none;
   margin: 0;
@@ -532,6 +534,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
 }
 */
 
+/*
 #s-cnt .p {
   font-size: 0.9em;
   line-height: 1.5em;
@@ -539,6 +542,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
   color: #2d4156;
   color: var(--cc-block-text);
 }
+*/
 
 .cc_div .b-tg .c-tgl:disabled {
   cursor: not-allowed;

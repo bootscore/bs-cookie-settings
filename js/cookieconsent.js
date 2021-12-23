@@ -625,7 +625,7 @@
 
                     _addClass(block_table_container, 'b-acc');
                     _addClass(block_table_container, 'collapse');
-                    _addClass(block_table_container, 'border-top');
+                    //_addClass(block_table_container, 'border-top');
                     _addClass(block_title_container, 'b-bn');
                     _addClass(block_title_container, 'd-flex');
                     _addClass(block_title_container, 'align-items-center');

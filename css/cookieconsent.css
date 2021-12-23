@@ -1320,17 +1320,22 @@ html.force--consent.show--consent body {
 
 
 
+.b-tl {
+  color: inherit;
+}
+
 
   /** dynamic table layout **/
   #s-bl table {
     width: 100%;
   }
 
-
+/*
   #s-cnt .b-bn .b-tl {
     padding-top: 1.2em;
     padding-bottom: 1.2em;
   }
+*/
 
   /* Force table to not be like tables anymore */
   #s-bl table,

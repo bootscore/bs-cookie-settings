@@ -2088,7 +2088,7 @@ window.addEventListener('load', function(){
                 // force_consent: false,                   // default: false
                 // hide_from_bots: false,                  // default: false
                 // remove_cookie_tables: false             // default: false
-                // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
+                 cookie_name: 'bs_cookie',               // default: 'cc_cookie'
                 // cookie_expiration: 182,                 // default: 182 (days)
                 // cookie_domain: location.hostname,       // default: current domain
                 // cookie_path: '/',                       // default: root
@@ -2121,7 +2121,7 @@ window.addEventListener('load', function(){
                     'en': {
                         consent_modal: {
                             title: 'We use cookies!',
-                            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+                            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <a href="javascript:void(0)" data-cc="c-settings" class="cc-link btn-link">Let me choose</a>',
                             primary_btn: {
                                 text: 'Accept all',
                                 role: 'accept_all'              // 'accept_selected' or 'accept_all'

@@ -67,11 +67,13 @@
   padding: 0;
   text-transform: none;
   letter-spacing: unset;
-  color: inherit;
-  background: none;
   border: none;
   box-shadow: none;
+    background: none;
+  /*
+    color: inherit;
   text-decoration: none;
+  */
   text-align: left;
   visibility: unset;
 }
@@ -129,6 +131,7 @@
   overflow: hidden;
 }
 
+/*
 .cc_div a {
   border-bottom: 1px solid;
 }
@@ -137,6 +140,7 @@
   text-decoration: none;
   border-color: transparent;
 }
+*/
 
 /* Make elements "animatable" */
 .c--anim #cm,
@@ -622,28 +626,21 @@ button.b-tl.exp[aria-expanded="true"]::before {
 */
 
 
+/*
 .cc_div .cc-link {
-  /*
-    color: #253b48;
-  */
   color: var(--bs-primary);
-  /*  
-  border-bottom: 1px solid #253b48;
-    border-color: var(--cc-btn-primary-bg);
-  */
   display: inline;
   padding-bottom: 0;
   text-decoration: none;
   cursor: pointer;
-  /*
-    font-weight: 600;
-  */
 }
 
 .cc_div .cc-link:hover,
 .cc_div .cc-link:active {
   border-color: transparent;
 }
+*/
+
 
 /*
 #c-bns button:first-child,

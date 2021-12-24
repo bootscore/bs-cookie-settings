@@ -597,19 +597,17 @@ button.b-tl.exp[aria-expanded="true"]::before {
 */
 
 
+/*
 #s-bl {
-  /*
 	overflow-y: auto;
     overflow-y: overlay;
-  */
   overflow-x: hidden;
-  /*
     height: 100%;
     padding: 1.3em 2.1em;
     display: block;
     width: 100%;
-  */
 }
+*/
 
 
 /*
@@ -1018,13 +1016,22 @@ button.b-tl.exp[aria-expanded="true"]::before {
 */
 
 .desc.b-acc {
-    border-top: 1px solid var(--bs-gray-300);
+    border-top: 2px solid;
+  border-color: var(--bs-white);
 }
 
 #s-bl tr {
     padding: 1rem;
-    border-top: 1px solid var(--bs-gray-300);
+    border-top: 2px solid;
+  border-color: var(--bs-white); 
 }
+
+/* Dark-mode plugin */
+.dark-theme .desc.b-acc,
+.dark-theme #s-bl tr{
+    border-color: var(--bs-gray-dark);
+}
+/* Dark-mode plugin */
 
 #s-bl td, #s-bl th {
     padding: 0.25rem 0;

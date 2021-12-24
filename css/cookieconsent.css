@@ -1026,12 +1026,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
   border-color: var(--bs-white); 
 }
 
-/* Dark-mode plugin */
-.dark-theme .desc.b-acc,
-.dark-theme #s-bl tr{
-    border-color: var(--bs-gray-dark);
-}
-/* Dark-mode plugin */
+
 
 #s-bl td, #s-bl th {
     padding: 0.25rem 0;

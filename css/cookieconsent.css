@@ -152,7 +152,7 @@
 }
 
 .show--consent .c--anim #cm {
-  transition-delay: 1s !important;
+  transition-delay: 2s !important;
 }
 
 /*
@@ -239,17 +239,23 @@
     font-family: inherit;
     padding: 1.1em 1.8em 1.4em 1.8em;
   */
+  /*
   position: fixed;
+  */
   z-index: 1;
 
   /*
   background: #fff;
     background: var(--cc-bg);
   */
+  /*
   max-width: 24.2em;
+  */
+  /*
   width: 100%;
-  bottom: 1.250em;
-  right: 1.250em;
+  bottom: 0;
+  right: 0;
+  */
   /*
     box-shadow: 0 0.625em 1.875em #000000;
     box-shadow: 0 0.625em 1.875em rgba(2, 2, 3, 0.28);
@@ -257,13 +263,17 @@
   opacity: 0;
   visibility: hidden;
   transform: scale(.95);
+  /*
   line-height: initial;
+  */
 }
 
 /** fix https://github.com/orestbida/cookieconsent/issues/94 **/
+/*
 #cc_div #cm {
   display: block !important;
 }
+*/
 
 /*
 #c-ttl{
@@ -285,11 +295,13 @@
 }
 */
 
+/*
 .cc_div #c-bns {
   display: flex;
   justify-content: space-between;
   margin-top: 1.4em;
 }
+*/
 
 /*
 .cc_div .c-bn{
@@ -1389,6 +1401,7 @@ html.force--consent.show--consent body {
 
 @media screen and (max-width: 575px) {
 
+  /*
   #cm,
   #cm.cloud,
   #cm.left,
@@ -1402,6 +1415,7 @@ html.force--consent.show--consent body {
     bottom: 1em;
     display: block;
   }
+  */
 
   .force--consent #cm,
   .force--consent #cm.cloud {
@@ -1452,10 +1466,11 @@ html.force--consent.show--consent body {
 
 
 
-
+/*
   .cc_div #c-bns {
     flex-direction: column;
   }
+  */
 
   div#s-bns {
     justify-content: normal;

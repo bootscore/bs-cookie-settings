@@ -328,6 +328,7 @@
                 }
 
                 consent_modal = _createNode('div');
+                var consent_modal_container = _createNode('div');
                 var consent_modal_inner = _createNode('div');
                 var consent_modal_inner_inner = _createNode('div');
                 
@@ -336,16 +337,17 @@
                 var overlay = _createNode('div');
 
                 consent_modal.id = 'cm';
-                consent_modal.className =  "py-4 py-md-5 bg-light position-fixed end-0 bottom-0 start-0 d-block";
+                consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block";
+                consent_modal_container.className =  "container";
                 consent_modal_inner.id = 'c-inr';
-                consent_modal_inner.className =  "container d-md-flex";
+                consent_modal_inner.className =  "row";
                 consent_modal_inner_inner.id = 'c-inr-i';
-                consent_modal_inner_inner.className =  "mb-4 mb-md-0 pe-md-5 w-75";
+                consent_modal_inner_inner.className =  "col mb-4 mb-md-0";
                
                 consent_text.id = 'c-txt';
                 //consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
-                consent_buttons.className =  "d-flex flex-column gap-2 justify-content-sm-center flex-grow-1";
+                consent_buttons.className =  "col-md-4 col-xxl-3 d-flex flex-column justify-content-center gap-2";
                 overlay.id = 'cm-ov';
        
                 
@@ -432,9 +434,11 @@
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                 }
 
+                consent_modal.appendChild(consent_modal_container);
+                consent_modal_container.appendChild(consent_modal_inner);
                 consent_modal_inner.appendChild(consent_modal_inner_inner);
                 (primary_btn_data || secondary_btn_data ) && consent_modal_inner.appendChild(consent_buttons);
-                consent_modal.appendChild(consent_modal_inner);
+  
 
                 // Append consent modal to main container
                 all_modals_container.appendChild(consent_modal);

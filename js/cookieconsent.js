@@ -483,6 +483,7 @@
             /**
              * Set classes
              */
+            settings.className = "position-fixed top-0 end-0 bottom-0 start-0";
             settings_container.className = "slide";  
             settings_container_inner.className = "modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down";
             settings_inner.className = 'modal-content';

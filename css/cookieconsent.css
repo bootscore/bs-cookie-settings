@@ -184,67 +184,8 @@ button.b-tl.exp[aria-expanded="true"]::before {
   cursor: not-allowed;
 }
 
-#c-vln {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-}
-
-#cs {
-  padding: 0 1.7em;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-}
-
-
 #s-inr {
-  position: relative;
   opacity: 0;
-  position: relative;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#c-bns.swap button:first-child {
-  color: #40505a;
-  color: var(--cc-btn-secondary-text);
-  background: #e5ebef;
-  background: var(--cc-btn-secondary-bg);
-}
-
-#c-bns.swap button:last-child {
-  color: #fff;
-  color: var(--cc-btn-primary-text);
-  background: #253b48;
-  background: var(--cc-btn-primary-bg);
-}
-
-.cc_div .b-tg .c-tgl:checked ~ .c-tg {
-  background: #253b48;
-  background: var(--cc-toggle-bg-on);
-}
-
-#c-bns.swap button:first-child:active,
-#c-bns.swap button:first-child:hover {
-  background: #3e454a;
-  background: var(--cc-btn-secondary-hover-bg);
-}
-
-#c_policy__text {
-  height: 31.250em;
-  overflow-y: auto;
-  margin-top: 1.250em;
-}
-
-#s-bl table,
-#s-bl th,
-#s-bl td {
-  border: none;
 }
 
 .desc.b-acc {
@@ -262,16 +203,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
 #s-bl th {
   padding: 0.25rem 0;
   font-size: .875em;
-}
-
-#s-bl th {
-  font-family: inherit;
-  padding: 1.2em 1.2em;
-}
-
-#s-bl thead tr:first-child {
-  border-bottom: 1px solid #e9edf2;
-  border-color: var(--cc-cookie-table-border);
 }
 
 .force--consent #s-cnt,

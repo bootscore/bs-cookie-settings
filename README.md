@@ -35,7 +35,7 @@ HTML widget in Footer 4
           },
 
           settings_modal: {
-            title: 'Cookie preferences',
+            title: 'Cookie settings',
             save_settings_btn: 'Save settings',
             accept_all_btn: 'Accept all',
             reject_all_btn: 'Reject all',
@@ -123,4 +123,17 @@ Footer 4 HTML Widget
 
 <script type="text/plain" data-cookiecategory="marketing" src="./assets/js/my_custom_script.js" defer></script>
 
+```
+
+## Open settings modal
+
+Footer 1 HTML widget
+
+```html
+<a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
+```
+or
+
+```html
+<button type="button" class="btn btn-primary" data-cc="c-settings">Cookie settings</button>
 ```

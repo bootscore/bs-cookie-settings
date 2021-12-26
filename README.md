@@ -1,4 +1,4 @@
-# bs-cookie-orestbida
+# bS Cookie Settings
 
 
 ## Init

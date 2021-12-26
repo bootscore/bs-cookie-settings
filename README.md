@@ -16,8 +16,8 @@ HTML widget in Footer 4
     // run plugin with your configuration
     cc.run({
       current_lang: 'en',
-      autoclear_cookies: true,                   // default: false
-      page_scripts: true,                        // default: false
+      autoclear_cookies: true,
+      page_scripts: true,
 
       languages: {
         'en': {
@@ -26,11 +26,11 @@ HTML widget in Footer 4
             description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit "Cookie settings" to provide a controlled consent. <a href="javascript:void(0)" data-cc="c-settings" class="cc-link btn-link">Cookie settings</a>',
             primary_btn: {
               text: 'Accept all',
-              role: 'accept_all'              // 'accept_selected' or 'accept_all'
+              role: 'accept_all'
             },
             secondary_btn: {
               text: 'Reject all',
-              role: 'accept_necessary'        // 'settings' or 'accept_necessary'
+              role: 'accept_necessary'
             }
           },
 
@@ -49,7 +49,7 @@ HTML widget in Footer 4
             blocks: [
               {
                 title: 'Cookie usage',
-                description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy" class="cc-link">privacy policy</a>.'
               }, {
                 title: 'Necessary',
                 description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
@@ -71,14 +71,14 @@ HTML widget in Footer 4
                     col1: '^_ga',       // match all cookies starting with "_ga"
                     col2: 'google.com',
                     col3: '2 years',
-                    col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+                    col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                     is_regex: true
                   },
                   {
                     col1: '_gid',
                     col2: 'google.com',
                     col3: '1 day',
-                    col4: 'description ...',
+                    col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                   }
                 ]
               }, {
@@ -88,7 +88,22 @@ HTML widget in Footer 4
                   value: 'marketing',
                   enabled: false,
                   readonly: false
-                }
+                },
+                cookie_table: [             // list of all expected cookies
+                  {
+                    col1: '_name',
+                    col2: 'xyz.com',
+                    col3: '2 weeks',
+                    col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
+                    is_regex: true
+                  },
+                  {
+                    col1: '_name',
+                    col2: 'xyz.com',
+                    col3: '3 days',
+                    col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
+                  }
+                ]
               }, {
                 title: 'More information',
                 description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
@@ -108,7 +123,7 @@ HTML widget in Footer 4
 
 ## 3rd party scripts
 
-Footer 4 HTML Widget
+HTML widget in Footer 4
 
 ```html
 <script type="text/plain" data-cookiecategory="analytics">
@@ -127,7 +142,7 @@ Footer 4 HTML Widget
 
 ## Open settings modal
 
-Footer 1 HTML widget and privacy policy
+HTML widget in Footer 1 and privacy policy
 
 ```html
 <a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>

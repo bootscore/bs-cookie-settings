@@ -1,52 +1,3 @@
-/** Light color-scheme **/
-:root {
-  --cc-bg: #fff;
-  --cc-text: #2d4156;
-  --cc-btn-primary-bg: #2d4156;
-  --cc-btn-primary-text: var(--cc-bg);
-  --cc-btn-primary-hover-bg: #1d2e38;
-  --cc-btn-secondary-bg: #eaeff2;
-  --cc-btn-secondary-text: var(--cc-text);
-  --cc-btn-secondary-hover-bg: #d8e0e6;
-  --cc-toggle-bg-off: #919ea6;
-  --cc-toggle-bg-on: var(--cc-btn-primary-bg);
-  --cc-toggle-bg-readonly: #d5dee2;
-  --cc-toggle-knob-bg: #fff;
-  --cc-toggle-knob-icon-color: #ecf2fa;
-  --cc-block-text: var(--cc-text);
-  --cc-cookie-category-block-bg: #f0f4f7;
-  --cc-cookie-category-block-bg-hover: #e9eff4;
-  --cc-section-border: #f1f3f5;
-  --cc-cookie-table-border: #e9edf2;
-  --cc-overlay-bg: rgba(4, 6, 8, .85);
-  --cc-webkit-scrollbar-bg: #cfd5db;
-  --cc-webkit-scrollbar-bg-hover: #9199a0;
-}
-
-/** Dark color-scheme **/
-.c_darkmode {
-  --cc-bg: #181b1d;
-  --cc-text: #d8e5ea;
-  --cc-btn-primary-bg: #a6c4dd;
-  --cc-btn-primary-text: #000;
-  --cc-btn-primary-hover-bg: #c2dff7;
-  --cc-btn-secondary-bg: #33383c;
-  --cc-btn-secondary-text: var(--cc-text);
-  --cc-btn-secondary-hover-bg: #3e454a;
-  --cc-toggle-bg-off: #667481;
-  --cc-toggle-bg-on: var(--cc-btn-primary-bg);
-  --cc-toggle-bg-readonly: #454c54;
-  --cc-toggle-knob-bg: var(--cc-cookie-category-block-bg);
-  --cc-toggle-knob-icon-color: var(--cc-bg);
-  --cc-block-text: #b3bfc5;
-  --cc-cookie-category-block-bg: #23272a;
-  --cc-cookie-category-block-bg-hover: #2b3035;
-  --cc-section-border: #292d31;
-  --cc-cookie-table-border: #2b3035;
-  --cc-webkit-scrollbar-bg: #667481;
-  --cc-webkit-scrollbar-bg-hover: #9199a0;
-}
-
 .cc_div *,
 .cc_div :before,
 .cc_div :after {
@@ -138,11 +89,6 @@
   visibility: visible !important;
 }
 
-.show--consent .c--anim #cm.box.middle,
-.show--consent .c--anim #cm.cloud.middle {
-  transform: scale(1) translateY(-50%);
-}
-
 .show--settings .c--anim #s-cnt {
   visibility: visible !important;
 }
@@ -158,7 +104,6 @@
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transform: scale(.95);
 }
 
 .c-bn.btn-close:focus {
@@ -259,7 +204,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
 
 #s-inr {
   position: relative;
-  transform: scale(.96);
   opacity: 0;
   position: relative;
   overflow: hidden;
@@ -402,11 +346,6 @@ html.force--consent.show--consent body {
   top: 50%;
   transform: translateY(-37%);
   bottom: auto;
-}
-
-#cm.box.middle.zoom,
-#cm.cloud.middle.zoom {
-  transform: scale(.95) translateY(-50%);
 }
 
 #cm.box.center {

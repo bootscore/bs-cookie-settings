@@ -127,13 +127,8 @@ Footer 4 HTML Widget
 
 ## Open settings modal
 
-Footer 1 HTML widget
+Footer 1 HTML widget and privacy policy
 
 ```html
 <a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
-```
-or
-
-```html
-<button type="button" class="btn btn-primary" data-cc="c-settings">Cookie settings</button>
 ```

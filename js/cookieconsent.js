@@ -337,7 +337,7 @@
                 var overlay = _createNode('div');
 
                 consent_modal.id = 'cm';
-                consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block";
+                consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block slide";
                 consent_modal_container.className =  "container";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row";
@@ -483,6 +483,7 @@
             /**
              * Set classes
              */
+            settings_container.className = "slide";  
             settings_container_inner.className = "modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down";
             settings_inner.className = 'modal-content';
             settings_header.className = "modal-header";
@@ -2102,6 +2103,7 @@ window.addEventListener('load', function(){
                 // use_rfc_cookie: false,                  // default: false
                 // revision: 0,                            // default: 0
 
+              /*
                 onAccept: function (cookie) {
                     // ...
                 },
@@ -2109,19 +2111,22 @@ window.addEventListener('load', function(){
                 onChange: function (cookie, changed_preferences) {
                     // ...
                 },
+                */
               
+              /*
                 gui_options: {
                   consent_modal: {
                     //layout: 'cloud',               // box/cloud/bar
                     //position: 'bottom center',     // bottom/middle/top + left/right/center
-                    transition: 'slide'            // zoom/slide
+                    //transition: 'slide'            // zoom/slide
                   },
                     settings_modal: {
-                      layout: 'box',                 // box/bar
+                      //layout: 'box',                 // box/bar
                       // position: 'left',           // left/right
-                      transition: 'slide'            // zoom/slide
+                      //transition: 'slide'            // zoom/slide
                     }
                 },
+                */
 
                 languages: {
                     'en': {

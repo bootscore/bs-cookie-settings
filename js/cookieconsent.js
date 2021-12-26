@@ -487,6 +487,7 @@
             settings_inner.className = 'modal-content';
             settings_header.className = "modal-header";
             settings_title.className = 'h5 modal-title';
+            settings_close_btn_container.className = 'd-flex';
             settings_close_btn.className = 'c-bn btn-close';
             settings_blocks.className = 'modal-body';
 

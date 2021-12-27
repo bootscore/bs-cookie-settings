@@ -166,11 +166,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
   font-size: .875em;
 }
 
-.force--consent #s-cnt,
-.force--consent #cs {
-  width: 100vw;
-}
-
 #cm-ov,
 #cs-ov {
   position: fixed;
@@ -186,9 +181,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
 }
 
 .show--settings #cs-ov,
-.c--anim #cs-ov,
-.force--consent .c--anim #cm-ov,
-.force--consent.show--consent #cm-ov {
+.c--anim #cs-ov {
   display: block;
 }
 
@@ -196,40 +189,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
   z-index: 2;
 }
 
-.force--consent .cc_div {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  width: 100vw;
-  visibility: hidden;
-  transition: visibility .25s linear;
-}
 
-.force--consent.show--consent .c--anim .cc_div,
-.force--consent.show--settings .c--anim .cc_div {
-  visibility: visible;
-}
-
-.force--consent #cm {
-  position: absolute;
-}
-
-.force--consent #cm.bar {
-  width: 100vw;
-  max-width: 100vw;
-}
-
-html.force--consent.show--consent {
-  overflow-y: hidden !important;
-}
-
-html.force--consent.show--consent,
-html.force--consent.show--consent body {
-  height: auto !important;
-  overflow-x: hidden !important;
-}
 
 /** END BLOCK PAGE SCROLL */
 

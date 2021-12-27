@@ -33,29 +33,19 @@
 }
 
 /* start transitions */
-
-
 #cm.slide {
   transform: translateY(1.6em);
 }
 
-
 .cc_div .slide #s-inr {
   transform: translateY(-1.6em);
 }
-
-#cm.top.slide {
-  transform: translateY(-1.6em);
-}
-
 /* end transitions */
 
 /* Show modals */
 
 .show--consent .c--anim #cm,
-.show--consent .c--anim #cm.bar,
-.show--settings .c--anim #s-inr,
-.show--settings .c--anim .bar.slide #s-inr {
+.show--settings .c--anim #s-inr {
   opacity: 1;
   transform: scale(1);
   visibility: visible !important;

@@ -43,7 +43,6 @@
 /* end transitions */
 
 /* Show modals */
-
 .show--consent .c--anim #cm,
 .show--settings .c--anim #s-inr {
   opacity: 1;
@@ -56,7 +55,7 @@
 }
 
 /* Show overlays */
-.force--consent.show--consent .c--anim #cm-ov,
+
 .show--settings .c--anim #cs-ov {
   visibility: visible !important;
   opacity: .5 !important;
@@ -236,43 +235,6 @@ html.force--consent.show--consent body {
 
 
 
-#cm.box.center {
-  left: 1em;
-  right: 1em;
-  margin: 0 auto;
-}
-
-
-
-/* Positions */
-#cm.top {
-  bottom: auto;
-  top: 1.250em;
-}
-
-#cm.left {
-  right: auto;
-  left: 1.250em;
-}
-
-#cm.right {
-  left: auto;
-  right: 1.250em;
-}
-
-#cm.bar.left,
-#cm.bar.right {
-  left: 0;
-  right: 0;
-}
-
-#cm.bar.top {
-  top: 0;
-}
-
-/* end positions */
-
-
 /** dynamic table layout **/
 #s-bl table {
   width: 100%;
@@ -312,8 +274,6 @@ html.force--consent.show--consent body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
 
 /* Modal footer buttons */
 @media screen and (max-width: 575px) {

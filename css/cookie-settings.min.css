@@ -75,13 +75,8 @@
 CookieConsent settings modal
 **/
 #s-cnt {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   z-index: 101;
   display: table;
-  height: 100%;
   visibility: hidden;
 }
 
@@ -166,13 +161,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
 }
 
 #cs-ov {
-  /*
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  */
   visibility: hidden;
   opacity: 0;
   background-color: #000000;
@@ -188,7 +176,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
 #cs-ov {
   z-index: 2;
 }
-
 
 /** dynamic table layout **/
 #s-bl table {

@@ -93,6 +93,10 @@ CookieConsent settings modal
   padding: 1em;
 }
 
+.exp {
+  color: inherit;
+}
+
 button.b-tl.exp::before {
   content: "\f054";
   display: inline-block;

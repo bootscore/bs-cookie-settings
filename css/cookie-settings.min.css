@@ -68,14 +68,6 @@
   transform: translateY(-1.6em);
 }
 
-#cm.bar.slide {
-  transform: translateY(100%);
-}
-
-#cm.bar.top.slide {
-  transform: translateY(-100%);
-}
-
 /* end transitions */
 
 /* Show modals */
@@ -272,12 +264,7 @@ html.force--consent.show--consent body {
 
 /** END BLOCK PAGE SCROLL */
 
-#cm.box.middle,
-#cm.cloud.middle {
-  top: 50%;
-  transform: translateY(-37%);
-  bottom: auto;
-}
+
 
 #cm.box.center {
   left: 1em;
@@ -286,106 +273,6 @@ html.force--consent.show--consent body {
 }
 
 
-/* Start bar layout */
-#cm.bar {
-  width: 100%;
-  max-width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0;
-  position: fixed;
-  padding: 2em;
-}
-
-#cm.bar #c-inr {
-  max-width: 32em;
-  margin: 0 auto;
-}
-
-#cm.bar #c-bns {
-  max-width: 33.75em;
-}
-
-#cm.bar #cs {
-  padding: 0;
-}
-
-.cc_div .bar #c-s-in {
-  top: 0;
-  transform: none;
-  height: 100%;
-  max-height: 100%;
-}
-
-.cc_div .bar #s-hdr,
-.cc_div .bar #s-bl,
-.cc_div .bar #s-bns {
-  padding-left: 1.6em;
-  padding-right: 1.6em;
-}
-
-.cc_div .bar #cs {
-  padding: 0;
-}
-
-/* align bar to right by default */
-.cc_div .bar #s-inr {
-  margin: 0;
-  margin-left: auto;
-  margin-right: 0;
-  border-radius: 0;
-  max-width: 32em;
-}
-
-.cc_div .bar.left #s-inr {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* Force table to not be like tables anymore */
-.cc_div .bar #s-bl table,
-.cc_div .bar #s-bl thead,
-.cc_div .bar #s-bl tbody,
-.cc_div .bar #s-bl th,
-.cc_div .bar #s-bl td,
-.cc_div .bar #s-bl tr,
-.cc_div .bar #s-cnt {
-  display: block;
-}
-
-/* Hide table headers (but not display: none;, for accessibility) */
-.cc_div .bar #s-bl thead tr {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-.cc_div .bar #s-bl tr {
-  border-top: 1px solid #e3e7ed;
-  border-color: var(--cc-cookie-table-border);
-}
-
-.cc_div .bar #s-bl td {
-  /* Behave  like a "row" */
-  border: none;
-  position: relative;
-  padding-left: 35%;
-}
-
-.cc_div .bar #s-bl td:before {
-  position: absolute;
-  left: 1em;
-  padding-right: 0.625em;
-  white-space: nowrap;
-  content: attr(data-column);
-  color: #000;
-  color: var(--cc-text);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* End bar layout */
 
 /* Positions */
 #cm.top {

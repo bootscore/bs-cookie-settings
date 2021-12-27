@@ -23,8 +23,7 @@
 .c--anim #cm,
 .c--anim #s-cnt,
 .c--anim #s-inr,
-#cs-ov,
-#cm-ov {
+#cs-ov {
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
@@ -166,13 +165,14 @@ button.b-tl.exp[aria-expanded="true"]::before {
   font-size: .875em;
 }
 
-#cm-ov,
 #cs-ov {
+  /*
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  */
   visibility: hidden;
   opacity: 0;
   background-color: #000000;
@@ -188,11 +188,6 @@ button.b-tl.exp[aria-expanded="true"]::before {
 #cs-ov {
   z-index: 2;
 }
-
-
-
-/** END BLOCK PAGE SCROLL */
-
 
 
 /** dynamic table layout **/

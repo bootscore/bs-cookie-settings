@@ -41,7 +41,7 @@
 .show--consent #cm {
   opacity: 1;
   visibility: visible !important;
-  transform: translate(0, 0);
+  transform: none;
   transition-delay: 2s !important;
 }
 
@@ -59,13 +59,6 @@
 
 
 /* Cookie settings modal */
-
-/*
-#s-cnt {
-  z-index: 101;
-
-}
-*/
 #s-cnt {
   z-index: 101;
   opacity: 0;
@@ -81,33 +74,15 @@
 /* Cookie settings modal End */
 
 
-
-
-
-
-
-
 /* Cookie settings modal-dialog */
 
 #c-s-in {
-  /*
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, -50px);
-  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
-  */
-  
   transition: transform .3s ease-out;
-    transform: translate(0,-50px);
-  
+    transform: translate(0,-50px);  
 }
 
 .show--settings #c-s-in {
   transform: none;
-  /*
-  opacity: 1;
-  visibility: visible !important;
-  */
 }
 /* Cookie settings modal-dialog End */
 

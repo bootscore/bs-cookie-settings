@@ -20,7 +20,6 @@
 }
 
 /* Make elements "animatable" */
-.c--anim #cm,
 .c--anim #s-cnt,
 .c--anim #s-inr,
 #cs-ov {
@@ -28,41 +27,56 @@
 }
 
 
-.show--consent #cm {
-  transition-delay: 2s !important;
-}
 
 
 /* start transitions */
+
+/* Banner */
+
+
 #cm {
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
   transform: translate(0, 50px);
+  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
 .show--consent #cm {
   opacity: 1;
   transform: translate(0, 0);
   visibility: visible !important;
+  transition-delay: 2s !important;
 }
 
+
+/* Hide Banner if modal is open */
+/*
 .show--consent.show--settings #cm {
   opacity: 0;
   transform: translate(0, 50px);
   visibility: hidden !important;
-  /*
   transition-delay: 0s !important;
-  */
-}
-
-/*
-.show--consent.show--settings #cm {
-  transform: translate(0, 50px);;
 }
 */
+/* Banner End */ 
+
+
+
+
+
+
 
 .cc_div .slide #s-inr {
   transform: translate(0, -50px);
 }
 /* end transitions */
+
+
+
+
+
+
 
 /* Show modals */
 .show--settings .c--anim #s-inr {
@@ -82,11 +96,7 @@
   opacity: .5 !important;
 }
 
-#cm {
-  z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 .c-bn.btn-close:focus {
   opacity: .5;

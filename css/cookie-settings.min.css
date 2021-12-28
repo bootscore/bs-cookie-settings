@@ -27,22 +27,44 @@
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
-.show--consent .c--anim #cm {
+
+.show--consent #cm {
   transition-delay: 2s !important;
 }
 
+
 /* start transitions */
-#cm.slide {
-  transform: translateY(1.6em);
+#cm {
+  transform: translate(0, 50px);
 }
 
+.show--consent #cm {
+  opacity: 1;
+  transform: translate(0, 0);
+  visibility: visible !important;
+}
+
+.show--consent.show--settings #cm {
+  opacity: 0;
+  transform: translate(0, 50px);
+  visibility: hidden !important;
+  /*
+  transition-delay: 0s !important;
+  */
+}
+
+/*
+.show--consent.show--settings #cm {
+  transform: translate(0, 50px);;
+}
+*/
+
 .cc_div .slide #s-inr {
-  transform: translateY(-1.6em);
+  transform: translate(0, -50px);
 }
 /* end transitions */
 
 /* Show modals */
-.show--consent .c--anim #cm,
 .show--settings .c--anim #s-inr {
   opacity: 1;
   transform: scale(1);

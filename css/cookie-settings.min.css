@@ -21,7 +21,6 @@
 
 /* Make elements "animatable" */
 .c--anim #s-cnt,
-.c--anim #s-inr,
 #cs-ov {
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
@@ -32,8 +31,6 @@
 /* start transitions */
 
 /* Banner */
-
-
 #cm {
   z-index: 1;
   opacity: 0;
@@ -62,14 +59,33 @@
 /* Banner End */ 
 
 
+/* Modal */
 
+#s-inr {
+  opacity: 0;
+}
 
-
-
+.c--anim #s-inr {
+  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
+}
 
 .cc_div .slide #s-inr {
   transform: translate(0, -50px);
 }
+
+.show--settings .c--anim #s-inr {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible !important;
+}
+
+
+/* Modal End */
+
+
+
+
+
 /* end transitions */
 
 
@@ -79,11 +95,6 @@
 
 
 /* Show modals */
-.show--settings .c--anim #s-inr {
-  opacity: 1;
-  transform: scale(1);
-  visibility: visible !important;
-}
 
 .show--settings .c--anim #s-cnt {
   visibility: visible !important;
@@ -174,9 +185,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
   cursor: not-allowed;
 }
 
-#s-inr {
-  opacity: 0;
-}
+
 
 .desc.b-acc {
   border-top: 2px solid;

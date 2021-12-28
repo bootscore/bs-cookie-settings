@@ -41,8 +41,8 @@
 
 .show--consent #cm {
   opacity: 1;
-  transform: translate(0, 0);
   visibility: visible !important;
+  transform: translate(0, 0);
   transition-delay: 2s !important;
 }
 
@@ -59,28 +59,22 @@
 /* Banner End */ 
 
 
-/* Modal */
+/* Cookie settings modal */
 
 #c-s-in {
   opacity: 0;
-}
-
-.c--anim #c-s-in {
+  visibility: hidden;
+  transform: translate(0, -50px);
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
-.cc_div .slide #c-s-in {
-  transform: translate(0, -50px);
-}
-
-.show--settings .c--anim #c-s-in {
+.show--settings #c-s-in {
   opacity: 1;
   transform: translate(0, 0);
   visibility: visible !important;
 }
 
-
-/* Modal End */
+/* Cookie settings modal End */
 
 
 

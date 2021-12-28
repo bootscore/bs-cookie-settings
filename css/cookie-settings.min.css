@@ -60,14 +60,31 @@
 
 /* Cookie settings modal */
 
+/*
+#s-cnt {
+  z-index: 101;
 
-
-.#s-cnt {
+}
+*/
+#s-cnt {
+  z-index: 101;
+  opacity: 0;
+  visibility: hidden;
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
-
+.show--settings #s-cnt {
+  opacity: 1;
+  visibility: visible !important;
+  
+}
 /* Cookie settings modal End */
+
+
+
+
+
+
 
 
 /* Cookie settings modal-dialog */
@@ -87,11 +104,8 @@
 
 .show--settings #c-s-in {
   transform: none;
-  
   opacity: 1;
-  
   visibility: visible !important;
-  
 }
 /* Cookie settings modal-dialog End */
 
@@ -109,9 +123,7 @@
 
 /* Show modals */
 
-.show--settings .c--anim #s-cnt {
-  visibility: visible !important;
-}
+
 
 /* Show overlays */
 
@@ -130,10 +142,7 @@
 /**
 CookieConsent settings modal
 **/
-#s-cnt {
-  z-index: 101;
-  visibility: hidden;
-}
+
 
 #s-bl .title:first-child {
   margin-top: 0;

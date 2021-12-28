@@ -61,21 +61,21 @@
 
 /* Modal */
 
-#s-inr {
+#c-s-in {
   opacity: 0;
 }
 
-.c--anim #s-inr {
+.c--anim #c-s-in {
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
-.cc_div .slide #s-inr {
+.cc_div .slide #c-s-in {
   transform: translate(0, -50px);
 }
 
-.show--settings .c--anim #s-inr {
+.show--settings .c--anim #c-s-in {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(0, 0);
   visibility: visible !important;
 }
 

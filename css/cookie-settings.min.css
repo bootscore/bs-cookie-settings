@@ -76,7 +76,6 @@ CookieConsent settings modal
 **/
 #s-cnt {
   z-index: 101;
-  display: table;
   visibility: hidden;
 }
 

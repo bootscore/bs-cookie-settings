@@ -19,10 +19,21 @@
   overflow: hidden;
 }
 
-/* Make elements "animatable" */
+/* Backdrop */
 #cs-ov {
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000000;
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
+
+
+.show--settings #cs-ov {
+  visibility: visible !important;
+  opacity: .5 !important;
+}
+/* Backdrop End */
 
 
 
@@ -104,12 +115,12 @@
 
 /* Show overlays */
 
-.show--settings .c--anim #cs-ov {
-  visibility: visible !important;
-  opacity: .5 !important;
+/*
+.show--settings #cs-ov,
+.c--anim #cs-ov {
+  display: block;
 }
-
-
+*/
 
 .c-bn.btn-close:focus {
   opacity: .5;
@@ -203,22 +214,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
   font-size: .875em;
 }
 
-#cs-ov {
-  visibility: hidden;
-  opacity: 0;
-  background-color: #000000;
-  display: none;
-  transition: none;
-}
 
-.show--settings #cs-ov,
-.c--anim #cs-ov {
-  display: block;
-}
-
-#cs-ov {
-  z-index: 2;
-}
 
 /** dynamic table layout **/
 #s-bl table {

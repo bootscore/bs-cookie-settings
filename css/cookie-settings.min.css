@@ -90,22 +90,24 @@
 /* Cookie settings modal-dialog */
 
 #c-s-in {
-  
+  /*
   opacity: 0;
   visibility: hidden;
   transform: translate(0, -50px);
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
+  */
   
-  /*
   transition: transform .3s ease-out;
     transform: translate(0,-50px);
-  */
+  
 }
 
 .show--settings #c-s-in {
   transform: none;
+  /*
   opacity: 1;
   visibility: visible !important;
+  */
 }
 /* Cookie settings modal-dialog End */
 

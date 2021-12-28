@@ -20,7 +20,6 @@
 }
 
 /* Make elements "animatable" */
-.c--anim #s-cnt,
 #cs-ov {
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
@@ -61,20 +60,40 @@
 
 /* Cookie settings modal */
 
+
+
+.#s-cnt {
+  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
+}
+
+
+/* Cookie settings modal End */
+
+
+/* Cookie settings modal-dialog */
+
 #c-s-in {
+  
   opacity: 0;
   visibility: hidden;
   transform: translate(0, -50px);
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
+  
+  /*
+  transition: transform .3s ease-out;
+    transform: translate(0,-50px);
+  */
 }
 
 .show--settings #c-s-in {
+  transform: none;
+  
   opacity: 1;
-  transform: translate(0, 0);
+  
   visibility: visible !important;
+  
 }
-
-/* Cookie settings modal End */
+/* Cookie settings modal-dialog End */
 
 
 

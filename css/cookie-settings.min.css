@@ -28,17 +28,11 @@
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
-
 .show--settings #cs-ov {
   visibility: visible !important;
   opacity: .5 !important;
 }
 /* Backdrop End */
-
-
-
-
-/* start transitions */
 
 /* Banner */
 #cm {
@@ -86,7 +80,6 @@
 
 
 /* Cookie settings modal-dialog */
-
 #c-s-in {
   transition: transform .3s ease-out;
     transform: translate(0,-50px);  
@@ -98,29 +91,6 @@
 /* Cookie settings modal-dialog End */
 
 
-
-
-
-/* end transitions */
-
-
-
-
-
-
-
-/* Show modals */
-
-
-
-/* Show overlays */
-
-/*
-.show--settings #cs-ov,
-.c--anim #cs-ov {
-  display: block;
-}
-*/
 
 .c-bn.btn-close:focus {
   opacity: .5;

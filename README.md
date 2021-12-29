@@ -66,9 +66,9 @@ HTML widget in Footer 4
                   enabled: false,
                   readonly: false
                 },
-                cookie_table: [             // list of all expected cookies
+                cookie_table: [           // list of all expected cookies
                   {
-                    col1: '^_ga',       // match all cookies starting with "_ga"
+                    col1: '^_ga',         // match all cookies starting with "_ga"
                     col2: 'google.com',
                     col3: '2 years',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
@@ -82,10 +82,10 @@ HTML widget in Footer 4
                   }
                 ]
               }, {
-                title: 'Advertisement',
+                title: 'Advertising',
                 description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
                 toggle: {
-                  value: 'marketing',
+                  value: 'advertising',
                   enabled: false,
                   readonly: false
                 },
@@ -136,7 +136,7 @@ HTML widget in Footer 4
   ga('send', 'pageview');
 </script>
 
-<script type="text/plain" data-cookiecategory="marketing" src="./assets/js/my_custom_script.js" defer></script>
+<script type="text/plain" data-cookiecategory="advertising" src="./assets/js/my_custom_script.js" defer></script>
 
 ```
 

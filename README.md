@@ -163,6 +163,8 @@ By clicking one of the "Accept all", "Reject all" or "Save settings" button, the
 <a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
 ```
 
+Make sure that the links to your legal note and privacy policy are not covered by the banner. Use a menu in **Footer 1** widget position for them.
+
 ## License & Credits
 
 - cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE

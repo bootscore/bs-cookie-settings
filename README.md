@@ -16,7 +16,7 @@ WordPress plugin to add a GDPR-ready cookie consent to bootScore theme. Based on
 
 ### Init
 
-Initialize plugin with inline script in **HTML widget in Footer 4** position.
+Initialize plugin with inline script in **HTML widget in Footer 4** position and replace your data.
 
 ```html
 <script>

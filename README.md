@@ -14,7 +14,7 @@
 
 ### Init
 
-HTML widget in Footer 4
+Initialize plugin with inline script in HTML widget in Footer 4 position.
 
 ```html
 <script>

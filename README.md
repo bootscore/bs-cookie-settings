@@ -157,6 +157,8 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 
 ### Open settings modal
 
+By clicking one of the "Accept all", "Reject all" or "Save settings" the cookie `bs_cookie_settings` is set and hides banner and modal for 182 days.
+
 HTML widget in Footer 1 and privacy policy
 
 ```html

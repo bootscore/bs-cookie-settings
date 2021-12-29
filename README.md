@@ -1,5 +1,7 @@
 # bS Cookie Settings
 
+<img src="https://lh3.googleusercontent.com/pw/AM-JKLVzgrDgCd68uGMaxBPYAMYB4wg6cg7orzuNU5sr41XOkGFuxueA9eEgkHRCp1HfoxTghl5giVRdnewa8-Lx7GmDyNeastxvBKpvjRNQ0saP5vspSRGCRP7N0-pLkyJqtcltBR32ZsbWfZjCBvOzvRjIHA=w1200-h954-no">
+
 
 ## Init
 
@@ -66,9 +68,9 @@ HTML widget in Footer 4
                   enabled: false,
                   readonly: false
                 },
-                cookie_table: [             // list of all expected cookies
+                cookie_table: [           // list of all expected cookies
                   {
-                    col1: '^_ga',       // match all cookies starting with "_ga"
+                    col1: '^_ga',         // match all cookies starting with "_ga"
                     col2: 'google.com',
                     col3: '2 years',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
@@ -82,10 +84,10 @@ HTML widget in Footer 4
                   }
                 ]
               }, {
-                title: 'Advertisement',
+                title: 'Advertising',
                 description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
                 toggle: {
-                  value: 'marketing',
+                  value: 'advertising',
                   enabled: false,
                   readonly: false
                 },
@@ -136,7 +138,7 @@ HTML widget in Footer 4
   ga('send', 'pageview');
 </script>
 
-<script type="text/plain" data-cookiecategory="marketing" src="./assets/js/my_custom_script.js" defer></script>
+<script type="text/plain" data-cookiecategory="advertising" src="./assets/js/my_custom_script.js" defer></script>
 
 ```
 
@@ -147,3 +149,8 @@ HTML widget in Footer 1 and privacy policy
 ```html
 <a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
 ```
+
+## License & Credits
+
+- cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
+- 

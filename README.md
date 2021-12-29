@@ -136,9 +136,10 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
 
 ### Block / manage scripts
 
-Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. HTML widget in Footer 4
+Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script **HTML widget in Footer 4** position **after** the init script.
 
 ```html
+<!-- Google Analytics -->
 <script type="text/plain" data-cookiecategory="analytics">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -149,6 +150,7 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
   ga('send', 'pageview');
 </script>
 
+<!-- Advertising -->
 <script type="text/plain" data-cookiecategory="advertising" src="./assets/js/my_custom_script.js" defer></script>
 
 ```

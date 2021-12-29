@@ -149,3 +149,8 @@ HTML widget in Footer 1 and privacy policy
 ```html
 <a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
 ```
+
+## License & Credits
+
+- cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
+- 

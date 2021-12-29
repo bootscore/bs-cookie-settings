@@ -132,11 +132,9 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position.
 
 ```
 
-### 3rd party scripts
+### Block / manage party scripts
 
-Set `type="text/plain"` and `data-cookiecategory="<category>" to any script tag you want to manage:
-
-HTML widget in Footer 4
+Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. HTML widget in Footer 4
 
 ```html
 <script type="text/plain" data-cookiecategory="analytics">

@@ -3,7 +3,16 @@
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLVzgrDgCd68uGMaxBPYAMYB4wg6cg7orzuNU5sr41XOkGFuxueA9eEgkHRCp1HfoxTghl5giVRdnewa8-Lx7GmDyNeastxvBKpvjRNQ0saP5vspSRGCRP7N0-pLkyJqtcltBR32ZsbWfZjCBvOzvRjIHA=w1200-h954-no">
 
 
-## Init
+## Installation
+
+1. Download the zip file right here by pressing the green code button above.
+2. In your admin panel, go to Plugins > and click the Add New button.
+3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
+4. Click Activate to use your new Plugin right away.
+
+## Usage
+
+### Init
 
 HTML widget in Footer 4
 
@@ -123,7 +132,7 @@ HTML widget in Footer 4
 
 ```
 
-## 3rd party scripts
+### 3rd party scripts
 
 HTML widget in Footer 4
 
@@ -142,7 +151,7 @@ HTML widget in Footer 4
 
 ```
 
-## Open settings modal
+### Open settings modal
 
 HTML widget in Footer 1 and privacy policy
 

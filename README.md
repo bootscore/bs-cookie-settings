@@ -162,4 +162,4 @@ HTML widget in Footer 1 and privacy policy
 ## License & Credits
 
 - cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
-- 
+- bS Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE

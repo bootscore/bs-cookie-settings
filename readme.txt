@@ -31,6 +31,6 @@ Read documentation https://github.com/bootscore/bs-cookie-settings/blob/main/REA
 
 == Changelog ==
 
-    = 5.0.0.0 - january 03 2022 =
+    = 5.0.0.0 - January 03 2022 =
     
         * Initial release

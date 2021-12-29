@@ -23,7 +23,7 @@
             'current_lang': 'en',
             'auto_language': null,
             'autorun': true,                          // run as soon as loaded
-            'cookie_name': 'cc_cookie',
+            'cookie_name': 'bs_cookie_settings',
             'cookie_expiration': 182,                 // default: 6 months (in days)
             'cookie_domain': window.location.hostname,       // default: current domain
             'cookie_path': '/',
@@ -294,7 +294,8 @@
 
             // Fix layout flash
             main_container.style.position = "fixed";
-            main_container.style.zIndex = "1000000";
+            //main_container.style.zIndex = "1000000";
+            main_container.style.zIndex = "1060";
             main_container.innerHTML = '<!--[if lt IE 9 ]><div id="cc_div" class="cc_div ie"></div><![endif]--><!--[if (gt IE 8)|!(IE)]><!--><div id="cc_div" class="cc_div"></div><!--<![endif]-->'
             var all_modals_container = main_container.children[0];
 
@@ -327,6 +328,7 @@
                 }
 
                 consent_modal = _createNode('div');
+                var consent_modal_container = _createNode('div');
                 var consent_modal_inner = _createNode('div');
                 var consent_modal_inner_inner = _createNode('div');
                 
@@ -335,12 +337,18 @@
                 var overlay = _createNode('div');
 
                 consent_modal.id = 'cm';
+                consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block";
+                consent_modal_container.className =  "container";
                 consent_modal_inner.id = 'c-inr';
+                consent_modal_inner.className =  "row";
                 consent_modal_inner_inner.id = 'c-inr-i';
+                consent_modal_inner_inner.className =  "col mb-4 mb-md-0";
                
                 consent_text.id = 'c-txt';
+                //consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
-                overlay.id = 'cm-ov';
+                consent_buttons.className =  "col-md-4 col-xxl-3 d-flex flex-column justify-content-center gap-2";
+                //overlay.id = 'cm-ov';
        
                 
                 consent_modal.setAttribute('role', 'dialog');
@@ -352,8 +360,8 @@
                 /**
                  * Make modal by default hidden to prevent weird page jumps/flashes (shown only once css is loaded)
                  */
-                consent_modal.style.visibility = overlay.style.visibility = "hidden";
-                overlay.style.opacity = 0;
+                //consent_modal.style.visibility = overlay.style.visibility = "hidden";
+                //overlay.style.opacity = 0;
 
                 // Use insertAdjacentHTML instead of innerHTML
                 var consent_modal_title_value = conf_params.languages[lang]['consent_modal']['title'];
@@ -362,6 +370,7 @@
                 if(consent_modal_title_value){
                     var consent_title = _createNode('div');
                     consent_title.id = 'c-ttl';
+                    consent_title.className =  "h5";
                     consent_title.setAttribute('role', 'heading');
                     consent_title.setAttribute('aria-level', '2');
                     consent_title.insertAdjacentHTML('beforeend', consent_modal_title_value);
@@ -379,7 +388,7 @@
                     
                     var consent_primary_btn = _createNode('button');
                     consent_primary_btn.id = 'c-p-bn';
-                    consent_primary_btn.className =  "c-bn";
+                    consent_primary_btn.className =  "c-bn btn btn-primary";
                     consent_primary_btn[innerText] = conf_params.languages[lang]['consent_modal']['primary_btn']['text'];
                     
                     var _accept_type;
@@ -399,7 +408,7 @@
 
                     var consent_secondary_btn = _createNode('button');
                     consent_secondary_btn.id = 'c-s-bn';
-                    consent_secondary_btn.className = "c-bn c_link";
+                    consent_secondary_btn.className = "c-bn c_link btn btn-outline-secondary";
                     consent_secondary_btn[innerText] = conf_params.languages[lang]['consent_modal']['secondary_btn']['text'];
 
                     if(secondary_btn_data['role'] === 'accept_necessary'){
@@ -425,9 +434,11 @@
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                 }
 
+                consent_modal.appendChild(consent_modal_container);
+                consent_modal_container.appendChild(consent_modal_inner);
                 consent_modal_inner.appendChild(consent_modal_inner_inner);
                 (primary_btn_data || secondary_btn_data ) && consent_modal_inner.appendChild(consent_buttons);
-                consent_modal.appendChild(consent_modal_inner);
+  
 
                 // Append consent modal to main container
                 all_modals_container.appendChild(consent_modal);
@@ -443,14 +454,13 @@
              * Create all consent_modal elements
              */
             settings_container = _createNode('div');
-            var settings_container_valign = _createNode('div');
+            //var settings_container_valign = _createNode('div');
             var settings = _createNode('div');
             var settings_container_inner = _createNode('div');
             settings_inner = _createNode('div');
             var settings_title = _createNode('div');
             var settings_header = _createNode('div');
             var settings_close_btn = _createNode('button');
-            var settings_close_btn_container = _createNode('div');
             var settings_blocks = _createNode('div');
             var overlay = _createNode('div');
 
@@ -458,7 +468,7 @@
              * Set ids
              */
             settings_container.id = 's-cnt';
-            settings_container_valign.id = "c-vln";
+            //settings_container_valign.id = "c-vln";
             settings_container_inner.id = "c-s-in";
             settings.id = "cs";
             settings_title.id = 's-ttl';
@@ -467,9 +477,24 @@
             settings_blocks.id = 's-bl';
             settings_close_btn.id = 's-c-bn';
             overlay.id = 'cs-ov';
-            settings_close_btn_container.id = 's-c-bnc';
-            settings_close_btn.className = 'c-bn';
+          
+            /**
+             * Set classes
+             */
+            settings.className = "position-fixed top-0 end-0 bottom-0 start-0";
+            settings_container.className = "position-fixed top-0 end-0 bottom-0 start-0";  
+            settings_container_inner.className = "modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down";
+            settings_inner.className = 'modal-content';
+            settings_header.className = "modal-header";
+            settings_title.className = 'h5 modal-title';
+            settings_close_btn.className = 'c-bn btn-close';
+            settings_blocks.className = 'modal-body';
+            overlay.className = 'position-fixed top-0 end-0 bottom-0 start-0';
 
+          
+            /**
+             * Set attributes
+             */          
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
             settings_container.setAttribute('role', 'dialog');
             settings_container.setAttribute('aria-modal', 'true');
@@ -479,10 +504,8 @@
             settings_container.style.visibility = overlay.style.visibility = "hidden";
             overlay.style.opacity = 0;
 
-            settings_close_btn_container.appendChild(settings_close_btn);
-
             // If 'esc' key is pressed inside settings_container div => hide settings
-            _addEvent(settings_container_valign, 'keydown', function(evt){
+            _addEvent(settings_container_inner, 'keydown', function(evt){
                 evt = evt || window.event;
                 if (evt.keyCode === 27) {
                     _cookieconsent.hideSettings(0);
@@ -518,7 +541,7 @@
                 // Create description
                 if(description_data){
                     var block_desc = _createNode('div');
-                    block_desc.className = 'p';
+                    block_desc.className = 'p small';
                     block_desc.insertAdjacentHTML('beforeend', description_data);
                 }
 
@@ -532,6 +555,7 @@
                 if(title_data && typeof toggle_data !== 'undefined'){
 
                     var accordion_id = "c-ac-"+i;
+                    var accordion_id_toggler = "#c-ac-"+i;
 
                     // Create button (to collapse/expand block description)
                     var block_title_btn = isExpandable ? _createNode('button') : _createNode('div');
@@ -544,16 +568,18 @@
                     var block_switch_span_on_icon = _createNode('span');
                     var block_switch_span_off_icon = _createNode('span');
 
-                    block_title_btn.className = isExpandable ? 'b-tl exp' : 'b-tl';
-                    block_switch_label.className = 'b-tg';
-                    block_switch.className = 'c-tgl';
+                    block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
+                    block_switch_label.className = 'b-tg form-check form-switch fs-4';
+                    block_switch.className = 'c-tgl form-check-input cursor-pointer';
                     block_switch_span_on_icon.className = 'on-i';
                     block_switch_span_off_icon.className = 'off-i';
                     block_switch_span.className = 'c-tg';
-                    label_text_span.className = "t-lb";
+                    label_text_span.className = "t-lb d-none";
 
                     if(isExpandable){
                         block_title_btn.setAttribute('aria-expanded', 'false');
+                        block_title_btn.setAttribute('data-bs-toggle', 'collapse');
+                        block_title_btn.setAttribute('data-bs-target', accordion_id_toggler);
                         block_title_btn.setAttribute('aria-controls', accordion_id);
                     }
 
@@ -602,8 +628,18 @@
                     }
 
                     _addClass(block_table_container, 'b-acc');
+                    _addClass(block_table_container, 'collapse');
+                    //_addClass(block_table_container, 'border-top');
                     _addClass(block_title_container, 'b-bn');
+                    _addClass(block_title_container, 'd-flex');
+                    _addClass(block_title_container, 'align-items-center');
+                    _addClass(block_title_container, 'position-relative');
                     _addClass(block_section, 'b-ex');
+                    _addClass(block_section, 'p-0');
+                    _addClass(block_section, 'bg-light');
+                    _addClass(block_section, 'rounded');
+                    //_addClass(block_section, 'border-0');
+                    _addClass(block_section, 'mb-2');
 
                     block_table_container.id = accordion_id;
                     block_table_container.setAttribute('aria-hidden', 'true');
@@ -637,7 +673,7 @@
                      */
                     if(title_data){
                         var block_title = _createNode('div');
-                        block_title.className = 'b-tl';
+                        block_title.className = 'b-tl h6';
                         block_title.setAttribute('role', 'heading');
                         block_title.setAttribute('aria-level', '3');
                         block_title.insertAdjacentHTML('beforeend', title_data);
@@ -730,10 +766,11 @@
             var settings_accept_all_btn = _createNode('button');
 
             settings_buttons.id = 's-bns';
+            settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn';
-            settings_accept_all_btn.className ='c-bn';
+            settings_save_btn.className ='c-bn btn btn-outline-secondary ms-sm-auto';
+            settings_accept_all_btn.className ='c-bn btn btn-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
 
@@ -746,7 +783,7 @@
 
                 var reject_all_btn = _createNode('button');
                 reject_all_btn.id = 's-rall-bn';
-                reject_all_btn.className = 'c-bn';
+                reject_all_btn.className = 'c-bn btn btn-outline-secondary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
 
                 _addEvent(reject_all_btn, 'click', function(){
@@ -755,7 +792,7 @@
                     _cookieconsent.accept([]);
                 });
 
-                settings_inner.className = "bns-t";
+                settings_inner.className = "bns-t modal-content";
                 settings_buttons.appendChild(reject_all_btn);
             }
 
@@ -776,7 +813,7 @@
             });
 
             settings_header.appendChild(settings_title);
-            settings_header.appendChild(settings_close_btn_container);
+            settings_header.appendChild(settings_close_btn);
 
             settings_inner.appendChild(settings_header);
             settings_inner.appendChild(settings_blocks);
@@ -784,8 +821,8 @@
             settings_container_inner.appendChild(settings_inner);
 
             settings.appendChild(settings_container_inner);
-            settings_container_valign.appendChild(settings);
-            settings_container.appendChild(settings_container_valign);
+            //settings_container_valign.appendChild(settings);
+            settings_container.appendChild(settings_container_inner);
 
             all_modals_container.appendChild(settings_container);
             all_modals_container.appendChild(overlay);
@@ -2010,166 +2047,3 @@
         window[init] = CookieConsent
     }
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Init
-window.addEventListener('load', function(){
-            
-            // obtain plugin
-            var cc = initCookieConsent();
-
-            // run plugin with your configuration
-            cc.run({
-                current_lang: 'en',
-                autoclear_cookies: true,                   // default: false
-                //theme_css: 'css/cookieconsent.css',  // replace with a valid path
-                page_scripts: true,                        // default: false
-
-                // delay: 0,                               // default: 0
-                // auto_language: '',                      // default: null; could also be 'browser' or 'document'
-                // autorun: true,                          // default: true
-                // force_consent: false,                   // default: false
-                // hide_from_bots: false,                  // default: false
-                // remove_cookie_tables: false             // default: false
-                // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
-                // cookie_expiration: 182,                 // default: 182 (days)
-                // cookie_domain: location.hostname,       // default: current domain
-                // cookie_path: '/',                       // default: root
-                // cookie_same_site: 'Lax',                // default: 'Lax'
-                // use_rfc_cookie: false,                  // default: false
-                // revision: 0,                            // default: 0
-
-                onAccept: function (cookie) {
-                    // ...
-                },
-
-                onChange: function (cookie, changed_preferences) {
-                    // ...
-                },
-              
-                gui_options: {
-                  consent_modal: {
-                    layout: 'cloud',               // box/cloud/bar
-                    position: 'bottom center',     // bottom/middle/top + left/right/center
-                    transition: 'slide'            // zoom/slide
-                  },
-                    settings_modal: {
-                      layout: 'box',                 // box/bar
-                      // position: 'left',           // left/right
-                      transition: 'slide'            // zoom/slide
-                    }
-                },
-
-                languages: {
-                    'en': {
-                        consent_modal: {
-                            title: 'We use cookies!',
-                            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
-                            primary_btn: {
-                                text: 'Accept all',
-                                role: 'accept_all'              // 'accept_selected' or 'accept_all'
-                            },
-                            secondary_btn: {
-                                text: 'Reject all',
-                                role: 'accept_necessary'        // 'settings' or 'accept_necessary'
-                            }
-                          },
-
-                        settings_modal: {
-                            title: 'Cookie preferences',
-                            save_settings_btn: 'Save settings',
-                            accept_all_btn: 'Accept all',
-                            reject_all_btn: 'Reject all',
-                            close_btn_label: 'Close',
-                            cookie_table_headers: [
-                                {col1: 'Name'},
-                                {col2: 'Domain'},
-                                {col3: 'Expiration'},
-                                {col4: 'Description'}
-                            ],
-                            blocks: [
-                                {
-                                    title: 'Cookie usage 📢',
-                                    description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
-                                }, {
-                                    title: 'Strictly necessary cookies',
-                                    description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
-                                    toggle: {
-                                        value: 'necessary',
-                                        enabled: true,
-                                        readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
-                                    }
-                                }, {
-                                    title: 'Performance and Analytics cookies',
-                                    description: 'These cookies allow the website to remember the choices you have made in the past',
-                                    toggle: {
-                                        value: 'analytics',     // your cookie category
-                                        enabled: false,
-                                        readonly: false
-                                    },
-                                    cookie_table: [             // list of all expected cookies
-                                        {
-                                            col1: '^_ga',       // match all cookies starting with "_ga"
-                                            col2: 'google.com',
-                                            col3: '2 years',
-                                            col4: 'description ...',
-                                            is_regex: true
-                                        },
-                                        {
-                                            col1: '_gid',
-                                            col2: 'google.com',
-                                            col3: '1 day',
-                                            col4: 'description ...',
-                                        }
-                                    ]
-                                }, {
-                                    title: 'Advertisement and Targeting cookies',
-                                    description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
-                                    toggle: {
-                                        value: 'targeting',
-                                        enabled: false,
-                                        readonly: false
-                                    }
-                                }, {
-                                    title: 'More information',
-                                    description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
-                                }, 
-                              
-                            ]
-                        }
-                      
-                    }
-                }
-              
-              
-              
-            });
-        });
-        
-        
-
-

@@ -1,3 +1,30 @@
+/* Temporary. Modal variables not work (Bootstrap 5.2.0-beta1) */
+:root {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 1.75rem;
+  --bs-modal-color: ;
+  --bs-modal-bg: #fff;
+  --bs-modal-border-color: var(--bs-border-color-translucent);
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-radius: 0.5rem;
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-modal-inner-border-radius: calc(0.5rem - 1px);
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-width: 1px;
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
+  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-width: 1px;
+}
+/* Temporary END*/
+
+
 .cc_div *,
 .cc_div :before,
 .cc_div :after {
@@ -32,6 +59,7 @@
   visibility: visible !important;
   opacity: .5 !important;
 }
+
 /* Backdrop End */
 
 /* Banner */
@@ -54,7 +82,7 @@
   transition-delay: 0s;
 }
 */
-/* Banner End */ 
+/* Banner End */
 
 
 /* Cookie settings modal */
@@ -68,20 +96,22 @@
 .show--settings #s-cnt {
   opacity: 1;
   visibility: visible !important;
-  
+
 }
+
 /* Cookie settings modal End */
 
 
 /* Cookie settings modal-dialog */
 #c-s-in {
   transition: transform .3s ease-out;
-    transform: translate(0,-50px);  
+  transform: translate(0, -50px);
 }
 
 .show--settings #c-s-in {
   transform: none;
 }
+
 /* Cookie settings modal-dialog End */
 
 

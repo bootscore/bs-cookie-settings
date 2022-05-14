@@ -4,9 +4,9 @@
 Contributors: Bastian Kreiter
 
 Requires at least: 4.5
-Tested up to: 5.8.1
+Tested up to: 5.9.3
 Requires PHP: 5.6
-Stable tag: 5.0.0.0
+Stable tag: 5.2.0.0-beta-1
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
@@ -31,6 +31,10 @@ Read documentation https://github.com/bootscore/bs-cookie-settings/blob/main/REA
 
 == Changelog ==
 
+    = 5.2.0.0-beta1 - May 17 2022 =
+    
+      * Added temporary Modal variables to plugin :root (Doesn't work with Bootstrap 5.2.0-beta1).
+
     = 5.0.0.0 - January 03 2022 =
     
-        * Initial release
+      * Initial release

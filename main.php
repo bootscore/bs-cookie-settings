@@ -2,7 +2,7 @@
 /*Plugin Name: bS Cookie Settings
 Plugin URI: https://bootscore.me/plugins/bs-cookie-settings/
 Description: This plugin adds a cookie modal to bootScore
-Version: 5.0.0.0
+Version: 5.1.3.2
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License

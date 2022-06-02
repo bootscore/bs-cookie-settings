@@ -24,13 +24,13 @@
   z-index: 2;
   visibility: hidden;
   opacity: 0;
-  background-color: #000000;
+  background-color: rgba(0,0,0,.5);
   transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
 }
 
 .show--settings #cs-ov {
   visibility: visible !important;
-  opacity: .5 !important;
+  opacity: 1 !important;
 }
 /* Backdrop End */
 
@@ -114,11 +114,12 @@ CookieConsent settings modal
 }
 
 button.b-tl.exp::before {
-  font: var(--fa-font-solid);
   content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   display: inline-block;
   margin-right: .5rem;
-  transition: transform 0.35s ease;
+  transition: transform .35s ease
 }
 
 button.b-tl.exp[aria-expanded="true"]::before {

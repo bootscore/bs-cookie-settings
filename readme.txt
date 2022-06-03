@@ -1,12 +1,12 @@
 
-=== bS Cookie Consent ===
+=== bS Cookie Settings ===
 
 Contributors: Bastian Kreiter
 
 Requires at least: 4.5
-Tested up to: 5.8.1
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 5.0.0.0
+Stable tag: 5.1.3.2
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
@@ -31,6 +31,11 @@ Read documentation https://github.com/bootscore/bs-cookie-settings/blob/main/REA
 
 == Changelog ==
 
-    = 5.0.0.0 - January 03 2022 =
+  = 5.1.3.2 - June 03 2022 =
+
+    * Fix modal backdrop in Chrome/Edge. Used rgba instead of opacity.
+    * Switched to FA5 icons
+
+  = 5.0.0.0 - January 03 2022 =
     
-        * Initial release
+    * Initial release

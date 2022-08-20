@@ -6,7 +6,7 @@ Contributors: Bastian Kreiter
 Requires at least: 4.5
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 5.1.3.2
+Stable tag: 5.2.0.0
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
@@ -30,6 +30,10 @@ This plugin adds a GDPR-ready cookie consent to bootScore theme, Copyright 2022 
 Read documentation https://github.com/bootscore/bs-cookie-settings/blob/main/README.md
 
 == Changelog ==
+
+  = 5.2.0.0 - August 20 2022 =
+
+    * Added missing modal class
 
   = 5.1.3.2 - June 03 2022 =
 

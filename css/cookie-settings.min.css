@@ -60,6 +60,7 @@
 
 
 /* Cookie settings modal */
+/*
 #s-cnt {
   z-index: 101;
   opacity: 0;
@@ -72,10 +73,12 @@
   visibility: visible !important;
   
 }
+*/
 /* Cookie settings modal End */
 
 
 /* Cookie settings modal-dialog */
+/*
 #c-s-in {
   transition: transform .3s ease-out;
     transform: translate(0,-50px);  
@@ -84,14 +87,16 @@
 .show--settings #c-s-in {
   transform: none;
 }
+*/
 /* Cookie settings modal-dialog End */
 
 
-
+/*
 .c-bn.btn-close:focus {
   opacity: .5;
   box-shadow: none;
 }
+*/
 
 /**
 CookieConsent settings modal
@@ -193,8 +198,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
 #s-bl tbody,
 #s-bl th,
 #s-bl td,
-#s-bl tr,
-#s-cnt {
+#s-bl tr {
   display: block;
 }
 

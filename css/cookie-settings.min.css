@@ -15,13 +15,13 @@
 }
 
 /* Banner */
-#cm {
+#bs-cookie-bar {
   z-index: 1050;
   transform: translateY(100%);
   transition: transform 0.4s ease-in-out;
 }
 
-.show--consent #cm {
+.show--consent #bs-cookie-bar {
   transform: none;
   transition-delay: 1.5s;
 }
@@ -29,7 +29,7 @@
 
 /* Hide Banner if modal is open */
 
-.show--consent.show--settings #cm {
+.show--consent.show--settings #bs-cookie-bar {
   transform: translateY(100%);
   transition: transform .15s ease-in-out;
   transition-delay: 0s;

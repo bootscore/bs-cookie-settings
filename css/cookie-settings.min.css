@@ -14,30 +14,6 @@
   visibility: unset;
 }
 
-/* Lock body scroll when settings are open */
-/*
-.show--settings body {
-  overflow: hidden;
-}
-*/
-
-/* Backdrop */
-/*
-#cs-ov {
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  background-color: rgba(0,0,0,.5);
-  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
-}
-
-.show--settings #cs-ov {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-*/
-/* Backdrop End */
-
 /* Banner */
 #cm {
   z-index: 1;
@@ -58,52 +34,7 @@
   transition-delay: 0s;
 }
 
-/* Banner End */ 
-
-
 /* Cookie settings modal */
-/*
-#s-cnt {
-  z-index: 101;
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
-}
-
-.show--settings #s-cnt {
-  opacity: 1;
-  visibility: visible !important;
-  
-}
-*/
-/* Cookie settings modal End */
-
-
-/* Cookie settings modal-dialog */
-/*
-#c-s-in {
-  transition: transform .3s ease-out;
-    transform: translate(0,-50px);  
-}
-
-.show--settings #c-s-in {
-  transform: none;
-}
-*/
-/* Cookie settings modal-dialog End */
-
-
-/*
-.c-bn.btn-close:focus {
-  opacity: .5;
-  box-shadow: none;
-}
-*/
-
-/**
-CookieConsent settings modal
-**/
-
 
 #s-bl .title:first-child {
   margin-top: 0;

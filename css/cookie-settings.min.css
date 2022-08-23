@@ -15,9 +15,11 @@
 }
 
 /* Lock body scroll when settings are open */
+/*
 .show--settings body {
   overflow: hidden;
 }
+*/
 
 /* Backdrop */
 /*
@@ -50,12 +52,12 @@
 
 
 /* Hide Banner if modal is open */
-/*
 .show--consent.show--settings #cm {
   transform: translateY(100%);
+  transition: transform .15s ease-in-out;
   transition-delay: 0s;
 }
-*/
+
 /* Banner End */ 
 
 

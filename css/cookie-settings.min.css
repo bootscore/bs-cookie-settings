@@ -123,13 +123,12 @@ CookieConsent settings modal
 }
 
 button.b-tl.exp::before {
-  content: "\f054";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
-  margin-right: .5rem;
-  transition: transform .35s ease
-}
+   font: var(--fa-font-solid);
+   content: "\f054";
+   display: inline-block;
+   margin-right: .5rem;
+   transition: transform 0.35s ease;
+ }
 
 button.b-tl.exp[aria-expanded="true"]::before {
   transform: rotate(90deg);

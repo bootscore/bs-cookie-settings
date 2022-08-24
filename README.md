@@ -62,7 +62,7 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
             blocks: [
               {
                 title: 'Cookie usage',
-                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy" class="cc-link">Privacy Policy</a>.'
+                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy">Privacy Policy</a>.'
               }, {
                 title: 'Necessary',
                 description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
@@ -119,7 +119,7 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
                 ]
               }, {
                 title: 'More information',
-                description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                description: 'For any queries in relation to our policy on cookies and your choices, please <a href="#yourcontactpage">contact us</a>.',
               },
 
             ]

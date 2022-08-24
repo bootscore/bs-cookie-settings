@@ -159,13 +159,13 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 
 By clicking one of the "Accept all", "Reject all" or "Save settings" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open settings modal again, add following link to your privacy policy and to a **HTML widget** in **Footer 1** position.
 
-**Link**
+#### Link
 
 ```html
 <a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>
 ```
 
-**Button**
+#### Button
 
 ```html
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Settings</button>

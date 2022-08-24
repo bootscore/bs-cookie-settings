@@ -7,7 +7,7 @@ WordPress plugin to add a GDPR-ready cookie consent to bootScore theme. Based on
 
 ## Installation
 
-1. Download the zip file right here by pressing the green code button above.
+1. Download latest release [bs-cookie-settings-main.zip](https://github.com/bootscore/bs-cookie-settings/releases)
 2. In your admin panel, go to Plugins > and click the Add New button.
 3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 4. Click Activate to use your new Plugin right away.
@@ -36,7 +36,7 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit "Cookie settings" to provide a controlled consent. <a href="javascript:void(0)" data-cc="c-settings" class="cc-link btn-link">Cookie settings</a>',
+            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit "Cookie settings" to provide a controlled consent. <a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -62,7 +62,7 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
             blocks: [
               {
                 title: 'Cookie usage',
-                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy" class="cc-link">privacy policy</a>.'
+                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy" class="cc-link">Privacy Policy</a>.'
               }, {
                 title: 'Necessary',
                 description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
@@ -159,8 +159,16 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 
 By clicking one of the "Accept all", "Reject all" or "Save settings" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open settings modal again, add following link to your privacy policy and to a **HTML widget** in **Footer 1** position.
 
+**Link**
+
 ```html
-<a href="javascript:void(0)" data-cc="c-settings" aria-haspopup="dialog">Cookie settings</a>
+<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>
+```
+
+**Button**
+
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Settings</button>
 ```
 
 Make sure that the links to your legal note and privacy policy are not covered by the banner. Use a menu in **Footer 1** widget position for them.

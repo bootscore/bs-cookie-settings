@@ -186,8 +186,9 @@
          * Search for all occurrences in the current page and add an onClick listener :
          * when clicked => open settings modal
          */
+        
         var _addCookieSettingsButtonListener = function(){
-            var all_links = document.querySelectorAll('a[data-cc="c-settings"], button[data-cc="c-settings"]');
+            var all_links = document.querySelectorAll('a[href="#bs-cookie-modal"], button[data-bs-target="#bs-cookie-modal"]');
             for(var x=0; x<all_links.length; x++){
                 all_links[x].setAttribute('aria-haspopup', 'dialog');
                 _addEvent(all_links[x], 'click', function(event){
@@ -196,6 +197,7 @@
                 });
             }
         }
+        
 
         /**
          * Get a valid language (at least 1 must be defined)
@@ -290,13 +292,13 @@
 
             // Create main container which holds both consent modal & settings modal
             main_container = _createNode('div');
-            main_container.id = 'cc--main';
+            main_container.id = 'bs-cookie-settings';
 
             // Fix layout flash
-            main_container.style.position = "fixed";
+            //main_container.style.position = "fixed";
             //main_container.style.zIndex = "1000000";
-            main_container.style.zIndex = "1060";
-            main_container.innerHTML = '<!--[if lt IE 9 ]><div id="cc_div" class="cc_div ie"></div><![endif]--><!--[if (gt IE 8)|!(IE)]><!--><div id="cc_div" class="cc_div"></div><!--<![endif]-->'
+            //main_container.style.zIndex = "1060";
+            main_container.innerHTML = '<div id="bs-cookie-wrapper" class="cc_div"></div>'
             var all_modals_container = main_container.children[0];
 
             // Get current language
@@ -334,9 +336,9 @@
                 
                 consent_text = _createNode('div');
                 var consent_buttons = _createNode('div');
-                var overlay = _createNode('div');
+                //var overlay = _createNode('div');
 
-                consent_modal.id = 'cm';
+                consent_modal.id = 'bs-cookie-bar';
                 consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block";
                 consent_modal_container.className =  "container";
                 consent_modal_inner.id = 'c-inr';
@@ -442,7 +444,7 @@
 
                 // Append consent modal to main container
                 all_modals_container.appendChild(consent_modal);
-                all_modals_container.appendChild(overlay);
+                //all_modals_container.appendChild(overlay);
 
                 consent_modal_exists = true;
             }
@@ -462,12 +464,12 @@
             var settings_header = _createNode('div');
             var settings_close_btn = _createNode('button');
             var settings_blocks = _createNode('div');
-            var overlay = _createNode('div');
+            //var overlay = _createNode('div');
 
             /**
              * Set ids
              */
-            settings_container.id = 's-cnt';
+            settings_container.id = 'bs-cookie-modal';
             //settings_container_valign.id = "c-vln";
             settings_container_inner.id = "c-s-in";
             settings.id = "cs";
@@ -476,7 +478,7 @@
             settings_header.id = "s-hdr";
             settings_blocks.id = 's-bl';
             settings_close_btn.id = 's-c-bn';
-            overlay.id = 'cs-ov';
+            //overlay.id = 'cs-ov';
           
             /**
              * Set classes
@@ -489,20 +491,22 @@
             settings_title.className = 'h5 modal-title';
             settings_close_btn.className = 'c-bn btn-close';
             settings_blocks.className = 'modal-body';
-            overlay.className = 'position-fixed top-0 end-0 bottom-0 start-0';
+            //overlay.className = 'position-fixed top-0 end-0 bottom-0 start-0';
 
           
             /**
              * Set attributes
              */          
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
-            settings_container.setAttribute('role', 'dialog');
-            settings_container.setAttribute('aria-modal', 'true');
+            settings_close_btn.setAttribute('data-bs-dismiss', 'modal'); 
+            settings_container.setAttribute('tabindex', '-1'); 
+            //settings_container.setAttribute('role', 'dialog');
+            //settings_container.setAttribute('aria-modal', 'true');
             settings_container.setAttribute('aria-hidden', 'true');
             settings_container.setAttribute('aria-labelledby', 's-ttl');
             settings_title.setAttribute('role', 'heading');
-            settings_container.style.visibility = overlay.style.visibility = "hidden";
-            overlay.style.opacity = 0;
+            //settings_container.style.visibility = overlay.style.visibility = "hidden";
+            //overlay.style.opacity = 0;
 
             // If 'esc' key is pressed inside settings_container div => hide settings
             _addEvent(settings_container_inner, 'keydown', function(evt){
@@ -774,6 +778,11 @@
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
 
+            // Button Attributes
+            settings_accept_all_btn.setAttribute('data-bs-dismiss', 'modal');
+            //settings_reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
+            settings_save_btn.setAttribute('data-bs-dismiss', 'modal');
+            
             settings_buttons.appendChild(settings_accept_all_btn);
 
             var reject_all_btn_text = conf_params.languages[_config.current_lang]['settings_modal']['reject_all_btn'];
@@ -785,9 +794,10 @@
                 reject_all_btn.id = 's-rall-bn';
                 reject_all_btn.className = 'c-bn btn btn-outline-secondary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
+                reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
 
                 _addEvent(reject_all_btn, 'click', function(){
-                    _cookieconsent.hideSettings();
+                    //_cookieconsent.hideSettings();
                     _cookieconsent.hide();
                     _cookieconsent.accept([]);
                 });
@@ -801,13 +811,13 @@
             // Add save preferences button onClick event
             // Hide both settings modal and consent modal
             _addEvent(settings_save_btn, 'click', function(){
-                _cookieconsent.hideSettings();
+                //_cookieconsent.hideSettings();
                 _cookieconsent.hide();
                 _cookieconsent.accept();
             });
 
             _addEvent(settings_accept_all_btn, 'click', function(){
-                _cookieconsent.hideSettings();
+                //_cookieconsent.hideSettings();
                 _cookieconsent.hide();
                 _cookieconsent.accept('all');
             });
@@ -825,7 +835,7 @@
             settings_container.appendChild(settings_container_inner);
 
             all_modals_container.appendChild(settings_container);
-            all_modals_container.appendChild(overlay);
+            //all_modals_container.appendChild(overlay);
 
             // Finally append everything to body (main_container holds both modals)
             (root || document.body).appendChild(main_container);
@@ -1195,6 +1205,7 @@
                 }, true);
             }
         }
+        
 
         /**
          * Manage each modal's layout
@@ -1318,7 +1329,7 @@
                     }
 
                     // Add class to enable animations/transitions
-                    setTimeout(function(){_addClass(main_container, 'c--anim');}, 30);
+                    //setTimeout(function(){_addClass(main_container, 'c--anim');}, 30);
 
                     // Accessibility :=> if tab pressed => trap focus inside modal
                     setTimeout(function(){_handleFocusTrap();}, 100);

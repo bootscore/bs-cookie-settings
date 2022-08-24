@@ -4,9 +4,9 @@
 Contributors: Bastian Kreiter
 
 Requires at least: 4.5
-Tested up to: 6.0
+Tested up to: 6.0.1
 Requires PHP: 5.6
-Stable tag: 5.2.0.0
+Stable tag: 5.2.1.0
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
@@ -27,9 +27,19 @@ This plugin adds a GDPR-ready cookie consent to bootScore theme, Copyright 2022 
 
 == Usage ==
 
-Read documentation https://github.com/bootscore/bs-cookie-settings/blob/main/README.md
+Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+  = 5.2.1.0 - August 24 2022 =
+
+    * Refactored modal
+    * Removed plugin's backdrop and uses Bootstrap modal backdrop instead
+    * Settings link triggers now modal instead modal-dialog
+    * Changed settings link to data-bs-toggle="modal" [Breaking]
+    * Hide banner if modal is open
+    * Changed id's
+    * Updated to FA6 Chevron
 
   = 5.2.0.0 - August 20 2022 =
 

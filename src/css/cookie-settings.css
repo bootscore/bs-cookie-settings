@@ -14,87 +14,38 @@
   visibility: unset;
 }
 
-/* Lock body scroll when settings are open */
-.show--settings body {
-  overflow: hidden;
-}
-
-/* Backdrop */
-#cs-ov {
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  background-color: rgba(0,0,0,.5);
-  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
-}
-
-.show--settings #cs-ov {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-/* Backdrop End */
-
 /* Banner */
-#cm {
-  z-index: 1;
+#bs-cookie-bar {
+  z-index: 1050;
   transform: translateY(100%);
   transition: transform 0.4s ease-in-out;
 }
 
-.show--consent #cm {
+.show--consent #bs-cookie-bar {
   transform: none;
   transition-delay: 1.5s;
 }
 
 
 /* Hide Banner if modal is open */
-/*
-.show--consent.show--settings #cm {
+
+.show--consent.show--settings #bs-cookie-bar {
   transform: translateY(100%);
+  transition: transform .15s ease-in-out;
   transition-delay: 0s;
 }
-*/
-/* Banner End */ 
+
 
 
 /* Cookie settings modal */
-#s-cnt {
-  z-index: 101;
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility .3s linear, opacity .3s ease-out, transform .3s ease-out !important;
-}
 
-.show--settings #s-cnt {
-  opacity: 1;
-  visibility: visible !important;
-  
-}
-/* Cookie settings modal End */
-
-
-/* Cookie settings modal-dialog */
-#c-s-in {
-  transition: transform .3s ease-out;
-    transform: translate(0,-50px);  
-}
-
-.show--settings #c-s-in {
-  transform: none;
-}
-/* Cookie settings modal-dialog End */
-
-
-
-.c-bn.btn-close:focus {
-  opacity: .5;
+/* Remove focus from close-btn */
+/*
+#bs-cookie-modal .btn-close:focus {
   box-shadow: none;
+  -webkit-box-shadow: none;
 }
-
-/**
-CookieConsent settings modal
-**/
-
+*/
 
 #s-bl .title:first-child {
   margin-top: 0;
@@ -114,13 +65,12 @@ CookieConsent settings modal
 }
 
 button.b-tl.exp::before {
-  content: "\f054";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
-  margin-right: .5rem;
-  transition: transform .35s ease
-}
+   font: var(--fa-font-solid);
+   content: "\f054";
+   display: inline-block;
+   margin-right: .5rem;
+   transition: transform 0.35s ease;
+ }
 
 button.b-tl.exp[aria-expanded="true"]::before {
   transform: rotate(90deg);
@@ -191,8 +141,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
 #s-bl tbody,
 #s-bl th,
 #s-bl td,
-#s-bl tr,
-#s-cnt {
+#s-bl tr {
   display: block;
 }
 

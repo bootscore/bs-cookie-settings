@@ -339,7 +339,7 @@
                 //var overlay = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
-                consent_modal.className =  "py-4 py-md-5 bg-light fixed-bottom d-block";
+                consent_modal.className =  "py-4 py-md-5 bg-body-tertiary fixed-bottom d-block";
                 consent_modal_container.className =  "container";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row";
@@ -410,7 +410,7 @@
 
                     var consent_secondary_btn = _createNode('button');
                     consent_secondary_btn.id = 'c-s-bn';
-                    consent_secondary_btn.className = "c-bn c_link btn btn-outline-secondary";
+                    consent_secondary_btn.className = "c-bn c_link btn btn-outline-primary";
                     consent_secondary_btn[innerText] = conf_params.languages[lang]['consent_modal']['secondary_btn']['text'];
 
                     if(secondary_btn_data['role'] === 'accept_necessary'){
@@ -640,7 +640,7 @@
                     _addClass(block_title_container, 'position-relative');
                     _addClass(block_section, 'b-ex');
                     _addClass(block_section, 'p-0');
-                    _addClass(block_section, 'bg-light');
+                    _addClass(block_section, 'bg-body-tertiary');
                     _addClass(block_section, 'rounded');
                     //_addClass(block_section, 'border-0');
                     _addClass(block_section, 'mb-2');
@@ -773,7 +773,7 @@
             settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn btn btn-outline-secondary ms-sm-auto';
+            settings_save_btn.className ='c-bn btn btn-outline-primary ms-sm-auto';
             settings_accept_all_btn.className ='c-bn btn btn-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
@@ -792,7 +792,7 @@
 
                 var reject_all_btn = _createNode('button');
                 reject_all_btn.id = 's-rall-bn';
-                reject_all_btn.className = 'c-bn btn btn-outline-secondary';
+                reject_all_btn.className = 'c-bn btn btn-outline-primary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
                 reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
 

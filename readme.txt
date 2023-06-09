@@ -1,12 +1,12 @@
 
 === bS Cookie Settings ===
 
-Contributors: Bastian Kreiter
+Contributors: The bootScore contributors
 
 Requires at least: 4.5
-Tested up to: 6.0.1
+Tested up to: 6.2.2
 Requires PHP: 5.6
-Stable tag: 5.2.1.0
+Stable tag: 5.3.0
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
@@ -30,6 +30,13 @@ This plugin adds a GDPR-ready cookie consent to bootScore theme, Copyright 2022 
 Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+  = 5.3.0 - June 09 2023 =
+  
+    * [FEATURE] Add composer.json
+    * [FEATURE] Add plugin update checker
+    * [IMPROVEMENT] Change btn-outline-secondary to btn-outline-primary
+    * [UPDATE] Bootstrap 5.3 color classes
 
   = 5.2.1.0 - August 24 2022 =
 

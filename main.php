@@ -20,3 +20,12 @@ function bs_cookie_settings() {
 }
 
 add_action('wp_enqueue_scripts','bs_cookie_settings');
+
+
+// Update checker
+require 'update/update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+  'https://bootscore.me/wp-content/plugins/bs-cookie-settings-main/update/plugin.json',
+  __FILE__, //Full path to the main plugin file or functions.php.
+  'bs-cookie-settings-main'
+);

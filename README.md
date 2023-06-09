@@ -176,4 +176,5 @@ Make sure that the links to your legal note and privacy policy are not covered b
 ## License & Credits
 
 - cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
+- Plugin Update Checker by YahnisElsts, MIT License <a href="https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt">https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
 - bS Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE

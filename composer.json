@@ -1,6 +1,6 @@
 {
     "name": "bootscore/bs-cookie-settings",
-    "description": "Adds Bootstrap to Contact Form 7",
+    "description": "Adds a cookie consent banner to bootScore",
     "type": "wordpress-plugin",
     "license": "MIT",
     "authors": [

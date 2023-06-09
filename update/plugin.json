@@ -1,0 +1,8 @@
+ {
+ 	"name" : "bS Cookie Settings",
+ 	"version" : "5.3.0",
+ 	"download_url" : "https://github.com/bootscore/bs-cookie-settings/releases/download/v5.3.0/bs-cookie-settings-main.zip",
+ 	"sections" : {
+ 		"description" : "Update Bootstrap 5.3 classes"
+ 	}
+ }

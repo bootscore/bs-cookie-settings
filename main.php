@@ -2,7 +2,7 @@
 /*Plugin Name: bS Cookie Settings
 Plugin URI: https://bootscore.me/plugins/bs-cookie-settings/
 Description: This plugin adds a cookie modal to bootScore
-Version: 5.2.1.0
+Version: 5.3.0
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License
@@ -20,3 +20,12 @@ function bs_cookie_settings() {
 }
 
 add_action('wp_enqueue_scripts','bs_cookie_settings');
+
+
+// Update checker
+require 'update/update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+  'https://bootscore.me/wp-content/plugins/bs-cookie-settings-main/update/plugin.json',
+  __FILE__, //Full path to the main plugin file or functions.php.
+  'bs-cookie-settings-main'
+);

@@ -113,13 +113,13 @@ button.b-tl.exp[aria-expanded="true"]::before {
 
 .desc.b-acc {
   border-top: 2px solid;
-  border-color: var(--bs-white);
+  border-color: var(--bs-modal-bg);
 }
 
 #s-bl tr {
   padding: 1rem;
   border-top: 2px solid;
-  border-color: var(--bs-white);
+  border-color: var(--bs-modal-bg);
 }
 
 #s-bl td,

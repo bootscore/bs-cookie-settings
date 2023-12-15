@@ -9,6 +9,10 @@ License: MIT License
 */
 
 
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
+
+
 // Register Styles and Scripts
 function bs_cookie_settings() {
     

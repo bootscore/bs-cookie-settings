@@ -1,8 +1,11 @@
 <?php
 /*Plugin Name: bS Cookie Settings
 Plugin URI: https://bootscore.me/plugins/bs-cookie-settings/
-Description: This plugin adds a cookie modal to bootScore
-Version: 5.3.0
+Description: Plugin adds a cookie modal to Bootscore theme. <a href="https://bootscore.me/documentation/plugin/bs-cookie-settings/">Documentation</a> | <a href="https://bootscore.me/documentation/plugin/bs-cookie-settings/#Changelog">Changelog</a>
+Version: 5.4.0
+Tested up to: 6.4.2
+Requires at least: 5.0
+Requires PHP: 7.4
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License
@@ -13,7 +16,25 @@ License: MIT License
 defined( 'ABSPATH' ) || exit;
 
 
-// Register Styles and Scripts
+/**
+ * Update checker
+ */
+require 'update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/bootscore/bs-cookie-settings/',
+	__FILE__,
+	'bs-cookie-settings'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+
+/**
+ * Register styles and scripts
+ */
 function bs_cookie_settings() {
     
   wp_enqueue_script( 'cookie-settings-js', plugins_url( '/js/cookie-settings.min.js' , __FILE__ ), array(), false, true );
@@ -24,12 +45,3 @@ function bs_cookie_settings() {
 }
 
 add_action('wp_enqueue_scripts','bs_cookie_settings');
-
-
-// Update checker
-require 'update/update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://bootscore.me/wp-content/plugins/bs-cookie-settings-main/update/plugin.json',
-  __FILE__, //Full path to the main plugin file or functions.php.
-  'bs-cookie-settings-main'
-);

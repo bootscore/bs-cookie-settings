@@ -29,7 +29,7 @@
 
 /* Hide Banner if modal is open */
 
-.show--consent.show--settings #bs-cookie-bar {
+.show--consent .modal-open #bs-cookie-bar {
   transform: translateY(100%);
   transition: transform .15s ease-in-out;
   transition-delay: 0s;

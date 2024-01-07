@@ -1370,6 +1370,7 @@
                 /**
                  * Set focus to the first focusable element inside settings modal
                  */
+              /*
                 setTimeout(function(){
                     // If there is no consent-modal, keep track of the last focused elem.
                     if(!consent_modal_visible){
@@ -1387,6 +1388,7 @@
                     }
                     current_modal_focusable = settings_modal_focusable;
                 }, 200);
+              */
 
                 _log("CookieConsent [SETTINGS]: show settings_modal");
             }, delay > 0 ? delay : 0);
@@ -1743,13 +1745,13 @@
                  * If consent modal is visible, focus him (instead of page document)
                  */
                 if(consent_modal_visible){
-                    last_consent_modal_btn_focus && last_consent_modal_btn_focus.focus();
+                    //last_consent_modal_btn_focus && last_consent_modal_btn_focus.focus();
                     current_modal_focusable = consent_modal_focusable;
                 }else{
                     /**
                      * Restore focus to last page element which had focus before modal opening
                      */
-                    last_elem_before_modal.focus();
+                    //last_elem_before_modal.focus();
                     current_modal_focusable = null;
                 }
 

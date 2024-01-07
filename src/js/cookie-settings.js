@@ -500,6 +500,7 @@
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
             settings_close_btn.setAttribute('data-bs-dismiss', 'modal'); 
             settings_container.setAttribute('tabindex', '-1'); 
+          settings_container.setAttribute('data-bs-backdrop', 'static'); 
             //settings_container.setAttribute('role', 'dialog');
             //settings_container.setAttribute('aria-modal', 'true');
             settings_container.setAttribute('aria-hidden', 'true');

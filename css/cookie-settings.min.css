@@ -1,1 +1,177 @@
-.cc_div *, .cc_div :before, .cc_div :after {transition: none;animation: none;margin: 0;padding: 0;text-transform: none;letter-spacing: unset;border: none;box-shadow: none;background: none;text-align: left;visibility: unset;}#bs-cookie-bar {z-index: 1050;transform: translateY(100%);transition: transform 0.4s ease-in-out;}.show--consent #bs-cookie-bar {transform: none;transition-delay: 1.5s;}.show--consent.show--settings #bs-cookie-bar {transform: translateY(100%);transition: transform .15s ease-in-out;transition-delay: 0s;}#s-bl .title:first-child {margin-top: 0;}#s-bl .b-bn {margin-top: 0;}#s-bl .b-acc .p {margin-top: 0;padding: 1em;}.exp {color: inherit;}button.b-tl.exp::before {font: var(--fa-font-solid);content: "\f054";display: inline-block;margin-right: .5rem;transition: transform 0.35s ease;}button.b-tl.exp[aria-expanded="true"]::before {transform: rotate(90deg);}#s-bl .c-bl:last-child {margin-bottom: .5em;}#s-bl .c-bl:first-child {transition: none;padding: 0;margin-top: 0;border: none;margin-bottom: 2em;}#s-bl .c-bl.b-ex + .c-bl {margin-top: 2em;}#s-bl .c-bl.b-ex + .c-bl.b-ex {margin-top: 0;}#s-bl .c-bl.b-ex:first-child {margin-bottom: 1em;}#s-bl .c-bl.b-ex:first-child {margin-bottom: .5em;}.cc_div .b-tg .c-tgl:disabled {cursor: not-allowed;}.desc.b-acc {border-top: 2px solid;border-color: var(--bs-modal-bg);}#s-bl tr {padding: 1rem;border-top: 2px solid;border-color: var(--bs-modal-bg);}#s-bl td, #s-bl th {padding: 0.25rem 0;font-size: .875em;}#s-bl table {width: 100%;}#s-bl table, #s-bl thead, #s-bl tbody, #s-bl th, #s-bl td, #s-bl tr {display: block;}#s-bl thead tr {position: absolute;top: -9999px;left: -9999px;}#s-bl td {border: none;position: relative;padding-left: 35%;}#s-bl td:before {position: absolute;left: 0;padding-right: 0.625em;white-space: nowrap;content: attr(data-column);overflow: hidden;text-overflow: ellipsis;}@media screen and (max-width: 575px) {#s-bns {justify-content: normal;}}
+.cc_div *,
+.cc_div :before,
+.cc_div :after {
+  transition: none;
+  animation: none;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  letter-spacing: unset;
+  border: none;
+  box-shadow: none;
+  background: none;
+  text-align: left;
+  visibility: unset;
+}
+
+/* Banner */
+#bs-cookie-bar {
+  z-index: 1050;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.show--consent #bs-cookie-bar {
+  transform: none;
+  transition-delay: 1.5s;
+}
+
+
+/* Hide Banner if modal is open */
+
+.show--consent .modal-open #bs-cookie-bar {
+  transform: translateY(100%);
+  transition: transform .15s ease-in-out;
+  transition-delay: 0s;
+}
+
+
+
+/* Cookie settings modal */
+
+/* Remove focus from close-btn */
+/*
+#bs-cookie-modal .btn-close:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+*/
+
+#s-bl .title:first-child {
+  margin-top: 0;
+}
+
+#s-bl .b-bn {
+  margin-top: 0;
+}
+
+#s-bl .b-acc .p {
+  margin-top: 0;
+  padding: 1em;
+}
+
+.exp {
+  color: inherit;
+}
+
+button.b-tl.exp::before {
+   font: var(--fa-font-solid);
+   content: "\f054";
+   display: inline-block;
+   margin-right: .5rem;
+   transition: transform 0.35s ease;
+ }
+
+button.b-tl.exp[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+
+}
+
+#s-bl .c-bl:last-child {
+  margin-bottom: .5em;
+}
+
+#s-bl .c-bl:first-child {
+  transition: none;
+  padding: 0;
+  margin-top: 0;
+  border: none;
+  margin-bottom: 2em;
+}
+
+#s-bl .c-bl.b-ex + .c-bl {
+  margin-top: 2em;
+}
+
+#s-bl .c-bl.b-ex + .c-bl.b-ex {
+  margin-top: 0;
+}
+
+#s-bl .c-bl.b-ex:first-child {
+  margin-bottom: 1em;
+}
+
+#s-bl .c-bl.b-ex:first-child {
+  margin-bottom: .5em;
+}
+
+.cc_div .b-tg .c-tgl:disabled {
+  cursor: not-allowed;
+}
+
+
+
+.desc.b-acc {
+  border-top: 2px solid;
+  border-color: var(--bs-modal-bg);
+}
+
+#s-bl tr {
+  padding: 1rem;
+  border-top: 2px solid;
+  border-color: var(--bs-modal-bg);
+}
+
+#s-bl td,
+#s-bl th {
+  padding: 0.25rem 0;
+  font-size: .875em;
+}
+
+
+
+/** dynamic table layout **/
+#s-bl table {
+  width: 100%;
+}
+
+/* Force table to not be like tables anymore */
+#s-bl table,
+#s-bl thead,
+#s-bl tbody,
+#s-bl th,
+#s-bl td,
+#s-bl tr {
+  display: block;
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+#s-bl thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#s-bl td {
+  /* Behave  like a "row" */
+  border: none;
+  position: relative;
+  padding-left: 35%;
+}
+
+#s-bl td:before {
+  position: absolute;
+  left: 0;
+  padding-right: 0.625em;
+  white-space: nowrap;
+  content: attr(data-column);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Modal footer buttons */
+@media screen and (max-width: 575px) {
+  #s-bns {
+    justify-content: normal;
+  }
+}

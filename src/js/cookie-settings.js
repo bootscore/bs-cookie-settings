@@ -383,7 +383,8 @@
                 consent_modal_inner_inner.appendChild(consent_text);
 
                 var primary_btn_data = conf_params.languages[lang]['consent_modal']['primary_btn'],   // accept current selection
-                    secondary_btn_data = conf_params.languages[lang]['consent_modal']['secondary_btn'];
+                    secondary_btn_data = conf_params.languages[lang]['consent_modal']['secondary_btn'],
+                    tertiary_btn_data = conf_params.languages[lang]['consent_modal']['tertiary_btn']; //Settings
 
                 // Add primary button if not falsy
                 if(primary_btn_data){
@@ -424,16 +425,38 @@
                         });
                     }
                 }
+              
+                // Add tertiary button if not falsy
+                if(tertiary_btn_data){
+
+                    var consent_tertiary_btn = _createNode('button');
+                    consent_tertiary_btn.id = 'set-s-bn';
+                    consent_tertiary_btn.className = "c-bn c_link btn btn-secondary";
+                    consent_tertiary_btn[innerText] = conf_params.languages[lang]['consent_modal']['tertiary_btn']['text'];
+
+                    if(tertiary_btn_data['role'] === 'accept_necessary'){
+                        _addEvent(consent_tertiary_btn, 'click', function(){
+                            _cookieconsent.hide();
+                            _cookieconsent.accept([]); // accept necessary only
+                        });
+                    }else{
+                        _addEvent(consent_tertiary_btn, 'click', function(){
+                            _cookieconsent.showSettings(0);
+                        });
+                    }
+                }
 
                 // Swap buttons
                 var gui_options_data = conf_params['gui_options'];
                 if(gui_options_data && gui_options_data['consent_modal'] && gui_options_data['consent_modal']['swap_buttons'] === true){
+                    tertiary_btn_data && consent_buttons.appendChild(consent_tertiary_btn);  
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     consent_buttons.className = 'swap';
                 }else{
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
+                    tertiary_btn_data && consent_buttons.appendChild(consent_tertiary_btn);
                 }
 
                 consent_modal.appendChild(consent_modal_container);

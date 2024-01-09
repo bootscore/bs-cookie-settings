@@ -434,6 +434,9 @@
                     consent_tertiary_btn.className = "c-bn c_link btn btn-secondary";
                     consent_tertiary_btn[innerText] = conf_params.languages[lang]['consent_modal']['tertiary_btn']['text'];
 
+                    consent_tertiary_btn.setAttribute('data-bs-toggle', 'modal');
+                    consent_tertiary_btn.setAttribute('data-bs-target', '#bs-cookie-modal');
+                    /*
                     if(tertiary_btn_data['role'] === 'accept_necessary'){
                         _addEvent(consent_tertiary_btn, 'click', function(){
                             _cookieconsent.hide();
@@ -444,6 +447,7 @@
                             _cookieconsent.showSettings(0);
                         });
                     }
+                    */
                 }
 
                 // Swap buttons

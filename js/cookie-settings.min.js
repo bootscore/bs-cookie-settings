@@ -346,7 +346,7 @@
                 consent_text.id = 'c-txt';
                 //consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
-                consent_buttons.className =  "col-md-4 col-xxl-3 d-flex flex-column justify-content-center gap-2";
+                consent_buttons.className =  "col-md-4 col-lg-3 d-flex flex-column justify-content-center gap-2";
                 //overlay.id = 'cm-ov';
        
                 

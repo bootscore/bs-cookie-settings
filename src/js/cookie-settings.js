@@ -346,7 +346,7 @@
                 consent_text.id = 'c-txt';
                 //consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
-                consent_buttons.className =  "col-md-4 col-xxl-3 d-flex flex-column justify-content-center gap-2";
+                consent_buttons.className =  "col-md-4 col-lg-3 d-flex flex-column justify-content-center gap-2";
                 //overlay.id = 'cm-ov';
        
                 
@@ -402,7 +402,7 @@
 
                     var consent_secondary_btn = _createNode('button');
                     consent_secondary_btn.id = 'c-s-bn';
-                    consent_secondary_btn.className = "c-bn c_link btn btn-outline-primary";
+                    consent_secondary_btn.className = "c-bn c_link btn btn-primary";
                     consent_secondary_btn[innerText] = conf_params.languages[lang]['consent_modal']['secondary_btn']['text'];
 
                     if(secondary_btn_data['role'] === 'accept_necessary'){
@@ -771,7 +771,7 @@
             settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn btn btn-outline-primary ms-sm-auto';
+            settings_save_btn.className ='c-bn btn btn-secondary ms-sm-auto';
             settings_accept_all_btn.className ='c-bn btn btn-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
@@ -789,7 +789,7 @@
 
                 var reject_all_btn = _createNode('button');
                 reject_all_btn.id = 's-rall-bn';
-                reject_all_btn.className = 'c-bn btn btn-outline-primary';
+                reject_all_btn.className = 'c-bn btn btn-primary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
                 reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
 

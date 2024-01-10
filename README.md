@@ -46,6 +46,9 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
             secondary_btn: {
               text: 'Reject all',
               role: 'accept_necessary'
+            },
+            settings_btn: {
+              text: 'Individual settings'
             }
           },
 

@@ -1,6 +1,7 @@
 # bS Cookie Settings
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-cookie-settings?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-cookie-settings)
+[![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-cookie-settings/total.svg)](https://github.com/bootscore/bs-cookie-settings/releases)
 
 WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on the [cookieconsent](https://orestbida.com/demo-projects/cookieconsent/) script by [Orest Bida](https://github.com/orestbida/cookieconsent).
 

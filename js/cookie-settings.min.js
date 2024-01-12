@@ -1,4 +1,7 @@
 /*!
+ * bs Cookie Settings v5.5.0
+ *
+ * Based on
  * CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
  * Author Orest Bida

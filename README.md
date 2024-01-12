@@ -147,12 +147,12 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 ```html
 <!-- Google Analytics -->
 <script type="text/plain" data-cookiecategory="analytics">
-
+  // Code goes here
 </script>
 
 <!-- Advertising -->
 <script type="text/plain" data-cookiecategory="advertising">
-
+  // Code goes here
 </script>
 ```
 

@@ -1,8 +1,8 @@
-=== bS Cookie Settings ===
+=== bs Cookie Settings ===
 
 Contributors: The Bootscore contributors
 
-Stable tag: 5.4.0
+Stable tag: 5.5.0
 Tested up to: 6.4.2
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -10,7 +10,7 @@ Requires at least: 4.5
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 
-Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 2023 The Bootscore Contributors.
+Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 2024 The Bootscore Contributors.
 
 
 == Credits ==
@@ -30,6 +30,16 @@ Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 202
 Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+= 5.5.0 - January 15 2024 =
+
+* [Feature] Added additional settings button to cookie bar. Button can be activated in init js #14 (@crftwrk)
+* [Feature] Added data-bs-backdrop="static" attribute to the modal to avoid closing it when clicking on the backdrop and forcing the user to make a decision #12 (@crftwrk)
+* [IMPROVEMENT] Removed -main branch suffix from plugin's folder. This does not affect existing bs-cookie-settings-main installations
+* [IMPROVEMENT] Removed btn-close focus on modal show #13 (@crftwrk)
+* [IMPROVEMENT] Changed all btn-outline-primary to btn primary according to the GDPR law #15 (@crftwrk)
+* [IMPROVEMENT] Changed col-xxl-3 to col-lg-3 in banner to fit the sidebar width 60dc213 (@crftwrk)
+* [UPDATE] Update checker 5.3 8bb10d5 (@crftwrk)
 
 = 5.4.0 - December 15 2023 =
 

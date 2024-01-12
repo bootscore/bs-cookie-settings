@@ -10,7 +10,7 @@ WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on
 
 ## Installation
 
-1. Download latest release [bs-cookie-settings-main.zip](https://github.com/bootscore/bs-cookie-settings/releases/latest/download/bs-cookie-settings-main.zip).
+1. Download latest release [bs-cookie-settings.zip](https://github.com/bootscore/bs-cookie-settings/releases/latest/download/bs-cookie-settings.zip).
 2. In your admin panel, go to Plugins > and click the Add New button.
 3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 4. Click Activate to use your new Plugin right away.

@@ -1,4 +1,4 @@
-# bS Cookie Settings
+# bs Cookie Settings
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-cookie-settings?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-cookie-settings)
 [![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-cookie-settings/total.svg)](https://github.com/bootscore/bs-cookie-settings/releases)
@@ -183,4 +183,4 @@ Make sure that the links to your legal note and privacy policy are not covered b
 
 - cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
 - Plugin Update Checker by YahnisElsts, MIT License <a href="https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt">https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
-- bS Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
+- bs Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE

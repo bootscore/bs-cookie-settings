@@ -1,6 +1,7 @@
-# bS Cookie Settings
+# bs Cookie Settings
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-cookie-settings?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-cookie-settings)
+[![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-cookie-settings/total.svg)](https://github.com/bootscore/bs-cookie-settings/releases)
 
 WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on the [cookieconsent](https://orestbida.com/demo-projects/cookieconsent/) script by [Orest Bida](https://github.com/orestbida/cookieconsent).
 
@@ -9,7 +10,7 @@ WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on
 
 ## Installation
 
-1. Download latest release [bs-cookie-settings-main.zip](https://github.com/bootscore/bs-cookie-settings/releases/latest/download/bs-cookie-settings-main.zip).
+1. Download latest release [bs-cookie-settings.zip](https://github.com/bootscore/bs-cookie-settings/releases/latest/download/bs-cookie-settings.zip).
 2. In your admin panel, go to Plugins > and click the Add New button.
 3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 4. Click Activate to use your new Plugin right away.
@@ -18,7 +19,7 @@ WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on
 
 ### Init
 
-Initialize plugin with inline script in **HTML widget in Footer 4** position and replace your data.
+Initialize plugin with inline script in **HTML widget in Footer Info** position and replace your data.
 
 ```html
 <script>
@@ -48,7 +49,7 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
               role: 'accept_necessary'
             },
             settings_btn: {
-              text: 'Individual settings'
+              text: 'Settings'
             }
           },
 
@@ -141,23 +142,18 @@ Initialize plugin with inline script in **HTML widget in Footer 4** position and
 
 ### Block / manage scripts
 
-Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script **HTML widget in Footer 4** position **after** the init script.
+Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script **HTML widget in Footer Info** position **after** the init script.
 
 ```html
 <!-- Google Analytics -->
 <script type="text/plain" data-cookiecategory="analytics">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('send', 'pageview');
+  // Code goes here
 </script>
 
 <!-- Advertising -->
-<script type="text/plain" data-cookiecategory="advertising" src="./assets/js/my_custom_script.js" defer></script>
-
+<script type="text/plain" data-cookiecategory="advertising">
+  // Code goes here
+</script>
 ```
 
 ### Open settings modal
@@ -182,4 +178,4 @@ Make sure that the links to your legal note and privacy policy are not covered b
 
 - cookieconsent script by Orest Bida, MIT License https://github.com/orestbida/cookieconsent/blob/master/LICENSE
 - Plugin Update Checker by YahnisElsts, MIT License <a href="https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt">https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
-- bS Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
+- bs Cookie Settings, MIT License https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE

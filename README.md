@@ -49,7 +49,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
               role: 'accept_necessary'
             },
             settings_btn: {
-              text: 'Settings'
+              text: 'Individual settings'
             }
           },
 

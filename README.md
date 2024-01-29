@@ -5,7 +5,7 @@
 
 WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on the [cookieconsent](https://orestbida.com/demo-projects/cookieconsent/) script by [Orest Bida](https://github.com/orestbida/cookieconsent).
 
-<img src="https://lh3.googleusercontent.com/pw/AM-JKLVzgrDgCd68uGMaxBPYAMYB4wg6cg7orzuNU5sr41XOkGFuxueA9eEgkHRCp1HfoxTghl5giVRdnewa8-Lx7GmDyNeastxvBKpvjRNQ0saP5vspSRGCRP7N0-pLkyJqtcltBR32ZsbWfZjCBvOzvRjIHA=w1200-h954-no" alt="bS Cookie Settings">
+<img src="https://lh3.googleusercontent.com/pw/AM-JKLVzgrDgCd68uGMaxBPYAMYB4wg6cg7orzuNU5sr41XOkGFuxueA9eEgkHRCp1HfoxTghl5giVRdnewa8-Lx7GmDyNeastxvBKpvjRNQ0saP5vspSRGCRP7N0-pLkyJqtcltBR32ZsbWfZjCBvOzvRjIHA=w1200-h954-no" alt="bs Cookie Settings">
 
 
 ## Installation
@@ -39,7 +39,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit "Cookie Settings" to provide a controlled consent. <a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>',
+            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit <a data-bs-toggle="modal" href="#bs-cookie-modal">Individual settings</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'

@@ -1,5 +1,7 @@
 /*!
- * bs Cookie Settings v5.5.0
+ * bs Cookie Settings
+ * 
+ * @version 5.5.1
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -75,14 +77,14 @@
 
 button.b-tl.exp::before {
    font: var(--fa-font-solid);
-   content: "\f054";
+   content: "\f078";
    display: inline-block;
    margin-right: .5rem;
-   transition: transform 0.35s ease;
+   transition: transform 0.2s ease-in-out;
  }
 
 button.b-tl.exp[aria-expanded="true"]::before {
-  transform: rotate(90deg);
+  transform: rotate(-180deg);
 
 }
 

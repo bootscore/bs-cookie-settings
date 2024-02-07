@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  * 
- * @version 5.5.1
+ * @version 5.5.0
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -79,7 +79,7 @@ button.b-tl.exp::before {
   font: var(--fa-font-solid);
   content: "\f078";
   display: inline-block;
-  margin-right: .5rem;
+  margin-right: $spacer * .5;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -98,7 +98,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
     padding: 0;
     margin-top: 0;
     border: none;
-    margin-bottom: 2em;
+    margin-bottom: $spacer * 2;
   }
 
   .c-bl.b-ex + .c-bl {
@@ -114,27 +114,18 @@ button.b-tl.exp[aria-expanded="true"]::before {
   }
 
   tr {
-    padding: 1rem;
+    padding: $spacer;
     border-top: 2px solid;
-    border-color: var(--bs-modal-bg);
+    border-color: var(--#{$prefix}modal-bg);
   }
 
   td,
   th {
     padding: 0.25rem 0;
-    font-size: .875em;
+    font-size: $font-size-base * .875;
   }
-}
 
-
-.desc.b-acc {
-  border-top: 2px solid;
-  border-color: var(--bs-modal-bg);
-}
-
-
-// Dynamic table layout
-#s-bl {
+  // Dynamic table layout
   table {
     width: 100%;
   }
@@ -175,9 +166,14 @@ button.b-tl.exp[aria-expanded="true"]::before {
 }
 
 
+.desc.b-acc {
+  border-top: 2px solid;
+  border-color: var(--#{$prefix}modal-bg);
+}
+
 
 /* Modal footer buttons */
-@media screen and (max-width: 575px) {
+@include media-breakpoint-down(xs) {
   #s-bns {
     justify-content: normal;
   }

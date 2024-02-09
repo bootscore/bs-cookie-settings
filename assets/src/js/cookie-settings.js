@@ -377,7 +377,8 @@
 
                 var primary_btn_data = conf_params.languages[lang]['consent_modal']['primary_btn'],   // accept current selection
                     secondary_btn_data = conf_params.languages[lang]['consent_modal']['secondary_btn'],
-                    settings_btn_data = conf_params.languages[lang]['consent_modal']['settings_btn']; //Settings
+                    settings_btn_data = conf_params.languages[lang]['consent_modal']['settings_btn'], // Settings
+                    consent_links = conf_params.languages[lang]['consent_modal']['consent_links']; // Links
 
                 // Add primary button if not falsy
                 if(primary_btn_data){
@@ -421,7 +422,7 @@
               
                 // Add settings button if not falsy
                 if(settings_btn_data){
-
+                  
                     var consent_settings_btn = _createNode('button');
                     consent_settings_btn.id = 'set-s-bn';
                     consent_settings_btn.className = "c-bn c_link btn btn-secondary";
@@ -429,26 +430,43 @@
 
                     consent_settings_btn.setAttribute('data-bs-toggle', 'modal');
                     consent_settings_btn.setAttribute('data-bs-target', '#bs-cookie-modal');
-
                 }
-
+              
+              
+            
                 // Swap buttons
                 var gui_options_data = conf_params['gui_options'];
                 if(gui_options_data && gui_options_data['consent_modal'] && gui_options_data['consent_modal']['swap_buttons'] === true){
-                    settings_btn_data && consent_buttons.appendChild(consent_settings_btn);  
+                  consent_links && consent_buttons.appendChild(consent_links);   
+                  settings_btn_data && consent_buttons.appendChild(consent_settings_btn);  
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     consent_buttons.className = 'swap';
-                }else{
+                } else  {
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     settings_btn_data && consent_buttons.appendChild(consent_settings_btn);
+                    //consent_links && consent_buttons.appendChild(consent_links);
+                    //consent_modal.appendChild(consent_links);
                 }
+              
+              
+                
 
                 consent_modal.appendChild(consent_modal_container);
                 consent_modal_container.appendChild(consent_modal_inner);
                 consent_modal_inner.appendChild(consent_modal_inner_inner);
                 (primary_btn_data || secondary_btn_data ) && consent_modal_inner.appendChild(consent_buttons);
+              
+                // Add banner consent links if not falsy
+                if(consent_links){
+
+                    var consent_links = _createNode('div');
+                    consent_links.id = 'consent-links';
+                    consent_links.className = "border-top";
+                    consent_links.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_links']['description']);
+                    consent_modal.appendChild(consent_links);
+                }
   
 
                 // Append consent modal to main container

@@ -378,7 +378,7 @@
                 var primary_btn_data = conf_params.languages[lang]['consent_modal']['primary_btn'],   // accept current selection
                     secondary_btn_data = conf_params.languages[lang]['consent_modal']['secondary_btn'],
                     settings_btn_data = conf_params.languages[lang]['consent_modal']['settings_btn'], // Settings
-                    consent_links = conf_params.languages[lang]['consent_modal']['consent_links']; // Links
+                    consent_footer = conf_params.languages[lang]['consent_modal']['consent_footer']; // Links
 
                 // Add primary button if not falsy
                 if(primary_btn_data){
@@ -437,7 +437,7 @@
                 // Swap buttons
                 var gui_options_data = conf_params['gui_options'];
                 if(gui_options_data && gui_options_data['consent_modal'] && gui_options_data['consent_modal']['swap_buttons'] === true){
-                  consent_links && consent_buttons.appendChild(consent_links);   
+                  consent_footer && consent_buttons.appendChild(consent_footer);   
                   settings_btn_data && consent_buttons.appendChild(consent_settings_btn);  
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
@@ -446,8 +446,8 @@
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     settings_btn_data && consent_buttons.appendChild(consent_settings_btn);
-                    //consent_links && consent_buttons.appendChild(consent_links);
-                    //consent_modal.appendChild(consent_links);
+                    //consent_footer && consent_buttons.appendChild(consent_footer);
+                    //consent_modal.appendChild(consent_footer);
                 }
               
               
@@ -459,17 +459,17 @@
                 (primary_btn_data || secondary_btn_data ) && consent_modal_inner.appendChild(consent_buttons);
               
                 // Add banner consent links if not falsy
-                if(consent_links){
+                if(consent_footer){
 
-                    var consent_links = _createNode('div');
-                    var consent_links_inner = _createNode('div');
-                    consent_links.id = 'consent-links';
-                    consent_links.className = "border-top";
-                    consent_links_inner.id = 'consent-links-inner';
-                    consent_links_inner.className = "container py-2 text-center text-md-start";
-                    consent_links_inner.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_links']['description']);
-                    consent_modal.appendChild(consent_links);
-                    consent_links.appendChild(consent_links_inner);
+                    var consent_footer = _createNode('div');
+                    var consent_footer_inner = _createNode('div');
+                    consent_footer.id = 'consent-links';
+                    consent_footer.className = "border-top";
+                    consent_footer_inner.id = 'consent-links-inner';
+                    consent_footer_inner.className = "container py-2 text-center text-md-start";
+                    consent_footer_inner.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_footer']['description']);
+                    consent_modal.appendChild(consent_footer);
+                    consent_footer.appendChild(consent_footer_inner);
                 }
   
 

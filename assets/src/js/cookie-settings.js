@@ -341,7 +341,7 @@
                 consent_modal.className =  "bg-body-tertiary fixed-bottom d-block";
                 consent_modal_container.className =  "container py-4";
                 consent_modal_inner.id = 'c-inr';
-                consent_modal_inner.className =  "row";
+                consent_modal_inner.className =  "row align-items-center";
                 consent_modal_inner_inner.id = 'c-inr-i';
                 consent_modal_inner_inner.className =  "col mb-4 mb-md-0";
                

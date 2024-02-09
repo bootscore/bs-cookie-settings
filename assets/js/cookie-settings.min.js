@@ -338,8 +338,8 @@
                 //var overlay = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
-                consent_modal.className =  "py-4 py-md-5 bg-body-tertiary fixed-bottom d-block";
-                consent_modal_container.className =  "container";
+                consent_modal.className =  "bg-body-tertiary fixed-bottom d-block";
+                consent_modal_container.className =  "container py-4";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row";
                 consent_modal_inner_inner.id = 'c-inr-i';
@@ -462,10 +462,14 @@
                 if(consent_links){
 
                     var consent_links = _createNode('div');
+                    var consent_links_inner = _createNode('div');
                     consent_links.id = 'consent-links';
                     consent_links.className = "border-top";
-                    consent_links.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_links']['description']);
+                    consent_links_inner.id = 'consent-links-inner';
+                    consent_links_inner.className = "container py-2 text-center text-md-start";
+                    consent_links_inner.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_links']['description']);
                     consent_modal.appendChild(consent_links);
+                    consent_links.appendChild(consent_links_inner);
                 }
   
 

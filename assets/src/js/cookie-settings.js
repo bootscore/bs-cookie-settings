@@ -1,5 +1,5 @@
 /*!
- * bs Cookie Settings v5.5.0
+ * bs Cookie Settings v5.6.0
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -335,7 +335,6 @@
                 
                 consent_text = _createNode('div');
                 var consent_buttons = _createNode('div');
-                //var overlay = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
                 consent_modal.className =  "bg-body-tertiary fixed-bottom d-block";
@@ -346,11 +345,8 @@
                 consent_modal_inner_inner.className =  "col mb-4 mb-md-0";
                
                 consent_text.id = 'c-txt';
-                //consent_text.className =  "small";
                 consent_buttons.id = "c-bns";
                 consent_buttons.className =  "col-md-4 col-lg-3 d-flex flex-column justify-content-center gap-2";
-                //overlay.id = 'cm-ov';
-       
                 
                 consent_modal.setAttribute('role', 'dialog');
                 consent_modal.setAttribute('aria-modal', 'true');
@@ -446,13 +442,9 @@
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     settings_btn_data && consent_buttons.appendChild(consent_settings_btn);
-                    //consent_footer && consent_buttons.appendChild(consent_footer);
-                    //consent_modal.appendChild(consent_footer);
                 }
               
-              
-                
-
+  
                 consent_modal.appendChild(consent_modal_container);
                 consent_modal_container.appendChild(consent_modal_inner);
                 consent_modal_inner.appendChild(consent_modal_inner_inner);
@@ -493,7 +485,6 @@
             var settings_header = _createNode('div');
             var settings_close_btn = _createNode('button');
             var settings_blocks = _createNode('div');
-            //var overlay = _createNode('div');
 
             /**
              * Set ids
@@ -506,7 +497,6 @@
             settings_header.id = "s-hdr";
             settings_blocks.id = 's-bl';
             settings_close_btn.id = 's-c-bn';
-            //overlay.id = 'cs-ov';
           
             /**
              * Set classes

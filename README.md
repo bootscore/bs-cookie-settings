@@ -39,7 +39,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may visit <a data-bs-toggle="modal" href="#bs-cookie-modal">Individual settings</a> to provide a controlled consent.',
+            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may <a data-bs-toggle="modal" href="#bs-cookie-modal">manage your preferences</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -49,7 +49,10 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
               role: 'accept_necessary'
             },
             settings_btn: {
-              text: 'Individual settings'
+              text: 'Manage preferences'
+            },
+            consent_footer: {
+              description: '<a class="small link-secondary text-decoration-none" href="#">Privacy Policy</a> • <a class="small link-secondary text-decoration-none" href="#">Terms & Conditions</a> • <a class="small link-secondary text-decoration-none" href="#">Imprint</a>'
             }
           },
 

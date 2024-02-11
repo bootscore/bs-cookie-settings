@@ -164,13 +164,13 @@ By clicking one of the "Accept all", "Reject all" or "Save settings" button, the
 #### Link
 
 ```html
-<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>
+<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Preferences</a>
 ```
 
 #### Button
 
 ```html
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Settings</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Preferences</button>
 ```
 
 Make sure that the links to your legal note and privacy policy are not covered by the banner. Use a menu in **Footer 1** widget position for them.

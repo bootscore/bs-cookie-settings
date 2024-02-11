@@ -1,5 +1,7 @@
 /*!
- * bs Cookie Settings v5.6.0
+ * bs Cookie Settings
+ *
+ * @version 5.6.0
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -782,7 +784,7 @@
             var settings_accept_all_btn = _createNode('button');
 
             settings_buttons.id = 's-bns';
-            settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex';
+            settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex gap-sm-0';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
             settings_save_btn.className ='c-bn btn btn-secondary ms-sm-auto';

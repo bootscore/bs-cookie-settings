@@ -37,20 +37,25 @@
 #bs-cookie-bar {
   z-index: 1050;
   transform: translateY(100%);
-  transition: transform 0.4s ease-in-out;
+  transition: transform .3s ease-in-out;
 }
 
 .show--consent {
   #bs-cookie-bar {
     transform: none;
-    transition-delay: 1.5s;
+    transition-delay: .5s;
   }
 
-  // Hide Banner if modal is open
-  .modal-open #bs-cookie-bar {
-    transform: translateY(100%);
-    transition: transform .15s ease-in-out;
-    transition-delay: 0s;
+  // Hide Banner if modal or offcanvas is open
+  .modal-open,
+  &:has(.offcanvas.showing),
+  &:has(.offcanvas.show),
+  &:has(.offcanvas-md.showing), // Sidebar
+  &:has(.offcanvas-md.show) {   // Sidebar
+    #bs-cookie-bar {
+      transform: translateY(100%);
+      transition-delay: 0s;
+    }
   }
 }
 
@@ -121,8 +126,8 @@ button.b-tl.exp[aria-expanded="true"]::before {
 
   td,
   th {
-    padding: 0.25rem 0;
-    font-size: $font-size-base * .875;
+    padding: ($spacer * .25) 0;
+    font-size: $small-font-size;
   }
 
   // Dynamic table layout
@@ -173,7 +178,7 @@ button.b-tl.exp[aria-expanded="true"]::before {
 
 
 /* Modal footer buttons */
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   #s-bns {
     justify-content: normal;
   }

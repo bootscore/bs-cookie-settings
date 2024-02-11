@@ -19,7 +19,7 @@ WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on
 
 ### Init
 
-Initialize plugin with inline script in **HTML widget in Footer Info** position and replace your data.
+Initialize plugin with inline script in **Custom HTML** widget in **Footer Info** widget position and replace your data.
 
 ```html
 <script>
@@ -143,7 +143,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
 
 ### Block / manage scripts
 
-Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script **HTML widget in Footer Info** position **after** the init script.
+Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script in a **Custom HTML** widget in **Footer Info** position **after** the init script.
 
 ```html
 <!-- Google Analytics -->
@@ -157,9 +157,9 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 </script>
 ```
 
-### Open settings modal
+### Open preferences modal
 
-By clicking one of the "Accept all", "Reject all" or "Save settings" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open settings modal again, add following link to your privacy policy and to a **HTML widget** in **Footer 1** position.
+By clicking one of the "Accept all", "Reject all" or "Save preferences" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open preferences modal again, add following link to your privacy policy and to a **Custom HTML** widget in a **Footer** widget position.
 
 #### Link
 

@@ -31,6 +31,19 @@ Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
 
+= 5.6.0 - February 12 2024 =
+
+#### Feature
+
+* Added optional footer to consent banner to add important links like privacy policy, terms, imprint etc. Footer can be activated in init js.
+
+#### Improvement
+
+* Moved css and js to assets folder
+* Refactored collapse icon
+* Switch to scss source
+* Hide Banner if modal/offcanvas is open
+
 = 5.5.0 - January 15 2024 =
 
 #### Feature

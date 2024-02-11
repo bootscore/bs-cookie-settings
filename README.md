@@ -39,7 +39,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may <a data-bs-toggle="modal" href="#bs-cookie-modal">manage your preferences</a> to provide a controlled consent.',
+            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="modal" href="#bs-cookie-modal">cookie preferences</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -95,8 +95,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
                     col3: '2 years',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                     is_regex: true
-                  },
-                  {
+                  }, {
                     col1: '_gid',
                     col2: 'google.com',
                     col3: '1 day',
@@ -118,8 +117,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
                     col3: '2 weeks',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                     is_regex: true
-                  },
-                  {
+                  }, {
                     col1: '_name',
                     col2: 'xyz.com',
                     col3: '3 days',

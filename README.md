@@ -57,8 +57,8 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
           },
 
           settings_modal: {
-            title: 'Cookie settings',
-            save_settings_btn: 'Save settings',
+            title: 'Cookie preferences',
+            save_settings_btn: 'Save preferences',
             accept_all_btn: 'Accept all',
             reject_all_btn: 'Reject all',
             close_btn_label: 'Close',

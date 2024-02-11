@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors
 
-Stable tag: 5.5.0
-Tested up to: 6.4.2
+Stable tag: 5.6.0
+Tested up to: 6.4.3
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5

@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors
 
-Stable tag: 5.5.0
-Tested up to: 6.4.2
+Stable tag: 5.6.0
+Tested up to: 6.4.3
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5
@@ -31,32 +31,71 @@ Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
 
+= 5.6.0 - February 12 2024 =
+
+#### Feature
+
+* Added optional footer to consent banner to add important links like privacy policy, terms, imprint etc. Footer can be activated in init js.
+
+#### Improvement
+
+* Moved css and js to assets folder
+* Refactored collapse icon
+* Switch to scss source
+* Hide Banner if modal/offcanvas is open
+
 = 5.5.0 - January 15 2024 =
 
-* [Feature] Added additional settings button to cookie bar. Button can be activated in init js #14 (@crftwrk)
-* [Feature] Added data-bs-backdrop="static" attribute to the modal to avoid closing it when clicking on the backdrop and forcing the user to make a decision #12 (@crftwrk)
-* [IMPROVEMENT] Removed -main branch suffix from plugin's folder. This does not affect existing bs-cookie-settings-main installations
-* [IMPROVEMENT] Removed btn-close focus on modal show #13 (@crftwrk)
-* [IMPROVEMENT] Changed all btn-outline-primary to btn primary according to the GDPR law #15 (@crftwrk)
-* [IMPROVEMENT] Changed col-xxl-3 to col-lg-3 in banner to fit the sidebar width 60dc213 (@crftwrk)
-* [UPDATE] Update checker 5.3 8bb10d5 (@crftwrk)
+#### Feature
+
+* Added additional settings button to cookie bar. Button can be activated in init js
+* Added data-bs-backdrop="static" attribute to the modal to avoid closing it when clicking on the backdrop and forcing the user to make a decision
+
+#### Improvement
+
+* Removed -main branch suffix from plugin's folder. This does not affect existing bs-cookie-settings-main installations
+* Removed btn-close focus on modal show
+* Changed all btn-outline-primary to btn primary according to the GDPR law
+* Changed col-xxl-3 to col-lg-3 in banner to fit the sidebar width
+
+#### Update
+
+* Update checker 5.3
 
 = 5.4.0 - December 15 2023 =
 
-* [IMPROVEMENT] Deny direct access
-* [UPDATE] Update checker v5
+#### Improvement
+
+* Deny direct access
+
+#### Update
+
+* Update checker v5
 
 = 5.3.0 - June 09 2023 =
 
-* [FEATURE] Add composer.json
-* [FEATURE] Add plugin update checker
-* [IMPROVEMENT] Change btn-outline-secondary to btn-outline-primary
-* [UPDATE] Bootstrap 5.3 color classes
+#### Feature
+
+* Added composer.json
+* Added plugin update checker
+
+#### Improvement
+
+* Change btn-outline-secondary to btn-outline-primary
+
+#### Update
+
+* Bootstrap 5.3 color classes
 
 = 5.2.1.0 - August 24 2022 =
 
+#### Feature
+
 * Refactored modal
 * Removed plugin's backdrop and uses Bootstrap modal backdrop instead
+
+#### Improvement
+
 * Settings link triggers now modal instead modal-dialog
 * Changed settings link to data-bs-toggle="modal" [Breaking]
 * Hide banner if modal is open
@@ -65,11 +104,18 @@ Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 = 5.2.0.0 - August 20 2022 =
 
+#### Bugfix
+
 * Added missing modal class
 
 = 5.1.3.2 - June 03 2022 =
 
+#### Bugfix
+
 * Fix modal backdrop in Chrome/Edge. Used rgba instead of opacity.
+
+#### Improvement
+
 * Switched to FA5 icons
 
 = 5.0.0.0 - January 03 2022 =

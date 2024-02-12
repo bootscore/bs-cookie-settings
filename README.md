@@ -19,7 +19,7 @@ WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on
 
 ### Init
 
-Initialize plugin with inline script in **HTML widget in Footer Info** position and replace your data.
+Initialize plugin with inline script in a **Custom HTML** widget in **Footer Info** widget position and replace your data.
 
 ```html
 <script>
@@ -39,7 +39,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept all”, you consent to the use of all the cookies. However, you may <a data-bs-toggle="modal" href="#bs-cookie-modal">manage your preferences</a> to provide a controlled consent.',
+            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="modal" href="#bs-cookie-modal">cookie preferences</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -57,8 +57,8 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
           },
 
           settings_modal: {
-            title: 'Cookie settings',
-            save_settings_btn: 'Save settings',
+            title: 'Cookie preferences',
+            save_settings_btn: 'Save preferences',
             accept_all_btn: 'Accept all',
             reject_all_btn: 'Reject all',
             close_btn_label: 'Close',
@@ -74,7 +74,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
                 description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy">Privacy Policy</a>.'
               }, {
                 title: 'Necessary',
-                description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                description: 'These cookies are essential for the proper functioning of our website. Without these cookies, the website would not work properly',
                 toggle: {
                   value: 'necessary',
                   enabled: true,
@@ -95,8 +95,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
                     col3: '2 years',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                     is_regex: true
-                  },
-                  {
+                  }, {
                     col1: '_gid',
                     col2: 'google.com',
                     col3: '1 day',
@@ -118,8 +117,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
                     col3: '2 weeks',
                     col4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
                     is_regex: true
-                  },
-                  {
+                  }, {
                     col1: '_name',
                     col2: 'xyz.com',
                     col3: '3 days',
@@ -145,7 +143,7 @@ Initialize plugin with inline script in **HTML widget in Footer Info** position 
 
 ### Block / manage scripts
 
-Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script **HTML widget in Footer Info** position **after** the init script.
+Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag you want to manage. Use inline-script in a **Custom HTML** widget in **Footer Info** position **after** the init script.
 
 ```html
 <!-- Google Analytics -->
@@ -159,23 +157,21 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 </script>
 ```
 
-### Open settings modal
+### Open preferences modal
 
-By clicking one of the "Accept all", "Reject all" or "Save settings" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open settings modal again, add following link to your privacy policy and to a **HTML widget** in **Footer 1** position.
+By clicking one of the "Accept all", "Reject all" or "Save preferences" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open preferences modal again, add following link to your privacy policy and to a **Custom HTML** widget in a **Footer** widget position.
 
 #### Link
 
 ```html
-<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Settings</a>
+<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Preferences</a>
 ```
 
 #### Button
 
 ```html
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Settings</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Preferences</button>
 ```
-
-Make sure that the links to your legal note and privacy policy are not covered by the banner. Use a menu in **Footer 1** widget position for them.
 
 ## License & Credits
 

@@ -71,7 +71,7 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
             blocks: [
               {
                 title: 'Cookie usage',
-                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#yourprivacypolicy">Privacy Policy</a>.'
+                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#">Privacy Policy</a>.'
               }, {
                 title: 'Necessary',
                 description: 'These cookies are essential for the proper functioning of our website. Without these cookies, the website would not work properly',

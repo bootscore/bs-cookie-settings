@@ -1,6 +1,6 @@
 === bs Cookie Settings ===
 
-Contributors: The Bootscore contributors
+Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
 Stable tag: 5.6.0
 Tested up to: 6.4.3

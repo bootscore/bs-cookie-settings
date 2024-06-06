@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.0
-Tested up to: 6.4.3
+Stable tag: 5.6.1
+Tested up to: 6.5.4
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5
@@ -30,6 +30,17 @@ Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 202
 Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+= 5.6.1 - June 06 2024 =
+
+#### Improvement
+
+* Added Spanish instructions
+* Created `translations` folder and moved Spanish translation to espanol.md
+
+#### Update
+
+* Update checker 5.4
 
 = 5.6.0 - February 12 2024 =
 

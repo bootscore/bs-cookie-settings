@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.1
-Tested up to: 6.5.4
+Stable tag: 5.6.2
+Tested up to: 6.6
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5
@@ -31,9 +31,17 @@ Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
 
+= 5.6.2 - August 31 2024 =
+
+#### Improvements
+
+* Added icon.svg
+* Updated meta
+* Tested up to WP 6.6
+
 = 5.6.1 - June 06 2024 =
 
-#### Improvement
+#### Improvements
 
 * Added Spanish instructions
 * Created `translations` folder and moved Spanish translation to espanol.md

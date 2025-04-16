@@ -36,12 +36,19 @@ $myUpdateChecker->setBranch('main');
  * Register styles and scripts
  */
 function bs_cookie_settings() {
-    
-  wp_enqueue_script( 'cookie-settings-js', plugins_url( '/assets/js/cookie-settings.min.js' , __FILE__ ), array(), false, true );
-    
-  wp_register_style( 'cookie-settings-css', plugins_url('/assets/css/cookie-settings.min.css', __FILE__) );
-  wp_enqueue_style( 'cookie-settings-css' );
-    
+  // File paths
+  $script_file = plugin_dir_path(__FILE__) . 'assets/js/cookie-settings.min.js';
+  $style_file  = plugin_dir_path(__FILE__) . 'assets/css/cookie-settings.min.css';
+
+  // Timestamps as version numbers
+  $script_ver = file_exists($script_file) ? date('YmdHi', filemtime($script_file)) : false;
+  $style_ver  = file_exists($style_file) ? date('YmdHi', filemtime($style_file)) : false;
+
+  // Enqueue script
+  wp_enqueue_script('cookie-settings-js', plugins_url('/assets/js/cookie-settings.min.js', __FILE__), [], $script_ver, true);
+
+  // Enqueue style
+  wp_enqueue_style('cookie-settings-css', plugins_url('/assets/css/cookie-settings.min.css', __FILE__), [], $style_ver);
 }
 
-add_action('wp_enqueue_scripts','bs_cookie_settings');
+add_action('wp_enqueue_scripts', 'bs_cookie_settings');

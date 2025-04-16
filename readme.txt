@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.2
-Tested up to: 6.6
+Stable tag: 5.6.3
+Tested up to: 6.8
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5
@@ -30,6 +30,18 @@ Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 202
 Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+= 5.6.3 - April 16 2025 =
+
+#### Improvements
+
+* Added `icon.png`
+* Added a timestamp to prevent caching if JS/CSS files has been changed
+
+#### Updates
+
+* Plugin Update Checker v5.5
+* Tested up to WP 6.8
 
 = 5.6.2 - August 31 2024 =
 

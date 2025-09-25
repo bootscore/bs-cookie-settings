@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  * 
- * @version 5.6.0
+ * @version 5.6.4
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -80,14 +80,27 @@
 }
 
 
+// Refactored FA icon to Bootstrap icon mask-image
+// See https://github.com/bootscore/bs-cookie-settings/issues/25
+// See https://github.com/bootscore/bs-cookie-settings/pull/25
 button.b-tl.exp::before {
-  font: var(--fa-font-solid);
-  content: "\f078";
+  content: '';
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: var(--#{$prefix}body-font-size);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: var(--#{$prefix}body-font-size);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  width: var(--#{$prefix}body-font-size);
+  height: var(--#{$prefix}body-font-size);
+  background-color: var(--#{$prefix}body-color);
   display: inline-block;
-  margin-right: $spacer * .5;
+  vertical-align: middle;
+  margin-right: 0.5rem;
   transition: transform 0.2s ease-in-out;
 }
-
 button.b-tl.exp[aria-expanded="true"]::before {
   transform: rotate(-180deg);
 

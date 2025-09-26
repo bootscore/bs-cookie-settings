@@ -2,7 +2,7 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.3
+Stable tag: 5.6.4
 Tested up to: 6.8
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -31,7 +31,17 @@ Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
 
+= 5.6.4 - September 26 2025 =
+
+* Refactored collapse FA icon to Bootstrap mask-icon
+
+#### Improvements
+
 = 5.6.3 - April 16 2025 =
+
+#### Updates
+
+* Plugin Update Checker v5.6
 
 #### Improvements
 

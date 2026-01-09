@@ -2,8 +2,8 @@
 /*Plugin Name: bs Cookie Settings
 Plugin URI: https://bootscore.me/documantation/bs-cookie-settings/
 Description: Plugin adds a cookie modal to Bootscore theme.
-Version: 5.6.4
-Tested up to: 6.8
+Version: 5.6.5
+Tested up to: 6.9
 Requires at least: 5.0
 Requires PHP: 7.4
 Author: Bootscore

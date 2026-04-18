@@ -192,7 +192,7 @@
          */
         
         var _addCookieSettingsButtonListener = function(){
-            var all_links = document.querySelectorAll('a[href="#bs-cookie-modal"], button[data-bs-target="#bs-cookie-modal"]');
+            var all_links = document.querySelectorAll('a[href="#bs-cookie-modal"], button[data-target="#bs-cookie-modal"]');
             for(var x=0; x<all_links.length; x++){
                 all_links[x].setAttribute('aria-haspopup', 'dialog');
                 _addEvent(all_links[x], 'click', function(event){
@@ -339,7 +339,7 @@
                 var consent_buttons = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
-                consent_modal.className =  "bg-body-tertiary fixed-bottom d-block";
+                consent_modal.className =  "bg-white fixed-bottom d-block";
                 consent_modal_container.className =  "container py-4";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row align-items-center";
@@ -426,8 +426,8 @@
                     consent_settings_btn.className = "c-bn c_link btn btn-secondary";
                     consent_settings_btn[innerText] = conf_params.languages[lang]['consent_modal']['settings_btn']['text'];
 
-                    consent_settings_btn.setAttribute('data-bs-toggle', 'modal');
-                    consent_settings_btn.setAttribute('data-bs-target', '#bs-cookie-modal');
+                    consent_settings_btn.setAttribute('data-toggle', 'modal');
+                    consent_settings_btn.setAttribute('data-target', '#bs-cookie-modal');
                 }
               
               
@@ -460,7 +460,7 @@
                     consent_footer.id = 'consent-links';
                     consent_footer.className = "border-top";
                     consent_footer_inner.id = 'consent-links-inner';
-                    consent_footer_inner.className = "container py-2 text-center text-md-start";
+                    consent_footer_inner.className = "container py-2 text-center text-md-left";
                     consent_footer_inner.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_footer']['description']);
                     consent_modal.appendChild(consent_footer);
                     consent_footer.appendChild(consent_footer_inner);
@@ -509,7 +509,7 @@
             settings_inner.className = 'modal-content';
             settings_header.className = "modal-header";
             settings_title.className = 'h5 modal-title';
-            settings_close_btn.className = 'c-bn btn-close';
+            settings_close_btn.className = 'c-bn close';
             settings_blocks.className = 'modal-body';
 
           
@@ -517,9 +517,9 @@
              * Set attributes
              */          
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
-            settings_close_btn.setAttribute('data-bs-dismiss', 'modal'); 
+            settings_close_btn.setAttribute('data-dismiss', 'modal'); 
             settings_container.setAttribute('tabindex', '-1'); 
-            settings_container.setAttribute('data-bs-backdrop', 'static'); 
+            settings_container.setAttribute('data-backdrop', 'static'); 
             settings_container.setAttribute('aria-hidden', 'true');
             settings_container.setAttribute('aria-labelledby', 's-ttl');
             settings_title.setAttribute('role', 'heading');
@@ -588,6 +588,10 @@
                     var block_switch_span_on_icon = _createNode('span');
                     var block_switch_span_off_icon = _createNode('span');
 
+                    
+                    // Switch
+                    
+                    // Bootstrap 5
                     block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
                     block_switch_label.className = 'b-tg form-check form-switch fs-4';
                     block_switch.className = 'c-tgl form-check-input cursor-pointer';
@@ -595,11 +599,25 @@
                     block_switch_span_off_icon.className = 'off-i';
                     block_switch_span.className = 'c-tg';
                     label_text_span.className = "t-lb d-none";
+                    
+                  
+                    /*
+                    // Bootstrap 4
+                    block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
+                    block_switch_label.className = 'b-tg custom-control-label fs-4';
+                    block_switch.className = 'c-tgl custom-control-input cursor-pointer';
+                    block_switch_span_on_icon.className = 'on-i';
+                    block_switch_span_off_icon.className = 'off-i';
+                    block_switch_span.className = 'c-tg';
+                    label_text_span.className = "t-lb d-none";
+                    */
 
+                  
+                  
                     if(isExpandable){
                         block_title_btn.setAttribute('aria-expanded', 'false');
-                        block_title_btn.setAttribute('data-bs-toggle', 'collapse');
-                        block_title_btn.setAttribute('data-bs-target', accordion_id_toggler);
+                        block_title_btn.setAttribute('data-toggle', 'collapse');
+                        block_title_btn.setAttribute('data-target', accordion_id_toggler);
                         block_title_btn.setAttribute('aria-controls', accordion_id);
                     }
 
@@ -793,8 +811,8 @@
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
 
             // Button Attributes
-            settings_accept_all_btn.setAttribute('data-bs-dismiss', 'modal');
-            settings_save_btn.setAttribute('data-bs-dismiss', 'modal');
+            settings_accept_all_btn.setAttribute('data-dismiss', 'modal');
+            settings_save_btn.setAttribute('data-dismiss', 'modal');
             
             settings_buttons.appendChild(settings_accept_all_btn);
 
@@ -807,7 +825,7 @@
                 reject_all_btn.id = 's-rall-bn';
                 reject_all_btn.className = 'c-bn btn btn-primary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
-                reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
+                reject_all_btn.setAttribute('data-dismiss', 'modal');
 
                 _addEvent(reject_all_btn, 'click', function(){
                     _cookieconsent.hide();

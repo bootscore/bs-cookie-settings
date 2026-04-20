@@ -160,6 +160,12 @@ button.b-tl:focus {
   margin: 0rem -.5rem -1rem auto;
 }
 
+
+/* Roughly fix switch vertical align */
+input.c-tgl {
+  margin-top: 1px;
+}
+
 /* Bootstrap 4 END */
 
 

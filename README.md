@@ -58,7 +58,6 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
               description: '<a class="small link-secondary text-decoration-none" href="#">Privacy Policy</a> • <a class="small link-secondary text-decoration-none" href="#">Terms & Conditions</a> • <a class="small link-secondary text-decoration-none" href="#">Imprint</a>'
             }
           },
-
           settings_modal: {
             title: 'Cookie preferences',
             save_settings_btn: 'Save preferences',
@@ -82,7 +81,16 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
                   value: 'necessary',
                   enabled: true,
                   readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
-                }
+                },
+                cookie_table: [           // list of all expected cookies
+                  {
+                    col1: 'bs_cookie_settings',      // match all cookies starting with "_ga"
+                    col2: 'yourdomain.com',
+                    col3: '182 days',
+                    col4: 'Used to remember your cookie preferences.',
+                    is_regex: true
+                  }
+                ]
               }, {
                 title: 'Analytics',
                 description: 'These cookies allow the website to remember the choices you have made in the past',
@@ -134,14 +142,11 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
 
             ]
           }
-
         }
       }
-
     });
   });
 </script>
-
 ```
 
 ### Block / manage scripts

@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  *
- * @version 5.6.1
+ * @version 5.6.6
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent

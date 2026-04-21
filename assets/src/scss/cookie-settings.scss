@@ -98,16 +98,12 @@ button.b-tl.exp {
     content: '';
     mask-position: center;
     mask-repeat: no-repeat;
-    //mask-size: $font-size-base * 1.25;
     mask-size: var(--#{$prefix}body-font-size);
      mask-image: var(--#{$prefix}cookie-chevron);
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    //-webkit-mask-size: $font-size-base * 1.25;
     -webkit-mask-size: var(--#{$prefix}body-font-size);
     -webkit-mask-image: var(--#{$prefix}cookie-chevron);
-    //width: $font-size-base * 1.25;
-    //height: $font-size-base * 1.25;
     width: var(--#{$prefix}body-font-size);
     height: var(--#{$prefix}body-font-size);
     background-color: var(--#{$prefix}body-color);
@@ -116,8 +112,8 @@ button.b-tl.exp {
   }
   
   &[aria-expanded="true"]::before {
-    transform: rotate(-180deg);
-  }
+    transform: rotate(-180deg) translateY(-2px); // Font Awesome icon has a different viewBox and path that doesn't center properly when rotated. translateY(-2px) is used to keep rotated icon in place.
+  } 
 }
 
 

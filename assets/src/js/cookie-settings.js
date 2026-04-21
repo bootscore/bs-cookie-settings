@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  *
- * @version 5.6.0
+ * @version 5.6.1
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -589,8 +589,8 @@
                     var block_switch_span_off_icon = _createNode('span');
 
                     block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
-                    block_switch_label.className = 'b-tg form-check form-switch fs-4';
-                    block_switch.className = 'c-tgl form-check-input cursor-pointer';
+                    block_switch_label.className = 'b-tg form-check form-switch fs-4 mb-0'; // mb-0 fix vertical align
+                    block_switch.className = 'c-tgl form-check-input cursor-pointer mt-0'; // mt-0 fix vertical align
                     block_switch_span_on_icon.className = 'on-i';
                     block_switch_span_off_icon.className = 'off-i';
                     block_switch_span.className = 'c-tg';

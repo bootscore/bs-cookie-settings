@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  * 
- * @version 5.6.4
+ * @version 5.6.6
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -83,28 +83,39 @@
 // Refactored FA icon to Bootstrap icon mask-image
 // See https://github.com/bootscore/bs-cookie-settings/issues/25
 // See https://github.com/bootscore/bs-cookie-settings/pull/25
-button.b-tl.exp::before {
-  content: '';
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: var(--#{$prefix}body-font-size);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: var(--#{$prefix}body-font-size);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
-  width: var(--#{$prefix}body-font-size);
-  height: var(--#{$prefix}body-font-size);
-  background-color: var(--#{$prefix}body-color);
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-  transition: transform 0.2s ease-in-out;
-}
-button.b-tl.exp[aria-expanded="true"]::before {
-  transform: rotate(-180deg);
 
+:root {
+  // Bootstrap icon
+  //--#{$prefix}cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  // Font Awesome
+  --#{$prefix}cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E");
 }
+
+
+button.b-tl.exp {
+
+  &::before {
+    content: '';
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: var(--#{$prefix}body-font-size);
+     mask-image: var(--#{$prefix}cookie-chevron);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: var(--#{$prefix}body-font-size);
+    -webkit-mask-image: var(--#{$prefix}cookie-chevron);
+    width: var(--#{$prefix}body-font-size);
+    height: var(--#{$prefix}body-font-size);
+    background-color: var(--#{$prefix}body-color);
+    transition: transform 0.2s ease-in-out;
+    flex-shrink: 0; // Prevent the icon from shrinking if the button text wraps
+  }
+  
+  &[aria-expanded="true"]::before {
+    transform: rotate(-180deg) translateY(-2px); // Font Awesome icon has a different viewBox and path that doesn't center properly when rotated. translateY(-2px) is used to keep rotated icon in place.
+  } 
+}
+
 
 #s-bl {
   .c-bl:last-child {

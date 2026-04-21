@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  * 
- * @version 5.6.4
+ * @version 5.6.6
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -83,22 +83,35 @@
 // Refactored FA icon to Bootstrap icon mask-image
 // See https://github.com/bootscore/bs-cookie-settings/issues/25
 // See https://github.com/bootscore/bs-cookie-settings/pull/25
+
+:root {
+  // Bootstrap icon
+  --#{$prefix}cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  // Font Awesome
+  //--#{$prefix}cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3C!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath d='M297.4 470.6C309.9 483.1 330.2 483.1 342.7 470.6L534.7 278.6C547.2 266.1 547.2 245.8 534.7 233.3C522.2 220.8 501.9 220.8 489.4 233.3L320 402.7L150.6 233.4C138.1 220.9 117.8 220.9 105.3 233.4C92.8 245.9 92.8 266.2 105.3 278.7L297.3 470.7z'/%3E%3C/svg%3E");
+}
+
+
 button.b-tl.exp::before {
   content: '';
   mask-position: center;
   mask-repeat: no-repeat;
-  mask-size: var(--#{$prefix}body-font-size);
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  mask-size: $font-size-base * 1.25;
+  //mask-size: var(--#{$prefix}body-font-size);
+   mask-image: var(--#{$prefix}cookie-chevron);
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
+  //-webkit-mask-size: $font-size-base * 1.25;
   -webkit-mask-size: var(--#{$prefix}body-font-size);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+  -webkit-mask-image: var(--#{$prefix}cookie-chevron);
+  //width: $font-size-base * 1.25;
+  //height: $font-size-base * 1.25;
   width: var(--#{$prefix}body-font-size);
   height: var(--#{$prefix}body-font-size);
   background-color: var(--#{$prefix}body-color);
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.5rem;
+  margin-right: $spacer * .5;
   transition: transform 0.2s ease-in-out;
 }
 button.b-tl.exp[aria-expanded="true"]::before {

@@ -588,7 +588,7 @@
                     var block_switch_span_on_icon = _createNode('span');
                     var block_switch_span_off_icon = _createNode('span');
 
-                    block_title_btn.className = isExpandable ? 'b-tl exp position-relative d-block p-3 w-100' : 'b-tl';
+                    block_title_btn.className = isExpandable ? 'b-tl exp d-inline-flex align-items-center gap-2 p-3 w-100' : 'b-tl';
                     block_switch_label.className = 'b-tg form-check form-switch fs-4 mb-0'; // mb-0 fix vertical align
                     block_switch.className = 'c-tgl form-check-input cursor-pointer mt-0'; // mt-0 fix vertical align
                     block_switch_span_on_icon.className = 'on-i';
@@ -652,7 +652,7 @@
                     _addClass(block_title_container, 'b-bn');
                     _addClass(block_title_container, 'd-flex');
                     _addClass(block_title_container, 'align-items-center');
-                    _addClass(block_title_container, 'position-relative');
+                    //_addClass(block_title_container, 'position-relative');
                     _addClass(block_section, 'b-ex');
                     _addClass(block_section, 'p-0');
                     _addClass(block_section, 'bg-body-tertiary');

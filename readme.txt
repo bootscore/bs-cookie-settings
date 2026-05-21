@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.5
-Tested up to: 6.9
+Stable tag: 5.6.6
+Tested up to: 7.0
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires at least: 4.5
@@ -30,6 +30,20 @@ Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 202
 Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
 
 == Changelog ==
+
+= 5.6.6 - May 21 2026 =
+
+#### Improvements
+
+- Added mask icon to root and refactor to FA icon
+
+#### Bugfix
+
+- `form-switch` vertical align
+
+#### Updates
+
+- Tested up to WP 7.0
 
 = 5.6.5 - January 09 2026 =
 

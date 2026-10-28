@@ -1,6 +1,6 @@
 /*!
  * bs Cookie Settings
- * 
+ *
  * @version 6.0.0
  *
  * Based on CookieConsent v2.7.0
@@ -10,201 +10,155 @@
  */
 
 
-
-.cc_div {
-
-  *,
-  :before,
-  :after {
-    transition: none;
-    animation: none;
-    margin: 0;
-    padding: 0;
-    text-transform: none;
-    letter-spacing: unset;
-    border: none;
-    box-shadow: none;
-    background: none;
-    text-align: left;
-    visibility: unset;
-  }
-
-  .b-tg .c-tgl:disabled {
-    cursor: not-allowed;
-  }
-}
-
-// Banner
-#bs-cookie-bar {
-  z-index: 1050;
-  transform: translateY(100%);
-  transition: transform .3s ease-in-out;
-}
-
-.show--consent {
-  #bs-cookie-bar {
-    transform: none;
-    transition-delay: .5s;
-  }
-
-  // Hide Banner if modal or offcanvas is open
-  .modal-open,
-  &:has(.offcanvas.showing),
-  &:has(.offcanvas.show),
-  &:has(.offcanvas-md.showing), // Sidebar
-  &:has(.offcanvas-md.show) {   // Sidebar
-    #bs-cookie-bar {
-      transform: translateY(100%);
-      transition-delay: 0s;
-    }
-  }
-}
-
-
-#s-bl {
-  .title:first-child {
-    margin-top: 0;
-  }
-
-  .b-bn {
-    margin-top: 0;
-  }
-
-  .b-acc .p {
-    margin-top: 0;
-    padding: 1em;
-  }
-}
-
-.exp {
-  color: inherit;
-}
-
-
-// Refactored FA icon to Bootstrap icon mask-image
+// Chevron icon for the expandable blocks
 // See https://github.com/bootscore/bs-cookie-settings/issues/25
-// See https://github.com/bootscore/bs-cookie-settings/pull/25
-
 :root {
-  // Bootstrap icon
-  //--cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
-  // Font Awesome
   --cookie-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E");
 }
 
 
-button.b-tl.exp {
+@layer components {
 
-  &::before {
-    content: '';
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: var(--body-font-size);
-     mask-image: var(--cookie-chevron);
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: var(--body-font-size);
-    -webkit-mask-image: var(--cookie-chevron);
-    width: var(--body-font-size);
-    height: var(--body-font-size);
-    background-color: var(--body-color);
-    transition: transform 0.2s ease-in-out;
-    flex-shrink: 0; // Prevent the icon from shrinking if the button text wraps
-  }
-  
-  &[aria-expanded="true"]::before {
-    transform: rotate(-180deg) translateY(-2px); // Font Awesome icon has a different viewBox and path that doesn't center properly when rotated. translateY(-2px) is used to keep rotated icon in place.
-  } 
-}
+  // Banner
+  #bs-cookie-bar {
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
 
-
-#s-bl {
-  .c-bl:last-child {
-    margin-bottom: .5rem;
-  }
-
-  .c-bl:first-child {
-    transition: none;
-    padding: 0;
-    margin-top: 0;
-    border: none;
-    margin-bottom: 2rem;
-  }
-
-  .c-bl.b-ex + .c-bl {
-    margin-top: 2rem;
-  }
-
-  .c-bl.b-ex + .c-bl.b-ex {
-    margin-top: 0;
-  }
-
-  .c-bl.b-ex:first-child {
-    margin-bottom: 1rem;
-  }
-
-  tr {
-    padding: 1rem;
-    border-top: 2px solid;
-    border-color: var(--modal-bg);
-  }
-
-  td,
-  th {
-    padding: (1rem * .25) 0;
-    font-size: .85em;
-  }
-
-  // Dynamic table layout
-  table {
-    width: 100%;
-  }
-
-  // Force table to not be like tables anymore
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-
-  // Hide table headers (but not display: none;, for accessibility)
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  td {
-    // Behave  like a "row"
-    border: none;
-    position: relative;
-    padding-left: 35%;
-
-    &::before {
-      position: absolute;
-      left: 0;
-      padding-right: 0.625em;
-      white-space: nowrap;
-      content: attr(data-column);
-      overflow: hidden;
-      text-overflow: ellipsis;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
   }
-}
+
+  .show--consent {
+    #bs-cookie-bar {
+      transform: none;
+      transition-delay: .5s;
+    }
+
+    // Hide banner while a dialog or drawer is open
+    &.dialog-open #bs-cookie-bar {
+      transform: translateY(100%);
+      transition-delay: 0s;
+    }
+  }
 
 
-.desc.b-acc {
-  border-top: 2px solid;
-  border-color: var(--modal-bg);
-}
+  // Settings dialog
+  #s-bl {
+
+    // Blocks
+    .title:first-child {
+      margin-top: 0;
+    }
+
+    .b-acc .p {
+      padding: 1rem;
+    }
+
+    .c-bl:first-child {
+      margin-bottom: 2rem;
+    }
+
+    .c-bl:last-child {
+      margin-bottom: .5rem;
+    }
+
+    .c-bl.b-ex + .c-bl {
+      margin-top: 2rem;
+    }
+
+    .c-bl.b-ex + .c-bl.b-ex {
+      margin-top: 0;
+    }
+
+    .c-bl.b-ex:first-child {
+      margin-bottom: 1rem;
+    }
+
+    // Cookie tables: one card per cookie instead of columns
+    table {
+      width: 100%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    // Hide table headers (but not display: none;, for accessibility)
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      padding: 1rem;
+      border-top: 2px solid var(--dialog-bg);
+    }
+
+    td,
+    th {
+      padding-block: .25rem;
+      font-size: .85em;
+    }
+
+    td {
+      position: relative;
+      padding-inline-start: 35%;
+
+      &::before {
+        position: absolute;
+        inset-inline-start: 0;
+        padding-inline-end: .625em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        content: attr(data-column);
+      }
+    }
+  }
+
+  .desc.b-acc {
+    border-top: 2px solid var(--dialog-bg);
+  }
 
 
-/* Modal footer buttons */
-@media (max-width: 576px) {
-  #s-bns {
-    justify-content: normal;
+  // Expand button
+  button.b-tl.exp {
+    color: inherit;
+    text-align: start;
+    cursor: pointer;
+    background: none;
+    border: 0;
+
+    &::before {
+      flex-shrink: 0; // Prevent the icon from shrinking if the button text wraps
+      width: var(--body-font-size);
+      height: var(--body-font-size);
+      content: "";
+      background-color: currentcolor;
+      mask: var(--cookie-chevron) center / var(--body-font-size) no-repeat;
+      transition: transform .2s ease-in-out;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+
+    // The Font Awesome icon isn't centered in its viewBox; translateY keeps the rotated icon in place
+    &[aria-expanded="true"]::before {
+      transform: rotate(-180deg) translateY(-2px);
+    }
+  }
+
+
+  // Read-only switch
+  .b-tg:has(.c-tgl:disabled) {
+    cursor: not-allowed;
   }
 }

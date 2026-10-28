@@ -1,7 +1,7 @@
 /*!
  * bs Cookie Settings
  *
- * @version 5.6.6
+ * @version 6.0.0
  *
  * Based on CookieConsent v2.7.0
  * https://www.github.com/orestbida/cookieconsent
@@ -194,6 +194,9 @@
             var all_links = document.querySelectorAll('a[href="#bs-cookie-modal"], button[data-bs-target="#bs-cookie-modal"]');
             for(var x=0; x<all_links.length; x++){
                 all_links[x].setAttribute('aria-haspopup', 'dialog');
+                // Triggers with data-bs-toggle="dialog" are opened by Bootstrap's data API
+                if(all_links[x].getAttribute('data-bs-toggle') === 'dialog') continue;
+
                 _addEvent(all_links[x], 'click', function(event){
                     _cookieconsent.showSettings(0);
                     event.preventDefault ? event.preventDefault() : event.returnValue = false;
@@ -338,16 +341,16 @@
                 var consent_buttons = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
-                consent_modal.className =  "bg-body-tertiary fixed-bottom d-block";
+                consent_modal.className =  "bg-1 fixed-bottom d-block";
                 consent_modal_container.className =  "container py-4";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row align-items-center";
                 consent_modal_inner_inner.id = 'c-inr-i';
-                consent_modal_inner_inner.className =  "col mb-4 mb-md-0";
+                consent_modal_inner_inner.className =  "col mb-4 md:mb-0";
                
                 consent_text.id = 'c-txt';
                 consent_buttons.id = "c-bns";
-                consent_buttons.className =  "col-md-4 col-lg-3 d-flex flex-column justify-content-center gap-2";
+                consent_buttons.className =  "md:col-4 lg:col-3 d-flex flex-column justify-content-center gap-2";
                 
                 consent_modal.setAttribute('role', 'dialog');
                 consent_modal.setAttribute('aria-modal', 'true');
@@ -382,7 +385,7 @@
                     
                     var consent_primary_btn = _createNode('button');
                     consent_primary_btn.id = 'c-p-bn';
-                    consent_primary_btn.className =  "c-bn btn btn-primary";
+                    consent_primary_btn.className =  "c-bn btn-solid theme-primary";
                     consent_primary_btn[innerText] = conf_params.languages[lang]['consent_modal']['primary_btn']['text'];
                     
                     var _accept_type;
@@ -402,7 +405,7 @@
 
                     var consent_secondary_btn = _createNode('button');
                     consent_secondary_btn.id = 'c-s-bn';
-                    consent_secondary_btn.className = "c-bn c_link btn btn-primary";
+                    consent_secondary_btn.className = "c-bn c_link btn-solid theme-primary";
                     consent_secondary_btn[innerText] = conf_params.languages[lang]['consent_modal']['secondary_btn']['text'];
 
                     if(secondary_btn_data['role'] === 'accept_necessary'){
@@ -422,11 +425,16 @@
                   
                     var consent_settings_btn = _createNode('button');
                     consent_settings_btn.id = 'set-s-bn';
-                    consent_settings_btn.className = "c-bn c_link btn btn-secondary";
+                    consent_settings_btn.className = "c-bn c_link btn-solid theme-secondary";
                     consent_settings_btn[innerText] = conf_params.languages[lang]['consent_modal']['settings_btn']['text'];
 
-                    consent_settings_btn.setAttribute('data-bs-toggle', 'modal');
-                    consent_settings_btn.setAttribute('data-bs-target', '#bs-cookie-modal');
+                    consent_settings_btn.setAttribute('type', 'button');
+                    consent_settings_btn.setAttribute('aria-haspopup', 'dialog');
+                    consent_settings_btn.setAttribute('aria-controls', 'bs-cookie-modal');
+
+                    _addEvent(consent_settings_btn, 'click', function(){
+                        _cookieconsent.showSettings(0);
+                    });
                 }
               
               
@@ -438,7 +446,7 @@
                   settings_btn_data && consent_buttons.appendChild(consent_settings_btn);  
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
-                    consent_buttons.className = 'swap';
+                    _addClass(consent_buttons, 'swap');
                 } else  {
                     primary_btn_data && consent_buttons.appendChild(consent_primary_btn);
                     secondary_btn_data && consent_buttons.appendChild(consent_secondary_btn);
@@ -459,7 +467,7 @@
                     consent_footer.id = 'consent-links';
                     consent_footer.className = "border-top";
                     consent_footer_inner.id = 'consent-links-inner';
-                    consent_footer_inner.className = "container py-2 text-center text-md-start";
+                    consent_footer_inner.className = "container py-2 text-center md:text-start";
                     consent_footer_inner.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['consent_modal']['consent_footer']['description']);
                     consent_modal.appendChild(consent_footer);
                     consent_footer.appendChild(consent_footer_inner);
@@ -478,10 +486,8 @@
             /**
              * Create all consent_modal elements
              */
-            settings_container = _createNode('div');
-            var settings = _createNode('div');
-            var settings_container_inner = _createNode('div');
-            settings_inner = _createNode('div');
+            settings_container = _createNode('dialog');
+            settings_inner = settings_container; // The <dialog> holds header, body and footer directly
             var settings_title = _createNode('div');
             var settings_header = _createNode('div');
             var settings_close_btn = _createNode('button');
@@ -491,10 +497,7 @@
              * Set ids
              */
             settings_container.id = 'bs-cookie-modal';
-            settings_container_inner.id = "c-s-in";
-            settings.id = "cs";
             settings_title.id = 's-ttl';
-            settings_inner.id = 's-inr';
             settings_header.id = "s-hdr";
             settings_blocks.id = 's-bl';
             settings_close_btn.id = 's-c-bn';
@@ -502,34 +505,32 @@
             /**
              * Set classes
              */
-            settings.className = "position-fixed top-0 end-0 bottom-0 start-0";
-            settings_container.className = "modal fade";  
-            settings_container_inner.className = "modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down";
-            settings_inner.className = 'modal-content';
-            settings_header.className = "modal-header";
-            settings_title.className = 'h5 modal-title';
+            settings_container.className = "dialog dialog-scrollable sm-down:dialog-fullscreen";
+            settings_header.className = "dialog-header";
+            settings_title.className = 'dialog-title h5';
             settings_close_btn.className = 'c-bn btn-close';
-            settings_blocks.className = 'modal-body';
+            settings_blocks.className = 'dialog-body';
 
           
             /**
              * Set attributes
              */          
             settings_close_btn.setAttribute('aria-label', conf_params.languages[lang]['settings_modal']['close_btn_label'] || 'Close');
-            settings_close_btn.setAttribute('data-bs-dismiss', 'modal'); 
-            settings_container.setAttribute('tabindex', '-1'); 
-            settings_container.setAttribute('data-bs-backdrop', 'static'); 
-            settings_container.setAttribute('aria-hidden', 'true');
+            settings_close_btn.setAttribute('type', 'button');
+            settings_container.setAttribute('data-bs-backdrop', 'static');
             settings_container.setAttribute('aria-labelledby', 's-ttl');
             settings_title.setAttribute('role', 'heading');
+            settings_title.setAttribute('aria-level', '2');
 
-            // If 'esc' key is pressed inside settings_container div => hide settings
-            _addEvent(settings_container_inner, 'keydown', function(evt){
-                evt = evt || window.event;
-                if (evt.keyCode === 27) {
-                    _cookieconsent.hideSettings(0);
-                }
-            }, true);
+            // Keep internal state in sync however the dialog opens or closes
+            // (plugin API, Bootstrap data API, Escape key, native fallback)
+            _addEvent(settings_container, 'show.bs.dialog', function(){
+                _onSettingsShown();
+            });
+
+            _addEvent(settings_container, 'close', function(){
+                _onSettingsHidden();
+            });
 
             _addEvent(settings_close_btn, 'click', function(){
                 _cookieconsent.hideSettings(0);
@@ -583,17 +584,12 @@
                     var block_switch_span = _createNode('span');
                     var label_text_span = _createNode('span');
 
-                    // These 2 spans will contain each 2 pseudo-elements to generate 'tick' and 'x' icons
-                    var block_switch_span_on_icon = _createNode('span');
-                    var block_switch_span_off_icon = _createNode('span');
-
                     block_title_btn.className = isExpandable ? 'b-tl exp d-inline-flex align-items-center gap-2 p-3 w-100' : 'b-tl';
-                    block_switch_label.className = 'b-tg form-check form-switch d-inline-flex align-items-center p-3 mb-0'; // mb-0 fix vertical align
-                    block_switch.className = 'c-tgl form-check-input cursor-pointer fs-4 mt-0 ms-0'; // mt-0 fix vertical align
-                    block_switch_span_on_icon.className = 'on-i';
-                    block_switch_span_off_icon.className = 'off-i';
-                    block_switch_span.className = 'c-tg';
-                    label_text_span.className = "t-lb d-none";
+                    isExpandable && block_title_btn.setAttribute('type', 'button');
+                    block_switch_label.className = 'b-tg d-inline-flex align-items-center p-3 mb-0 cursor-pointer';
+                    block_switch.className = 'c-tgl cursor-pointer';
+                    block_switch_span.className = 'switch switch-lg';
+                    label_text_span.className = "t-lb visually-hidden";
 
                     if(isExpandable){
                         block_title_btn.setAttribute('aria-expanded', 'false');
@@ -603,7 +599,8 @@
                     }
 
                     block_switch.type = 'checkbox';
-                    block_switch_span.setAttribute('aria-hidden', 'true');
+                    block_switch.setAttribute('role', 'switch');
+                    block_switch.setAttribute('switch', '');
 
                     var cookie_category = toggle_data.value;
                     block_switch.value = cookie_category;
@@ -612,8 +609,6 @@
                     block_title_btn.insertAdjacentHTML('beforeend', title_data);
 
                     block_title_container.appendChild(block_title_btn);
-                    block_switch_span.appendChild(block_switch_span_on_icon);
-                    block_switch_span.appendChild(block_switch_span_off_icon);
 
                     /**
                      * If never accepted => generate toggles with the states defined in the config. object
@@ -640,7 +635,6 @@
                      */
                     if(toggle_data['readonly']){
                         block_switch.disabled = true;
-                        _addClass(block_switch_span, 'c-ro');
                         toggle_readonly.push(true);
                     }else{
                         toggle_readonly.push(false);
@@ -654,14 +648,14 @@
                     //_addClass(block_title_container, 'position-relative');
                     _addClass(block_section, 'b-ex');
                     _addClass(block_section, 'p-0');
-                    _addClass(block_section, 'bg-body-tertiary');
+                    _addClass(block_section, 'bg-1');
                     _addClass(block_section, 'rounded');
                     _addClass(block_section, 'mb-2');
 
                     block_table_container.id = accordion_id;
                     block_table_container.setAttribute('aria-hidden', 'true');
 
-                    block_switch_label.appendChild(block_switch);
+                    block_switch_span.appendChild(block_switch);
                     block_switch_label.appendChild(block_switch_span);
                     block_switch_label.appendChild(label_text_span);
                     block_title_container.appendChild(block_switch_label);
@@ -783,18 +777,17 @@
             var settings_accept_all_btn = _createNode('button');
 
             settings_buttons.id = 's-bns';
-            settings_buttons.className = 'modal-footer d-grid gap-1 d-sm-flex gap-sm-0';
+            settings_buttons.className = 'dialog-footer flex-column align-items-stretch sm:flex-row sm:align-items-center';
             settings_save_btn.id = 's-sv-bn';
             settings_accept_all_btn.id = 's-all-bn';
-            settings_save_btn.className ='c-bn btn btn-secondary ms-sm-auto';
-            settings_accept_all_btn.className ='c-bn btn btn-primary';
+            settings_save_btn.className ='c-bn btn-solid theme-secondary sm:ms-auto';
+            settings_accept_all_btn.className ='c-bn btn-solid theme-primary';
             settings_save_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['save_settings_btn']);
             settings_accept_all_btn.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['accept_all_btn']);
 
-            // Button Attributes
-            settings_accept_all_btn.setAttribute('data-bs-dismiss', 'modal');
-            settings_save_btn.setAttribute('data-bs-dismiss', 'modal');
-            
+            settings_accept_all_btn.setAttribute('type', 'button');
+            settings_save_btn.setAttribute('type', 'button');
+
             settings_buttons.appendChild(settings_accept_all_btn);
 
             var reject_all_btn_text = conf_params.languages[_config.current_lang]['settings_modal']['reject_all_btn'];
@@ -804,16 +797,17 @@
 
                 var reject_all_btn = _createNode('button');
                 reject_all_btn.id = 's-rall-bn';
-                reject_all_btn.className = 'c-bn btn btn-primary';
+                reject_all_btn.className = 'c-bn btn-solid theme-primary';
                 reject_all_btn.insertAdjacentHTML('beforeend', reject_all_btn_text);
-                reject_all_btn.setAttribute('data-bs-dismiss', 'modal');
+                reject_all_btn.setAttribute('type', 'button');
 
                 _addEvent(reject_all_btn, 'click', function(){
                     _cookieconsent.hide();
                     _cookieconsent.accept([]);
+                    _cookieconsent.hideSettings();
                 });
 
-                settings_inner.className = "bns-t modal-content";
+                _addClass(settings_inner, 'bns-t');
                 settings_buttons.appendChild(reject_all_btn);
             }
 
@@ -824,23 +818,21 @@
             _addEvent(settings_save_btn, 'click', function(){
                 _cookieconsent.hide();
                 _cookieconsent.accept();
+                _cookieconsent.hideSettings();
             });
 
             _addEvent(settings_accept_all_btn, 'click', function(){
                 _cookieconsent.hide();
                 _cookieconsent.accept('all');
+                _cookieconsent.hideSettings();
             });
 
             settings_header.appendChild(settings_title);
             settings_header.appendChild(settings_close_btn);
 
-            settings_inner.appendChild(settings_header);
-            settings_inner.appendChild(settings_blocks);
-            settings_inner.appendChild(settings_buttons);
-            settings_container_inner.appendChild(settings_inner);
-
-            settings.appendChild(settings_container_inner);
-            settings_container.appendChild(settings_container_inner);
+            settings_container.appendChild(settings_header);
+            settings_container.appendChild(settings_blocks);
+            settings_container.appendChild(settings_buttons);
 
             all_modals_container.appendChild(settings_container);
 
@@ -1143,6 +1135,9 @@
                 // If is tab key => ok
                 if(e.key !== 'Tab') return;
 
+                // The settings <dialog> traps focus natively
+                if(settings_modal_visible) return;
+
                 // If there is any modal to focus
                 if(current_modal_focusable){
                     // If reached natural end of the tab sequence => restart
@@ -1366,12 +1361,49 @@
          */
         _cookieconsent.showSettings = function(delay){
             setTimeout(function() {
-                _addClass(html_dom, "show--settings");
-                settings_container.setAttribute('aria-hidden', 'false');
-                settings_modal_visible = true;
-
-                _log("CookieConsent [SETTINGS]: show settings_modal");
+                _openSettingsDialog();
             }, delay > 0 ? delay : 0);
+        }
+
+        /**
+         * Bootstrap Dialog instance of the settings <dialog>
+         * Returns null if Bootstrap's JS is not available (native fallback)
+         */
+        var _getSettingsDialog = function(){
+            var bs = window['bootstrap'];
+            return bs && bs.Dialog ? bs.Dialog.getOrCreateInstance(settings_container) : null;
+        }
+
+        /**
+         * Open / close the settings <dialog>
+         */
+        var _openSettingsDialog = function(){
+            if(settings_container.open) return;
+
+            var dialog = _getSettingsDialog();
+            dialog ? dialog.show() : settings_container.showModal();
+
+            // Bootstrap fires show.bs.dialog, the native fallback doesn't
+            _onSettingsShown();
+        }
+
+        var _closeSettingsDialog = function(){
+            if(!settings_container.open) return;
+
+            var dialog = _getSettingsDialog();
+            dialog ? dialog.hide() : settings_container.close();
+        }
+
+        /**
+         * Update internal state when the settings <dialog> opens
+         */
+        var _onSettingsShown = function(){
+            if(settings_modal_visible) return;
+
+            _addClass(html_dom, "show--settings");
+            settings_modal_visible = true;
+
+            _log("CookieConsent [SETTINGS]: show settings_modal");
         }
 
         /**
@@ -1715,9 +1747,23 @@
          * Hide settings modal
          */
         _cookieconsent.hideSettings = function(){
+            // Close the <dialog>; its native close event calls _onSettingsHidden()
+            if(settings_container.open){
+                _closeSettingsDialog();
+                return;
+            }
+
+            _onSettingsHidden();
+        }
+
+        /**
+         * Update internal state when the settings <dialog> has closed
+         */
+        var _onSettingsHidden = function(){
+            if(!settings_modal_visible) return;
+
             _removeClass(html_dom, "show--settings");
             settings_modal_visible = false;
-            settings_container.setAttribute('aria-hidden', 'true');
 
 
             setTimeout(function(){

@@ -42,7 +42,7 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="modal" href="#bs-cookie-modal">cookie preferences</a> to provide a controlled consent.',
+            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="modal" href="#bs-cookie-dialog">cookie preferences</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -172,13 +172,13 @@ By clicking one of the "Accept all", "Reject all" or "Save preferences" button, 
 #### Link
 
 ```html
-<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Preferences</a>
+<a data-bs-toggle="modal" href="#bs-cookie-dialog">Cookie Preferences</a>
 ```
 
 #### Button
 
 ```html
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Preferences</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-dialog">Cookie Preferences</button>
 ```
 ## License & Credits
 

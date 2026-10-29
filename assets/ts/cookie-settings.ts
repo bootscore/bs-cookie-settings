@@ -191,7 +191,7 @@
          */
         
         var _addCookieSettingsButtonListener = function(){
-            var all_links = document.querySelectorAll('a[href="#bs-cookie-modal"], button[data-bs-target="#bs-cookie-modal"]');
+            var all_links = document.querySelectorAll('a[href="#bs-cookie-dialog"], button[data-bs-target="#bs-cookie-dialog"]');
             for(var x=0; x<all_links.length; x++){
                 all_links[x].setAttribute('aria-haspopup', 'dialog');
                 // Triggers with data-bs-toggle="dialog" are opened by Bootstrap's data API
@@ -430,7 +430,7 @@
 
                     consent_settings_btn.setAttribute('type', 'button');
                     consent_settings_btn.setAttribute('aria-haspopup', 'dialog');
-                    consent_settings_btn.setAttribute('aria-controls', 'bs-cookie-modal');
+                    consent_settings_btn.setAttribute('aria-controls', 'bs-cookie-dialog');
 
                     _addEvent(consent_settings_btn, 'click', function(){
                         _cookieconsent.showSettings(0);
@@ -496,7 +496,7 @@
             /**
              * Set ids
              */
-            settings_container.id = 'bs-cookie-modal';
+            settings_container.id = 'bs-cookie-dialog';
             settings_title.id = 's-ttl';
             settings_header.id = "s-hdr";
             settings_blocks.id = 's-bl';

@@ -21,7 +21,7 @@
 
   // Hotfix, this is a Bootstrap bug, .dialog overrides the browser’s display: none
   // Closed <dialog> stays in the page flow (browser default: position absolute)
-  #bs-cookie-modal {
+  #bs-cookie-dialog {
     position: fixed;
   }
 

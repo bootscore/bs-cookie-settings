@@ -19,6 +19,12 @@
 
 @layer components {
 
+  // Hotfix, this is a Bootstrap bug, .dialog overrides the browser’s display: none
+  // Closed <dialog> stays in the page flow (browser default: position absolute)
+  #bs-cookie-modal {
+    position: fixed;
+  }
+
   // Banner
   #bs-cookie-bar {
     transform: translateY(100%);
@@ -46,25 +52,25 @@
   // Settings dialog
   #s-bl {
 
-    // Blocks
+     // Blocks
     .title:first-child {
       margin-top: 0;
     }
 
     .b-acc .p {
-      padding: 1rem;
+      padding: var(--spacer-5);
     }
 
     .c-bl:first-child {
-      margin-bottom: 2rem;
+      margin-bottom: var(--spacer-9);
     }
 
     .c-bl:last-child {
-      margin-bottom: .5rem;
+      margin-bottom: var(--spacer-3);
     }
 
     .c-bl.b-ex + .c-bl {
-      margin-top: 2rem;
+      margin-top: var(--spacer-9);
     }
 
     .c-bl.b-ex + .c-bl.b-ex {
@@ -72,7 +78,7 @@
     }
 
     .c-bl.b-ex:first-child {
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacer-5);
     }
 
     // Cookie tables: one card per cookie instead of columns

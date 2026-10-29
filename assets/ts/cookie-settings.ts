@@ -341,8 +341,8 @@
                 var consent_buttons = _createNode('div');
 
                 consent_modal.id = 'bs-cookie-bar';
-                consent_modal.className =  "bg-1 fixed-bottom d-block";
-                consent_modal_container.className =  "container py-4";
+                consent_modal.className =  "bg-body fixed-bottom d-block border-top";
+                consent_modal_container.className =  "container py-7";
                 consent_modal_inner.id = 'c-inr';
                 consent_modal_inner.className =  "row align-items-center";
                 consent_modal_inner_inner.id = 'c-inr-i';
@@ -505,7 +505,7 @@
             /**
              * Set classes
              */
-            settings_container.className = "dialog dialog-scrollable sm-down:dialog-fullscreen";
+            settings_container.className = "dialog dialog-slide-down dialog-scrollable sm-down:dialog-fullscreen";
             settings_header.className = "dialog-header";
             settings_title.className = 'dialog-title h5';
             settings_close_btn.className = 'c-bn btn-close';

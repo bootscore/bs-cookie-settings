@@ -650,7 +650,7 @@
                     _addClass(block_section, 'p-0');
                     _addClass(block_section, 'bg-1');
                     _addClass(block_section, 'rounded');
-                    _addClass(block_section, 'mb-2');
+                    _addClass(block_section, 'mb-3');
 
                     block_table_container.id = accordion_id;
                     block_table_container.setAttribute('aria-hidden', 'true');

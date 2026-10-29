@@ -21,3 +21,4 @@ defined( 'ABSPATH' ) || exit;
  */
 require_once plugin_dir_path( __FILE__ ) . 'inc/enqueue.php'; 			// Scripts & styles
 require_once plugin_dir_path(__FILE__) . 'inc/updater-config.php'; 	// Bootscore Updater
+//require_once plugin_dir_path(__FILE__) . 'inc/dev.php';             // Compile assets to theme

@@ -174,7 +174,7 @@ By clicking one of the "Accept all", "Reject all" or "Save preferences" button, 
 #### Button
 
 ```html
-<button type="button" class="btn btn-primary" data-bs-toggle="dialog" data-bs-target="#bs-cookie-dialog">Cookie Preferences</button>
+<button type="button" class="btn-solid theme-primary" data-bs-toggle="dialog" data-bs-target="#bs-cookie-dialog">Cookie Preferences</button>
 ```
 ## License & Credits
 

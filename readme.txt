@@ -2,11 +2,10 @@
 
 Contributors: The Bootscore contributors, Bastian Kreiter, Osdeibi Acurero
 
-Stable tag: 5.6.6
-Tested up to: 7.0
-Requires at least: 5.0
-Requires PHP: 7.4
-Requires at least: 4.5
+Stable tag: 6.0.0
+Tested up to: 7.1
+Requires at least: 7.0
+Requires PHP: 8.2
 License: MIT License
 License URI: https://github.com/bootscore/bs-cookie-settings/blob/main/LICENSE
 

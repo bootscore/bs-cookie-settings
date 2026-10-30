@@ -3,13 +3,9 @@
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-cookie-settings?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-cookie-settings)
 [![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-cookie-settings/total.svg)](https://github.com/bootscore/bs-cookie-settings/releases)
 
-### Read this in
-
-- [Español](https://github.com/bootscore/bs-cookie-settings/blob/main/translations/espanol.md)
-
 WordPress plugin to add a GDPR-ready cookie consent to Bootscore theme. Based on the [cookieconsent](https://orestbida.com/demo-projects/cookieconsent/) script by [Orest Bida](https://github.com/orestbida/cookieconsent).
 
-<img src="https://lh3.googleusercontent.com/pw/AM-JKLVzgrDgCd68uGMaxBPYAMYB4wg6cg7orzuNU5sr41XOkGFuxueA9eEgkHRCp1HfoxTghl5giVRdnewa8-Lx7GmDyNeastxvBKpvjRNQ0saP5vspSRGCRP7N0-pLkyJqtcltBR32ZsbWfZjCBvOzvRjIHA=w1200-h954-no" alt="bs Cookie Settings">
+[Documentation](https://bootscore.me/documentation/plugins/bs-cookie-settings/)
 
 ## Installation
 
@@ -42,7 +38,7 @@ Initialize plugin with inline script in a **Custom HTML** widget in **Footer Inf
         'en': {
           consent_modal: {
             title: 'We use cookies!',
-            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="modal" href="#bs-cookie-modal">cookie preferences</a> to provide a controlled consent.',
+            description: 'We use cookies on our website to enhance your browsing experience by remembering your preferences and analyzing site traffic. By clicking "Accept all", you consent to the use of all cookies. However, you can manage your <a data-bs-toggle="dialog" href="#bs-cookie-dialog">cookie preferences</a> to provide a controlled consent.',
             primary_btn: {
               text: 'Accept all',
               role: 'accept_all'
@@ -165,20 +161,20 @@ Set `type="text/plain"` and `data-cookiecategory="<category>"` to any script tag
 </script>
 ```
 
-### Open preferences modal
+### Open preferences dialog
 
-By clicking one of the "Accept all", "Reject all" or "Save preferences" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and modal for 182 days. To open preferences modal again, add following link to your privacy policy and to a **Custom HTML** widget in a **Footer** widget position.
+By clicking one of the "Accept all", "Reject all" or "Save preferences" button, the cookie `bs_cookie_settings` is set with your preferences and hides banner and dialog for 182 days. To open preferences dialog again, add following link to your privacy policy and to a **Custom HTML** widget in a **Footer** widget position.
 
 #### Link
 
 ```html
-<a data-bs-toggle="modal" href="#bs-cookie-modal">Cookie Preferences</a>
+<a data-bs-toggle="dialog" href="#bs-cookie-dialog">Cookie Preferences</a>
 ```
 
 #### Button
 
 ```html
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bs-cookie-modal">Cookie Preferences</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="dialog" data-bs-target="#bs-cookie-dialog">Cookie Preferences</button>
 ```
 ## License & Credits
 

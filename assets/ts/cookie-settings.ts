@@ -585,9 +585,9 @@
                     var block_switch_span = _createNode('span');
                     var label_text_span = _createNode('span');
 
-                    block_title_btn.className = isExpandable ? 'b-tl exp d-inline-flex align-items-center gap-2 p-3 w-100' : 'b-tl';
+                    block_title_btn.className = isExpandable ? 'b-tl exp d-inline-flex align-items-center gap-2 py-3 ps-5 w-100' : 'b-tl';
                     isExpandable && block_title_btn.setAttribute('type', 'button');
-                    block_switch_label.className = 'b-tg d-inline-flex align-items-center p-3 mb-0 cursor-pointer';
+                    block_switch_label.className = 'b-tg d-inline-flex align-items-center py-3 pe-5 mb-0 cursor-pointer';
                     block_switch.className = 'c-tgl cursor-pointer';
                     block_switch_span.className = 'switch switch-lg';
                     label_text_span.className = "t-lb visually-hidden";

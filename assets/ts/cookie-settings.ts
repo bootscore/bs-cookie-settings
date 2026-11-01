@@ -546,6 +546,9 @@
             settings_title.insertAdjacentHTML('beforeend', conf_params.languages[_config.current_lang]['settings_modal']['title']);
 
             // Create settings modal content (blocks)
+            // Wrapper for consecutive toggle blocks (b-ex)
+            var toggles_wrapper = null;
+
             for(var i=0; i<n_blocks; ++i){
 
                 var title_data = all_blocks[i]['title'],
@@ -651,7 +654,6 @@
                     _addClass(block_section, 'p-0');
                     _addClass(block_section, 'bg-1');
                     _addClass(block_section, 'rounded');
-                    _addClass(block_section, 'mb-3');
 
                     block_table_container.id = accordion_id;
                     block_table_container.setAttribute('aria-hidden', 'true');
@@ -768,7 +770,19 @@
                  */
                 if(toggle_data && title_data || (!toggle_data && (title_data || description_data))){
                     block_section.appendChild(block_table_container);
-                    settings_blocks.appendChild(block_section);
+
+                    // Toggle blocks share one wrapper; a text block ends the group
+                    if(_hasClass(block_section, 'b-ex')){
+                        if(!toggles_wrapper){
+                            toggles_wrapper = _createNode('div');
+                            toggles_wrapper.className = 'd-flex flex-column gap-1 mb-5';
+                            settings_blocks.appendChild(toggles_wrapper);
+                        }
+                        toggles_wrapper.appendChild(block_section);
+                    }else{
+                        toggles_wrapper = null;
+                        settings_blocks.appendChild(block_section);
+                    }
                 }
             }
 

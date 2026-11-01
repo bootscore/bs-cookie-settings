@@ -775,7 +775,7 @@
                     if(_hasClass(block_section, 'b-ex')){
                         if(!toggles_wrapper){
                             toggles_wrapper = _createNode('div');
-                            toggles_wrapper.className = 'd-flex flex-column gap-1 mb-5';
+                            toggles_wrapper.className = 'd-flex flex-column gap-1';
                             settings_blocks.appendChild(toggles_wrapper);
                         }
                         toggles_wrapper.appendChild(block_section);

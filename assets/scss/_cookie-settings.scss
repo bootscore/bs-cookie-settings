@@ -55,13 +55,13 @@
       padding: var(--spacer-5);
     }
 
-    // Text blocks
-    > .c-bl:not(:last-child) {
+    // Text blocks and the toggle group
+    > :not(:last-child) {
       margin-bottom: var(--spacer-5);
     }
 
-    > .c-bl:last-child {
-      margin-bottom: var(--spacer-3);
+    > :last-child {
+      margin-bottom: 0;
     }
 
 

@@ -19,8 +19,8 @@ defined('ABSPATH') || exit;
 function bs_cookie_settings() {
 
   // Plugin base path & URL
-  $plugin_path = plugin_dir_path( dirname( __FILE__ ) );
-  $plugin_url  = plugin_dir_url( dirname( __FILE__ ) );
+  $plugin_path = plugin_dir_path( __DIR__ );
+  $plugin_url  = plugin_dir_url( __DIR__ );
 
   // File paths
   $script_file = $plugin_path . 'assets/js/cookie-settings.min.js';
@@ -33,7 +33,7 @@ function bs_cookie_settings() {
   // Enqueue script
   // Depends on bootscore-script: the plugin uses window.bootstrap.Dialog
   wp_enqueue_script(
-    'cookie-settings-js',
+    'bs-cookie-settings',
     $plugin_url . 'assets/js/cookie-settings.min.js',
     ['bootscore-script'],
     $script_ver,
@@ -45,7 +45,7 @@ function bs_cookie_settings() {
   // load after Bootstrap. Loaded first, it would define the layer order and break
   // Bootstrap's components. Custom CSS (unlayered) overrides it without !important.
   wp_enqueue_style(
-    'cookie-settings-css',
+    'bs-cookie-settings',
     $plugin_url . 'assets/css/cookie-settings.min.css',
     ['bootscore-main'],
     $style_ver

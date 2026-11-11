@@ -31,23 +31,23 @@ function bs_cookie_settings() {
   $style_ver  = file_exists( $style_file ) ? date( 'YmdHi', filemtime( $style_file ) ) : false;
 
   // Enqueue script
-  // Depends on bootscore-script: the plugin uses window.bootstrap.Dialog
+  // Depends on bootscore: the plugin uses window.bootstrap.Dialog
   wp_enqueue_script(
     'bs-cookie-settings',
     $plugin_url . 'assets/js/cookie-settings.min.js',
-    ['bootscore-script'],
+    ['bootscore'],
     $script_ver,
     true
   );
 
   // Enqueue style
-  // Depends on bootscore-main: the plugin CSS is in @layer components, so it must
+  // Depends on bootscore: the plugin CSS is in @layer components, so it must
   // load after Bootstrap. Loaded first, it would define the layer order and break
   // Bootstrap's components. Custom CSS (unlayered) overrides it without !important.
   wp_enqueue_style(
     'bs-cookie-settings',
     $plugin_url . 'assets/css/cookie-settings.min.css',
-    ['bootscore-main'],
+    ['bootscore'],
     $style_ver
   );
 }

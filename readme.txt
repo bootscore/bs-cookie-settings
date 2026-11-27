@@ -26,7 +26,7 @@ Plugin adds a GDPR-ready cookie consent to Bootscore theme, Copyright 2022 - 202
 
 == Usage ==
 
-Read documentation https://bootscore.me/documentation/plugin/bs-cookie-settings/
+Read documentation https://bootscore.me/documentation/plugins/bs-cookie-settings/
 
 == Changelog ==
 
